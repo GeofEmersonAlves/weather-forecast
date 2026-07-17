@@ -1,0 +1,6 @@
+streamlit==1.59.2
+requests==2.34.2
+streamlit-geolocation
+dotenv
+geopy
+lxml

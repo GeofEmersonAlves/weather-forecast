@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+"""
+===============================================================================
+Projeto    : Weather Forecast
+Arquivo    : local.py
+Autor      : Emerson A. Silva
+Data       : Thu Jul 16 21:21:39 2026
+Versão     : 1.0
+Python     : Python 3.13.14 | packaged by Anaconda, Inc. 
+
+Descrição:
+        Para organigar a pagina principa, movi todas as funções que lidam
+        com o dicionario Local para cá
+
+Histórico:
+       16/07/2026 - Inicio 
+===============================================================================
+"""
+import services.geolocation as geoloc
+import components.stream_geolocation as str_geoloc
+
+
+def local_default():
+    return {"lat": "-23.5489",
+           "long": "-46.6388",
+           "pais": "Brasil",
+           "estado": "São Paulo",
+           "uf": "SP",
+           "cidade": "São Paulo",
+           "regiao": "Região Sudeste",
+           "obs": "Local padrão"}
+
+def retorna_local() -> dict:   
+    #Localizaçãoi padrao inicial
+    local=local_default()
+    
+    location = {}
+    
+    #Tenta pega a localizacao pelo streamlit, se nao conseguir pega pelo IP
+    geolocalizacao = str_geoloc.geolocation()
+    if geolocalizacao.get('latitude') is not None:
+        location = geoloc.geolocation_with_latlon(geolocalizacao.get('latitude'), 
+                                                 geolocalizacao.get('longitude'))
+        
+        local['lat'] = geolocalizacao.get('latitude')
+        local['long'] = geolocalizacao.get('longitude')
+        local['obs'] = "Localização atual"
+        
+    else:
+        geolocIP = geoloc.geolocation()
+        location = geoloc.geolocation_with_latlon(geolocIP.get('latitude'), 
+                                                   geolocIP.get('longitude'))
+        local['lat'] = geolocIP.get('latitude')
+        local['long'] = geolocIP.get('longitude')
+        local['obs'] = "Localização aproximada pelo IP"
+    
+    if location is not None:
+        local['pais']  = location.get('address').get('country')
+        local['estado'] = location.get('address').get('state')
+        local['uf'] = geoloc.sigla_estado(location.get('address').get('state'))
+        local['cidade'] = location.get('address').get('city')
+        local['regiao'] = location.get('address').get('region')
+    
+    return local
