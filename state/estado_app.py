@@ -18,7 +18,6 @@ Histórico:
 """
 
 import streamlit as st
-
 from services.local import local_default
 
 def inicializar_estado_app():

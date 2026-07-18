@@ -32,9 +32,9 @@ weather_page = st.Page("pages/weather_page.py",
                        title = "Clima agora!",
                        default=True )
 
-test_page = st.Page("pages/testes.py")
+#test_page = st.Page("pages/testes.py")
 
-pg = st.navigation([weather_page, test_page], position='top')
+pg = st.navigation([weather_page], position='top')
 
 
 pg.run()

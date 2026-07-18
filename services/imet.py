@@ -9,7 +9,7 @@ Versão     : 1.0
 Python     : Python 3.13.14 | packaged by Anaconda, Inc. 
 
 Descrição:
-        Faz um scrapping na pagina do IMET para pegar a imagem de precipitacao 
+        Faz uma requisicao na API do IMET para pegar a imagem de precipitacao 
       
 
 Histórico:

@@ -55,8 +55,14 @@ clima_api_json = clima_api.json()
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    texto_topo = f"Tempo agora em {local['cidade']}/{local['uf']} :material/location_on:"
+    texto_topo = f"Tempo agora em {local['cidade']}/{local['uf']}"
+    if "None" not in local['bairro']:
+        texto_topo += f" ({local['bairro']})"
+    
+    texto_topo += " :material/location_on:"
+    
     st.write(texto_topo)
+    
     #texto_alinhado(texto_topo, alinhamento = 'center', fontsize = 20, color = '#FFFFFF')
     url_img_clima = clima_api_json.get('current').get('weather_icons')[0]
     
@@ -123,32 +129,33 @@ with col1:
     st.table(tab_astro, border= 'horizontal' )
     #texto_alinhado(txt_sol_up, alinhamento = 'right', fontsize = font_size, color = color)    
     
-    mo1, mo2 = st.columns(2)
-    with mo1:
+    moon1, moon2 = st.columns(2)
+    with moon1:
         fase_lua = wt_api.fase_da_lua(clima_api_json.get("current").get("astro").get("moon_phase"))
         img_lua = Image.open(fase_lua.get('image'))
-        st.image(img_lua, width = 50)
+        st.image(img_lua, width = 60)
         st.write(fase_lua.get('descricao'))
-    with mo2:
+        
+    with moon2:
         texto_alinhado(f"Fonte: {wt_api.fonte_dados()}", alinhamento = 'right', fontsize = 12)
     
     with st.expander("🌒🌓🌔🌕🌖🌗🌘Fases da Lua"):
         img_fases = Image.open('assets\images\Fases_da_Lua.png')
         st.image(img_fases, width = "stretch")
+        
 with col2:
-    st.write("aqui entra o climatempo")
+    st.write("aqui entra a previsao")
     
 with col3:
     mapa_imet_precipitacao = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
     st.image(mapa_imet_precipitacao, width = "stretch")
     texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
     
-
-data_por_extenso(data_hoje, fontsize = 18)
-texto_local = f"🌍 {local['cidade']}/{local['uf']} - {local['regiao']} do {local['pais']}"
-texto_alinhado(texto_local,fontsize = 14)
-texto_alinhado(f"🌐 ({local['lat']}, {local['long']})")
-texto_alinhado(f"📍{local['obs']}")
+    data_por_extenso(data_hoje, fontsize = 18)
+    texto_local = f"🌍 {local['cidade']}/{local['uf']} - {local['regiao']} do {local['pais']}"
+    texto_alinhado(texto_local,fontsize = 14)
+    texto_alinhado(f"🌐 ({local['lat']}, {local['long']})")
+    texto_alinhado(f"📍{local['obs']}")
 
 
 

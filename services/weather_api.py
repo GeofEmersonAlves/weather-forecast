@@ -21,8 +21,6 @@ from io import BytesIO
 from PIL import Image
 from dotenv import load_dotenv   #Para ler o arquivo .env
 import os
-
-
 from services.requisicao import faz_requisicao
 
 load_dotenv()

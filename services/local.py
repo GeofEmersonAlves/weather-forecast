@@ -27,6 +27,7 @@ def local_default():
            "estado": "São Paulo",
            "uf": "SP",
            "cidade": "São Paulo",
+           "bairro": "",
            "regiao": "Região Sudeste",
            "obs": "Local padrão"}
 
@@ -59,6 +60,9 @@ def retorna_local() -> dict:
         local['estado'] = location.get('address').get('state')
         local['uf'] = geoloc.sigla_estado(location.get('address').get('state'))
         local['cidade'] = location.get('address').get('city')
+        bairro = location.get('address').get('city_district')
+        neighbour = location.get('address').get('neighbourhood')
+        local['bairro'] = f"{bairro} - {neighbour}"
         local['regiao'] = location.get('address').get('region')
     
     return local
