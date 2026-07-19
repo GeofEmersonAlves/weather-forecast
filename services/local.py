@@ -31,6 +31,18 @@ def local_default():
            "regiao": "Região Sudeste",
            "obs": "Local padrão"}
 
+def local_empty():
+    return {"lat": None,
+           "long": None,
+           "pais": None,
+           "estado": None,
+           "uf": None,
+           "cidade": None,
+           "bairro": None,
+           "regiao": None,
+           "obs": "Local vázio"}
+
+#Pega a localizacao do usuario pelo gps ou pelo IP, e retorna 
 def retorna_local() -> dict:   
     #Localizaçãoi padrao inicial
     local=local_default()
@@ -48,7 +60,7 @@ def retorna_local() -> dict:
         local['obs'] = "Localização atual"
         
     else:
-        geolocIP = geoloc.geolocation()
+        geolocIP = geoloc.geolocation_by_IP()
         location = geoloc.geolocation_with_latlon(geolocIP.get('latitude'), 
                                                    geolocIP.get('longitude'))
         local['lat'] = geolocIP.get('latitude')

@@ -326,7 +326,6 @@ def classificar_indice_uv(indice_uv: float) -> str:
 def astro_evento(evento_astro : str)-> str:
     return f"{ASTRO_EVENTS.get(evento_astro).get('emoji')}{ASTRO_EVENTS.get(evento_astro).get('descricao')}"
 
-
 def direcao_vento_emoji(direcao : str)-> str:
     return WIND_DIRECTION.get(direcao).get('emoji')
 
@@ -359,4 +358,12 @@ def clima_agora(lat : str, long: str) -> dict:
            
     resposta = faz_requisicao(text_request, use_raise = False)
     
-    return resposta
+    if resposta is None:
+        return None
+
+    dados = resposta.json()
+
+    if not dados.get("success", True):
+        return None
+    
+    return dados

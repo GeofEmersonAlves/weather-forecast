@@ -18,15 +18,18 @@ Histórico:
 """
 
 import streamlit as st
-from services.local import local_default
+from services.local import local_default, local_empty
 
 def inicializar_estado_app():
     if "user_location" not in st.session_state:
         st.session_state.user_location = local_default()
+    
+    if "local_select" not in st.session_state:
+        st.session_state.local_select = local_empty()
         
-def aplicar_estado_app(local : dict):
+def alterar_user_location(local : dict):
     st.session_state.user_location =  local
 
 def restaura_estado_inical():
-    aplicar_estado_app(local_default())
+    alterar_user_location(local_default())
     

@@ -43,7 +43,7 @@ def geolocation_with_latlon(lat : str, lon : str)-> dict | None:
     return local.raw
 
 @st.cache_data(show_spinner="⏳ Carregando coordenadas pelo IP . . .",  ttl = 1800)
-def geolocation() -> dict | None:
+def geolocation_by_IP() -> dict | None:
     url = (
          "http://ip-api.com/json/"
          "?fields=status,message,country,regionName,city,lat,lon,timezone,query"
@@ -73,7 +73,7 @@ def geolocation() -> dict | None:
 
 
 def teste():
-    localizacao = geolocation()
+    localizacao = geolocation_by_IP()
     if localizacao:
         print(localizacao)
     

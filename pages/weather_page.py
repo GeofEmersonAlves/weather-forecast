@@ -21,13 +21,15 @@ Histórico:
 import streamlit as st
 from PIL import Image
 import pandas as pd
+from pathlib import Path
 
 #Bibliotecas do projeto
 from components.layout import  data_por_extenso, texto_alinhado 
+from components.select_city import select_city_weather
 from utils.datas import hoje
 from services.local import retorna_local
 import services.weather_api as wt_api 
-from state.estado_app import aplicar_estado_app
+from state.estado_app import alterar_user_location
 from services.imet import mapa_precipitacao
 
 
@@ -46,12 +48,13 @@ st.logo(__LOGO100_X_100, icon_image = __LOGO50_X_50)
 data_hoje = hoje()
 
 with st.sidebar: 
-    aplicar_estado_app(retorna_local())
+    alterar_user_location(retorna_local())
     local = st.session_state.user_location
+    select_city_weather(f"{local['cidade']}-{local['uf']}")
+    st.write(st.session_state.__letras_cidade__)
     #st.subheader("📍 Sua localização")
 
-clima_api = wt_api.clima_agora(local['lat'], local['long'])
-clima_api_json = clima_api.json()
+clima_api_json = wt_api.clima_agora(local['lat'], local['long'])
 
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -86,7 +89,7 @@ with col1:
     vento_veloc = clima_api_json.get('current').get('wind_speed')
     vento_dir = clima_api_json.get('current').get('wind_dir')
     vento_dir_emoji = wt_api.direcao_vento_emoji(vento_dir)
-    texto_vento = f"💨 Vento {vento_veloc}km/h {vento_dir_emoji}{vento_dir}"
+    texto_vento = f"💨 Vento {vento_veloc} km/h {vento_dir_emoji}{vento_dir}"
     
     umidade =  clima_api_json.get('current').get('humidity')
     texto_umidade = f"💧 Umidade {umidade} %"
@@ -130,9 +133,10 @@ with col1:
     #texto_alinhado(txt_sol_up, alinhamento = 'right', fontsize = font_size, color = color)    
     
     moon1, moon2 = st.columns(2)
-    with moon1:
+    with moon1: #Mostra uma imagem da lua na fase atual
         fase_lua = wt_api.fase_da_lua(clima_api_json.get("current").get("astro").get("moon_phase"))
-        img_lua = Image.open(fase_lua.get('image'))
+        path_img_lua = Path(fase_lua.get('image'))
+        img_lua = Image.open(path_img_lua)
         st.image(img_lua, width = 60)
         st.write(fase_lua.get('descricao'))
         
@@ -140,7 +144,8 @@ with col1:
         texto_alinhado(f"Fonte: {wt_api.fonte_dados()}", alinhamento = 'right', fontsize = 12)
     
     with st.expander("🌒🌓🌔🌕🌖🌗🌘Fases da Lua"):
-        img_fases = Image.open('assets\images\Fases_da_Lua.png')
+        PATH_IMG_FASES = Path("assets/images/Fases_da_Lua.png")
+        img_fases = Image.open(PATH_IMG_FASES)
         st.image(img_fases, width = "stretch")
         
 with col2:

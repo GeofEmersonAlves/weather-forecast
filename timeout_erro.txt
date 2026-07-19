@@ -1,0 +1,21 @@
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='tempoagora.uol.com.br', port=443): Read timed out. (read timeout=20)
+
+File "C:\Users\Emerson\Documents\MBA\Projetos\weather-forecast\components\select_city.py", line 33, in find_cities
+    resp_json =  buscar_cidades(letras_cidade)
+File "C:\Users\Emerson\Documents\MBA\Projetos\weather-forecast\services\busca_cidades.py", line 46, in buscar_cidades
+    resposta = requests.post(
+        URL_BUSCA_CIDADES,
+    ...<2 lines>...
+        timeout=20,
+    )
+File "C:\Users\Emerson\anaconda3\envs\WeatherForecast\Lib\site-packages\requests\api.py", line 134, in post
+    return request("post", url, data=data, json=json, **kwargs)
+File "C:\Users\Emerson\anaconda3\envs\WeatherForecast\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "C:\Users\Emerson\anaconda3\envs\WeatherForecast\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+File "C:\Users\Emerson\anaconda3\envs\WeatherForecast\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+File "C:\Users\Emerson\anaconda3\envs\WeatherForecast\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)

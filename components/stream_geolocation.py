@@ -20,12 +20,15 @@ import streamlit as st
 from streamlit_geolocation import streamlit_geolocation
 
 def geolocation() -> dict :
-    localizacao = streamlit_geolocation()
+    geocol1, geocol2, geocol3 = st.columns([1,4,1])
+    with geocol1:
+        localizacao = streamlit_geolocation()
     
-    if localizacao.get("latitude") is  None:
-        st.warning("Pressione o botão acima para o Weather Forecast App acessar sua localização.")
-    
-    else:
-        st.success("Localização obtida com Sucesso!")
+    with geocol2:
+        if localizacao.get("latitude") is  None:
+            st.warning("Pressione o botão para acessar sua localização.")
+        
+        else:
+            st.success("Localização obtida com Sucesso!")
     
     return localizacao

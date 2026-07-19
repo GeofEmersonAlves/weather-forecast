@@ -1,0 +1,14 @@
+[
+    {
+        "type": "city",
+        "response": {
+            "success": false,
+            "message": "Nenhum resultado encontrado por Chag",
+            "time": "2026-07-19 11:48:02",
+            "totalRows": null,
+            "totalPages": null,
+            "page": null,
+            "data": []
+        }
+    }
+]
