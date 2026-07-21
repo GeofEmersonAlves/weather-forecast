@@ -6,7 +6,7 @@
 substituindo parte de um processo que atualmente é realizado manualmente.
 
 ## Funcionalidades
-
+- 📍 Geolocalização
 - 🌤️ Consulta das condições meteorológicas atuais
 - 📅 Previsão do tempo para os próximos dias 
 - 🏙️ Consulta de múltiplas cidades brasileiras 
@@ -15,6 +15,7 @@ substituindo parte de um processo que atualmente é realizado manualmente.
 - 🗺️ Coleta de dados (webscraping) de paginas de clima 
 - 📊 Interface interativa desenvolvida em Streamlit
 - 📄 Geração automática de relatórios em Excel a partir de um modelo pré-definido (em implementação)
+- 📊 Gráficos interativos
 
 ## Tecnologias
 
@@ -30,7 +31,19 @@ substituindo parte de um processo que atualmente é realizado manualmente.
 - Babel
 - python-slugify
 - cairosvg
-- plotly
+- WeatherStack
+- INMET
+- Pillow
+
+## Ténicas utilizadas
+- Web Scraping
+- REST API
+- Data Visualization
+- Caching
+- Session State
+- Interactive Dashboard
+- Responsive Layout
+- Image Processing
 
 ## Fontes de Dados
 

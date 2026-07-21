@@ -32,6 +32,7 @@ from components.city_options import seleciona_uma_cidade
 from components.quadro_clima import mostrar_quadro_clima, texto_localizacao
 from components.tabela_previsao import tabela_previsao_tempo
 import components.graficos_previsao as graf_prev 
+from components.nota_rodape import nota_de_rodape
 from services.imet_api import mapa_precipitacao
 from services.pega_infoclima import  info_clima_agora
 import services.previsao_tempo as previsao_tempo
@@ -43,7 +44,7 @@ __LOGO50_X_50 = "assets/icons/weather_50px_50px.png"
 __LOGO100_X_100 = "assets/icons/weather_100px_100px.png"
 icone = Image.open(__LOGO50_X_50)
 
-st.set_page_config("Weather´s page: Clima e previsão do tempo",
+st.set_page_config("Weather Forecast",
                    page_icon=icone,
                    layout="wide",
                    initial_sidebar_state="expanded"
@@ -128,11 +129,11 @@ with col2: #Previsão do tempo
                                                                         "💧 Umidade do ar"], 
                                                                       on_change = "ignore")
             with tab_graf_temp:
-                st.plotly_chart(fig_temp_maxmin)
+                st.plotly_chart(fig_temp_maxmin, height = 400)
             with tab_graf_chuva:
-                st.plotly_chart(fig_chuva)
+                st.plotly_chart(fig_chuva, height = 400)
             with tab_graf_umidade:
-                st.plotly_chart(fig_umidade_maxmim)
+                st.plotly_chart(fig_umidade_maxmim, height = 400)
         
        fonte_previsao =  previsao_tempo.fonte_dados()
        texto_alinhado(f"Fonte: {fonte_previsao}", alinhamento = 'right', fontsize = 12)
@@ -153,9 +154,11 @@ with col3: #Mapas de precipitacão
         
     data_por_extenso(data_hoje, fontsize = 18)
     
-
-
-
+nota_de_rodape()
+texto = "Dados obtidos por APIs públicas, INMET e Web Scraping para fins educacionais e demonstrativos."
+versao = "Versão 1.0.0 • Julho/2026"
+texto_alinhado(versao, alinhamento = "right", fontsize = 12, color = "blue")
+texto_alinhado(texto, alinhamento = "right", fontsize = 10, color = "gray")
 
 
 

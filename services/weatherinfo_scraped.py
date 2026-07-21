@@ -57,6 +57,7 @@ def scrap_page1(dados_cidade : dict) -> dict:
     url_dados = gera_url(URLS[0], id_cid, cidade, estado)
 
     resposta = req.faz_requisicao(url_dados, use_raise=False)
+    
     if resposta is None:
         return None
     

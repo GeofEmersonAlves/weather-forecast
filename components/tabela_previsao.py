@@ -75,8 +75,8 @@ def tabela_previsao_tempo(previsoes :list[dict]):
      df_previsao = pd.DataFrame(dados_exibir)
     
      st.dataframe(df_previsao,
-         height  = 600 ,  
-         row_height = 70,
+         height  = 490 ,  
+         row_height = 60,
          column_config={
              "dia_bola": st.column_config.ImageColumn(
                  "Dia",
