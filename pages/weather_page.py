@@ -34,7 +34,7 @@ from components.tabela_previsao import tabela_previsao_tempo
 import components.graficos_previsao as graf_prev 
 from services.imet_api import mapa_precipitacao
 from services.pega_infoclima import  info_clima_agora
-from services.previsao_tempo import pega_previsao_tempo
+import services.previsao_tempo as previsao_tempo
 from utils.datas import hoje
 
 
@@ -98,41 +98,45 @@ with col1:  #Quadro com clima atual
 with col2: #Previsão do tempo
    texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
    st.write(texto_localizacao("Previsão para 15 dias",local_clima))
-   previsoes = pega_previsao_tempo(local_clima)
-
-   tab_tabela, tab_grafico  = st.tabs(["📋 Tabela","📈 Gráficos"], on_change = "ignore")
+   previsoes = previsao_tempo.pega_previsao_tempo(local_clima)
    
-   with tab_tabela:
-        tabela_previsao_tempo(previsoes)
-        
-   with tab_grafico: 
-        cols_tempmaxmin = ["temp_min","temp_max"]
-        cols_umidademaxmin =["umidade_min","umidade_max"]
-        fig_temp_maxmin = graf_prev.grafico_max_min(previsoes, 
-                                                    cols_tempmaxmin,
-                                                    "Previsão para 15 dias de temperatura",
-                                                    "Celsius (°C)")
-        
-        fig_umidade_maxmim = graf_prev.grafico_max_min(previsoes, 
-                                                    cols_umidademaxmin,
-                                                    "Previsão para 15 dias de umidade do ar",
-                                                    "Porcentagem (%)")
-        
-        fig_chuva = graf_prev.grafico_chuva(previsoes)
-        
-        tab_graf_temp, tab_graf_chuva , tab_graf_umidade = st.tabs(["🌡️Temperatura",
-                                                                    "🌧️Chuva",
-                                                                    "💧 Umidade do ar"], 
-                                                                  on_change = "ignore")
-        with tab_graf_temp:
-            st.plotly_chart(fig_temp_maxmin)
-        with tab_graf_chuva:
-            st.plotly_chart(fig_chuva)
-        with tab_graf_umidade:
-            st.plotly_chart(fig_umidade_maxmim)
+   if previsoes:
+       tab_tabela, tab_grafico  = st.tabs(["📋 Tabela","📈 Gráficos"], on_change = "ignore")
+       
+       with tab_tabela:
+            tabela_previsao_tempo(previsoes)
             
-   texto_alinhado(f"Fonte: {info_clima_json['fonte_dados']}", alinhamento = 'right', fontsize = 12)
-    
+       with tab_grafico: 
+            cols_tempmaxmin = ["temp_min","temp_max"]
+            cols_umidademaxmin =["umidade_min","umidade_max"]
+            fig_temp_maxmin = graf_prev.grafico_max_min(previsoes, 
+                                                        cols_tempmaxmin,
+                                                        "Previsão para 15 dias de temperatura",
+                                                        "Celsius (°C)")
+            
+            fig_umidade_maxmim = graf_prev.grafico_max_min(previsoes, 
+                                                        cols_umidademaxmin,
+                                                        "Previsão para 15 dias de umidade do ar",
+                                                        "Porcentagem (%)")
+            
+            fig_chuva = graf_prev.grafico_chuva(previsoes)
+            
+            tab_graf_temp, tab_graf_chuva , tab_graf_umidade = st.tabs(["🌡️Temperatura",
+                                                                        "🌧️Chuva",
+                                                                        "💧 Umidade do ar"], 
+                                                                      on_change = "ignore")
+            with tab_graf_temp:
+                st.plotly_chart(fig_temp_maxmin)
+            with tab_graf_chuva:
+                st.plotly_chart(fig_chuva)
+            with tab_graf_umidade:
+                st.plotly_chart(fig_umidade_maxmim)
+        
+       fonte_previsao =  previsao_tempo.fonte_dados()
+       texto_alinhado(f"Fonte: {fonte_previsao}", alinhamento = 'right', fontsize = 12)
+   else:
+       st.error("Sem dados para mostrar.")
+       
 with col3: #Mapas de precipitacão
     tab_mensal, tab_semestral = st.tabs(["Precipitação Mensal", "Precipitação Trimestral"], on_change = "ignore")
     mapa_imet_precipita_mensal = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)

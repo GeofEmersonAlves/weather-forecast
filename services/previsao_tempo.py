@@ -33,12 +33,16 @@ from services.busca_cidades import traz_cidade_clima
 from services.weatherinfo_scraped import gera_url
 
 #558/saopaulo-sp
+__URLS__ =["https://tempoagora.uol.com.br/previsao-do-tempo/15-dias/cidade/",
+       "https://tempoagora.uol.com.br/dist/images/v2/svg/"]
+
+
+def fonte_dados()->str:
+    return __URLS__[0]
+
 
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
 def pega_previsao_tempo(dados_cidade : dict)->dict:    
-    __URLS__ =["https://tempoagora.uol.com.br/previsao-do-tempo/15-dias/cidade/",
-           "https://tempoagora.uol.com.br/dist/images/v2/svg/"]
-
     cidade_clima = traz_cidade_clima(dados_cidade)
 
     cidade = cidade_clima['city']
@@ -48,6 +52,9 @@ def pega_previsao_tempo(dados_cidade : dict)->dict:
     url_dados = gera_url(__URLS__[0], id_cid, cidade, estado)
 
     resp = req.faz_requisicao(url_dados)
+    if resp  is None:
+        return None
+    
     soup = BeautifulSoup(resp.text, "lxml")
 
     calendario = soup.select_one("#calendar")

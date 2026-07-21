@@ -51,7 +51,13 @@ def scrap_page1(dados_cidade : dict) -> dict:
     url_dados = gera_url(URLS[0], id_cid, cidade, estado)
 
     resposta = req.faz_requisicao(url_dados, use_raise=False)
-
+    if resposta is None:
+        return None
+    
+    if resposta.status_code != 200:
+        return None
+    
+    
     soup = BeautifulSoup(resposta.text, "lxml")
     card = soup.select_one("div.card._justify-center")
 
@@ -105,7 +111,12 @@ def scrap_page2(dados_cidade : dict) -> list:
     url_dados = gera_url(URLS[1], id_cid, cidade, estado)
 
     resposta = req.faz_requisicao(url_dados, use_raise=False)
-   
+    if resposta is None:
+        return None
+    
+    if resposta.status_code != 200:
+        return None
+    
     soup = BeautifulSoup(resposta.text, "lxml")
 
     #elemento = soup.find(id="min-temp-1")
@@ -174,6 +185,9 @@ def clima_agora(dados_cidade : dict) -> dict:
     info_clima_vazio["location"]["lon"] = dados_cidade["long"]
     
     mais_info = scrap_page1(cidade_clima)
+    if mais_info is None:
+        return None
+    
     info_clima_vazio["current"]["temperature"] = mais_info["temperatura"]
     info_clima_vazio['img_clima'] = mais_info['img_clima']
     
@@ -194,6 +208,8 @@ def clima_agora(dados_cidade : dict) -> dict:
                                      texto_sensacao]
     
     info_tab_astro = scrap_page2(cidade_clima)
+    if info_tab_astro is None:
+        return None
     
     info_clima_vazio['tab_astro'] = info_tab_astro
     info_clima_vazio["fonte_dados"] = F"{URLS[2]}"
