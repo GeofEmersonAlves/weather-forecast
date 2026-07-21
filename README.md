@@ -8,11 +8,11 @@ substituindo parte de um processo que atualmente é realizado manualmente.
 ## Funcionalidades
 
 - 🌤️ Consulta das condições meteorológicas atuais
-- 📅 Previsão do tempo para os próximos dias (em implementação)
-- 🏙️ Consulta de múltiplas cidades brasileiras (em implementação)
+- 📅 Previsão do tempo para os próximos dias 
+- 🏙️ Consulta de múltiplas cidades brasileiras 
 - 🌧️ Consumo da API do Weatherstack 
-- 🗺️ Coleta de dados (webscraping) de uma pagina de clima (em implementação)
 - 🗺️ Comsumo da API  d o INMET para mapa de precipitação mensal
+- 🗺️ Coleta de dados (webscraping) de paginas de clima 
 - 📊 Interface interativa desenvolvida em Streamlit
 - 📄 Geração automática de relatórios em Excel a partir de um modelo pré-definido (em implementação)
 
@@ -28,6 +28,9 @@ substituindo parte de um processo que atualmente é realizado manualmente.
 - Geopy - OpenStreetMap(GRATUITO)
 - streamlit-geolocation
 - Babel
+- python-slugify
+- cairosvg
+- plotly
 
 ## Fontes de Dados
 
