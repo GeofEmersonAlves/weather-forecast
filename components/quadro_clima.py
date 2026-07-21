@@ -23,7 +23,6 @@ from PIL import Image
 from pathlib import Path
 
 from components.layout import texto_alinhado 
-from services.salva_dict import salvar_json
 
 def texto_localizacao(texto_inicio: str, local: dict)->str:
     cidade = local["cidade"]
@@ -41,7 +40,6 @@ def texto_localizacao(texto_inicio: str, local: dict)->str:
 def mostrar_quadro_clima(clima_json : dict):
     salvar =  clima_json.copy()
     salvar['img_clima'] = 'imagem'
-    salvar_json(salvar,"dados_clima.json")
 
     if st.session_state.local_select["obs"] ==  "Local vazio":
         local = st.session_state.user_location

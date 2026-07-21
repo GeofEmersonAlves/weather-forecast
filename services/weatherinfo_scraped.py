@@ -44,6 +44,12 @@ def gera_url(base, id_cidade: int, cidade: str, uf: str ) -> str:
     return url_final
 
 def scrap_page1(dados_cidade : dict) -> dict:
+    
+    if (dados_cidade['city'] == None or 
+          dados_cidade["uf"] == None or 
+          dados_cidade["idcity"] == None):
+        return None
+        
     cidade = dados_cidade['city']
     estado = dados_cidade["uf"]
     id_cid = dados_cidade["idcity"]
@@ -56,7 +62,6 @@ def scrap_page1(dados_cidade : dict) -> dict:
     
     if resposta.status_code != 200:
         return None
-    
     
     soup = BeautifulSoup(resposta.text, "lxml")
     card = soup.select_one("div.card._justify-center")

@@ -24,14 +24,37 @@ def tabela_previsao_tempo(previsoes :list[dict]):
      dados_exibir=[]
      for dia in previsoes:
          dia_bola = gerar_img.gerar_dia_base64(dia['dia'], dia['dia_semana'])
-         temp_min = dia["temp_min"]
-         temp_max = dia["temp_max"]
+         if dia["temp_min"] == None:
+             temp_min = 0
+         else:
+             temp_min = dia["temp_min"]
+         
+         if dia['temp_max'] == None:
+             temp_max = 0
+         else:
+             temp_max = dia["temp_max"]
+         
          temp_max_min = gerar_img.temperaturas_min_max_base64(temp_min, temp_max)
          
-         umidade_min =  dia["umidade_min"]
-         umidade_max =  dia["umidade_max"]
-         precipitacao =  dia["precipitacao_mm"]
-         probabilidade_chuva =  dia["probabilidade_chuva"]
+         if dia["umidade_min"] == None:
+             umidade_min = 0
+         else:
+             umidade_min =  dia["umidade_min"]
+         
+         if dia["umidade_max"] == None:
+             umidade_max = 0
+         else:
+             umidade_max =  dia["umidade_max"]
+         
+         if dia["precipitacao_mm"] == None:
+             precipitacao = 0
+         else:
+             precipitacao =  dia["precipitacao_mm"]
+         
+         if dia["probabilidade_chuva"] == None:
+             probabilidade_chuva = 0
+         else:
+             probabilidade_chuva =  dia["probabilidade_chuva"]
          
          img_chuva_umidade = gerar_img.clima_chuva_base64(
                                                   umidade_min=umidade_min,

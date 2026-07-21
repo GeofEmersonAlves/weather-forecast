@@ -14,27 +14,6 @@ Descrição:
 
 Histórico:
        21/07/2026 - Inicio 
-       
-{
-        "data": "2026-07-28",
-        "dia": "28/07",
-        "dia_semana": "Terça",
-        "temperatura_minima": 14,
-        "temperatura_maxima": 27,
-        "precipitacao_mm": 0,
-        "probabilidade_chuva": 0,
-        "descricao": "Sol com algumas nuvens ao longo do dia. Noite de céu limpo.",
-        "icone": "9",
-        "umidade_minima": 47,
-        "umidade_maxima": 100,
-        "vento_minimo": 1,
-        "vento_maximo": 6,
-        "direcao_vento": "ENE",
-        "nascer_sol": "06:43:59",
-        "por_sol": "17:42:06",
-        "fase_lua": "crescente_gibosa"
-    },
-
 
 ===============================================================================
 """
@@ -51,10 +30,18 @@ def grafico_max_min(dados_previsao: dict, cols_minmax: list, title_graf: str, ti
     colmin = cols_minmax[0]
     colmax = cols_minmax[1]
     
+    for item in dados_previsao:
+        if item[colmin] == None:
+            item[colmin] = 0
+        
+        if item[colmax] == None:
+            item[colmax] = 0    
+    
     df = pd.DataFrame(
         [{col: item.get(col) for col in cols_para_grafico} for item in dados_previsao]
         )
     fig = go.Figure()
+
     # texto do eixo x
     df["eixo_x"] = df["dia"] + "<br>" + df["dia_semana"].str[:3]
     
@@ -140,6 +127,14 @@ def grafico_max_min(dados_previsao: dict, cols_minmax: list, title_graf: str, ti
 
 def grafico_chuva(dados_previsao: dict) -> go.Figure:
     cols_para_grafico = ["dia", "dia_semana", "precipitacao_mm", "probabilidade_chuva"]
+    
+    for item in dados_previsao:
+        if item["precipitacao_mm"] == None:
+            item["precipitacao_mm"] = 0
+        
+        if item["probabilidade_chuva"] == None:
+            item["probabilidade_chuva"] = 0   
+    
     
     df = pd.DataFrame(
         [{col: item.get(col) for col in cols_para_grafico} for item in dados_previsao]

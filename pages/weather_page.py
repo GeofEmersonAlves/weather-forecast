@@ -35,7 +35,8 @@ import components.graficos_previsao as graf_prev
 from services.imet_api import mapa_precipitacao
 from services.pega_infoclima import  info_clima_agora
 import services.previsao_tempo as previsao_tempo
-from utils.datas import hoje
+from utils.datas import hojeSSSs
+#from services.salva_dict import salvar_json
 
 
 __LOGO50_X_50 = "assets/icons/weather_50px_50px.png"
@@ -99,6 +100,7 @@ with col2: #Previsão do tempo
    texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
    st.write(texto_localizacao("Previsão para 15 dias",local_clima))
    previsoes = previsao_tempo.pega_previsao_tempo(local_clima)
+   #salvar_json(previsoes,"previsoes.json")
    
    if previsoes:
        tab_tabela, tab_grafico  = st.tabs(["📋 Tabela","📈 Gráficos"], on_change = "ignore")
