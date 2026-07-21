@@ -87,7 +87,7 @@ else:
 info_clima_json = info_clima_agora(local_clima)
 
 col1, col2, col3 = st.columns([1.5, 3.2, 1.2])
-with col1:
+with col1:  #Quadro com clima atual
   
     if info_clima_json:
         mostrar_quadro_clima(info_clima_json)
@@ -95,7 +95,7 @@ with col1:
     else:
         st.error("Sem dados para mostrar.")
         
-with col2:
+with col2: #Previsão do tempo
    texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
    st.write(texto_localizacao("Previsão para 15 dias",local_clima))
    previsoes = pega_previsao_tempo(local_clima)
@@ -133,7 +133,7 @@ with col2:
             
    texto_alinhado(f"Fonte: {info_clima_json['fonte_dados']}", alinhamento = 'right', fontsize = 12)
     
-with col3:
+with col3: #Mapas de precipitacão
     tab_mensal, tab_semestral = st.tabs(["Precipitação Mensal", "Precipitação Trimestral"], on_change = "ignore")
     mapa_imet_precipita_mensal = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
     mapa_imet_precipita_semestral = mapa_precipitacao(data_hoje.year, "Trimestral", data_hoje.month)

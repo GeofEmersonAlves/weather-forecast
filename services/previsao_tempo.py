@@ -32,7 +32,6 @@ import services.requisicao as req
 from services.busca_cidades import traz_cidade_clima
 from services.weatherinfo_scraped import gera_url
 
-#from services.salva_dict import salvar_json
 #558/saopaulo-sp
 
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
@@ -104,7 +103,5 @@ def pega_previsao_tempo(dados_cidade : dict)->dict:
         
     return previsoes
     
-#salvar_json(previsoes,"previsoes.json")      
-#print(len(previsoes))
 
 
