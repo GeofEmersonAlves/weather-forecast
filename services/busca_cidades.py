@@ -47,7 +47,7 @@ HEADERS = {
 
 __RESP_PADRAO__ = [
     {
-        "type": "city",
+        "type": "erro",
         "response": {
             "success": False,
             "message": "",
@@ -60,12 +60,35 @@ __RESP_PADRAO__ = [
     }
 ]
 
-def resp_erro(msg_erro : str) -> list(dict):
+def lst_empty_resp()-> list[dict[str, object]]:
     resp = deepcopy(__RESP_PADRAO__)
-    resp[0]['response']['message'] = msg_erro
+    resp[0]["type"] = "vazia" 
+    
+    return resp
+
+def resp_erro(msg_erro : str) -> list[dict[str, object]]:
+    resp = deepcopy(__RESP_PADRAO__)
+    resp[0]['response']['message'] = f"⚠️{msg_erro}"
     
     return resp
          
+def traz_cidade_clima(dados_cidade : dict)->str:
+    nome_cidade = dados_cidade['cidade']
+    uf = dados_cidade['uf']
+    pais = dados_cidade['pais']
+    
+    resposta = buscar_cidades(nome_cidade)
+    lst_cidades = resposta[0]["response"]["data"]
+    
+    cidade_clima = next((local for local in lst_cidades 
+                         if local["city"] == nome_cidade 
+                         and local["uf"] == uf 
+                         and local["country"] == pais), 
+                        None
+                    )
+    return cidade_clima
+
+
 
 def buscar_cidades(nome: str) -> list[dict]:
     nome = nome.strip()
@@ -117,6 +140,9 @@ def buscar_cidades(nome: str) -> list[dict]:
     cidades = response.get("data", [])
     if not isinstance(cidades, list):
         return resp_erro("Erro inesperado.")
+    
+    if "Nenhum resultado encontrado" in resultado[0]["response"]["message"]:
+        return  resp_erro(resultado[0]["response"]["message"])
     
 
     return resultado

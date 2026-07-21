@@ -9,28 +9,33 @@ Versão     : 1.0
 Python     :  Python 3.13.14 | packaged by Anaconda, Inc. 
 
 Descrição:
-         Página princial do app Weather Forecast.
-      
+         Página princial do app Weather Forecast.      
 
 Histórico:
        16/07/2026 - Inicio do projeto
-/===============================================================================
+       19/07/2026 - Atualizações para incluir a busca de cidades
+                    O quadro de dados do tempo virou um componente
+       20/07/2026 - Inicio do scrapping da pagina do tempoagora.uol
+===============================================================================
 """
 
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
 import streamlit as st
 from PIL import Image
-import pandas as pd
-from pathlib import Path
 
 #Bibliotecas do projeto
+import state.estado_app as estado
 from components.layout import  data_por_extenso, texto_alinhado 
-from components.select_city import select_city_weather
+from components.local import retorna_local
+from components.select_city import find_cities_weather
+from components.city_options import seleciona_uma_cidade
+from components.quadro_clima import mostrar_quadro_clima, texto_localizacao
+from components.tabela_previsao import tabela_previsao_tempo
+import components.graficos_previsao as graf_prev 
+from services.imet_api import mapa_precipitacao
+from services.pega_infoclima import  info_clima_agora
+from services.previsao_tempo import pega_previsao_tempo
 from utils.datas import hoje
-from services.local import retorna_local
-import services.weather_api as wt_api 
-from state.estado_app import alterar_user_location
-from services.imet import mapa_precipitacao
 
 
 __LOGO50_X_50 = "assets/icons/weather_50px_50px.png"
@@ -48,119 +53,100 @@ st.logo(__LOGO100_X_100, icon_image = __LOGO50_X_50)
 data_hoje = hoje()
 
 with st.sidebar: 
-    alterar_user_location(retorna_local())
-    local = st.session_state.user_location
-    select_city_weather(f"{local['cidade']}-{local['uf']}")
-    st.write(st.session_state.__letras_cidade__)
-    #st.subheader("📍 Sua localização")
-
-clima_api_json = wt_api.clima_agora(local['lat'], local['long'])
-
-col1, col2, col3 = st.columns(3)
-with col1:
-    texto_topo = f"Tempo agora em {local['cidade']}/{local['uf']}"
-    if "None" not in local['bairro']:
-        texto_topo += f" ({local['bairro']})"
+    local = retorna_local()  #Componente mostra um botão para pegar a localização, caso nao pegar busca pelo IP
+    estado.alterar_user_location(local)
     
-    texto_topo += " :material/location_on:"
+    user_local = st.session_state.user_location
     
-    st.write(texto_topo)
+    tem_cidades = find_cities_weather()  #Mostra a opção para buscar cidades
     
-    #texto_alinhado(texto_topo, alinhamento = 'center', fontsize = 20, color = '#FFFFFF')
-    url_img_clima = clima_api_json.get('current').get('weather_icons')[0]
-    
-    img_weather = wt_api.weather_icon(clima_api_json)
-    
-    bl1, bl2, bl3, bl4 = st.columns(4)
-    with bl2:
-        if img_weather is not None:
-           st.image(img_weather, width = 70)
-    
-    with bl3:
-        temp = clima_api_json.get('current').get('temperature')
-        texto_alinhado(f"{temp} ºC", alinhamento = 'left', fontsize = 40, color = '#FFFFFF')
-    
-    font_size = 16
-    color ='#D68C1F'
-    
-    descr = wt_api.clima_descricao(int(clima_api_json.get("current").get("weather_code")))
-    texto_descricao = f"{descr.get('emoji')} {descr.get('descricao')}"
-    
-    vento_veloc = clima_api_json.get('current').get('wind_speed')
-    vento_dir = clima_api_json.get('current').get('wind_dir')
-    vento_dir_emoji = wt_api.direcao_vento_emoji(vento_dir)
-    texto_vento = f"💨 Vento {vento_veloc} km/h {vento_dir_emoji}{vento_dir}"
-    
-    umidade =  clima_api_json.get('current').get('humidity')
-    texto_umidade = f"💧 Umidade {umidade} %"
-    
-    sens  = clima_api_json.get('current').get('feelslike')
-    texto_sensacao = f"🌡️ Sensação {sens} ºC"
-    
-    tab_clima=[texto_descricao, texto_vento, texto_umidade, texto_sensacao]
-    df_clima = pd.DataFrame([tab_clima])
-    st.table(df_clima, border= 'horizontal', hide_header = True )
-    
-    txt_sol_up_h = "🧭 "+clima_api_json.get('current').get('astro').get('sunrise')
-    txt_sol_up = wt_api.astro_evento('sunrise')
-    
-    txt_sol_down_h = "🧭 "+clima_api_json.get('current').get('astro').get('sunset')
-    txt_sol_down = wt_api.astro_evento('sunset')
-    
-    txt_moon_up_h = "🧭 "+clima_api_json.get('current').get('astro').get('moonrise')
-    txt_moon_up = wt_api.astro_evento('moonrise')
-    
-    txt_moon_down_h = "🧭 "+clima_api_json.get('current').get('astro').get('moonset')
-    txt_moon_down = wt_api.astro_evento('moonset')
-    
-    txt_precipita = "🌧️ Precipitação"
-    txt_preci_valor = f"💧 {clima_api_json.get('current').get('precip')} mm"
-    
-    txt_uv = "☀️ Índice UV"
-    vlr_uv = int(clima_api_json.get('current').get('uv_index'))
-    txt_uv_desc = f"{wt_api.classificar_indice_uv(vlr_uv)} ({vlr_uv})"
-    
-    tab_astro = [
-            [txt_sol_up, txt_sol_up_h ],
-            [txt_sol_down, txt_sol_down_h],
-            [txt_moon_up, txt_moon_up_h],
-            [txt_moon_down, txt_moon_down_h],
-            [txt_precipita, txt_preci_valor],
-            [txt_uv, txt_uv_desc]
-        ]
-    
-    st.table(tab_astro, border= 'horizontal' )
-    #texto_alinhado(txt_sol_up, alinhamento = 'right', fontsize = font_size, color = color)    
-    
-    moon1, moon2 = st.columns(2)
-    with moon1: #Mostra uma imagem da lua na fase atual
-        fase_lua = wt_api.fase_da_lua(clima_api_json.get("current").get("astro").get("moon_phase"))
-        path_img_lua = Path(fase_lua.get('image'))
-        img_lua = Image.open(path_img_lua)
-        st.image(img_lua, width = 60)
-        st.write(fase_lua.get('descricao'))
+    if tem_cidades:  #Se o usuário digitou algo no busca cidades, mostra as cidades encontradas para selecioar
+        resp_cidades = st.session_state.resp_busca_cidades
+        if resp_cidades[0]['type'] == "erro":
+            st.error(resp_cidades[0]['response']['message'])
+            estado.restaurar_local_select()
+        else: 
+            seleciona_uma_cidade()  #Permite o usuario selecionar uma cidade entre as cidades encontradas
         
-    with moon2:
-        texto_alinhado(f"Fonte: {wt_api.fonte_dados()}", alinhamento = 'right', fontsize = 12)
+    #st.map(latitude = user_local['lat'], longitude = user_local['long'])
     
-    with st.expander("🌒🌓🌔🌕🌖🌗🌘Fases da Lua"):
-        PATH_IMG_FASES = Path("assets/images/Fases_da_Lua.png")
-        img_fases = Image.open(PATH_IMG_FASES)
-        st.image(img_fases, width = "stretch")
+    #Mostra as informações da localização do usuário
+    texto_local = f"🌍 {user_local['cidade']}/{user_local['uf']} - {user_local['regiao']} do {user_local['pais']}"
+    texto_alinhado(texto_local,fontsize = 14)
+    texto_alinhado(f"🌐 ({user_local['lat']}, {user_local['long']})")
+    texto_alinhado(f"📍{user_local['obs']}")
+    
+if st.session_state.local_select["obs"] == "Local vazio":
+    local_clima = user_local
+    
+else:
+    local_clima = st.session_state.local_select
+    
+
+#Chama o servico que retorna as informações do clima    
+info_clima_json = info_clima_agora(local_clima)
+
+col1, col2, col3 = st.columns([1.5, 3.2, 1.2])
+with col1:
+  
+    if info_clima_json:
+        mostrar_quadro_clima(info_clima_json)
+        
+    else:
+        st.error("Sem dados para mostrar.")
         
 with col2:
-    st.write("aqui entra a previsao")
+   texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
+   st.write(texto_localizacao("Previsão para 15 dias",local_clima))
+   previsoes = pega_previsao_tempo(local_clima)
+
+   tab_tabela, tab_grafico  = st.tabs(["📋 Tabela","📈 Gráficos"], on_change = "ignore")
+   
+   with tab_tabela:
+        tabela_previsao_tempo(previsoes)
+        
+   with tab_grafico: 
+        cols_tempmaxmin = ["temp_min","temp_max"]
+        cols_umidademaxmin =["umidade_min","umidade_max"]
+        fig_temp_maxmin = graf_prev.grafico_max_min(previsoes, 
+                                                    cols_tempmaxmin,
+                                                    "Previsão para 15 dias de temperatura",
+                                                    "Celsius (°C)")
+        
+        fig_umidade_maxmim = graf_prev.grafico_max_min(previsoes, 
+                                                    cols_umidademaxmin,
+                                                    "Previsão para 15 dias de umidade do ar",
+                                                    "Porcentagem (%)")
+        
+        fig_chuva = graf_prev.grafico_chuva(previsoes)
+        
+        tab_graf_temp, tab_graf_chuva , tab_graf_umidade = st.tabs(["🌡️Temperatura",
+                                                                    "🌧️Chuva",
+                                                                    "💧 Umidade do ar"], 
+                                                                  on_change = "ignore")
+        with tab_graf_temp:
+            st.plotly_chart(fig_temp_maxmin)
+        with tab_graf_chuva:
+            st.plotly_chart(fig_chuva)
+        with tab_graf_umidade:
+            st.plotly_chart(fig_umidade_maxmim)
+            
+   texto_alinhado(f"Fonte: {info_clima_json['fonte_dados']}", alinhamento = 'right', fontsize = 12)
     
 with col3:
-    mapa_imet_precipitacao = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
-    st.image(mapa_imet_precipitacao, width = "stretch")
-    texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
-    
+    tab_mensal, tab_semestral = st.tabs(["Precipitação Mensal", "Precipitação Trimestral"], on_change = "ignore")
+    mapa_imet_precipita_mensal = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
+    mapa_imet_precipita_semestral = mapa_precipitacao(data_hoje.year, "Trimestral", data_hoje.month)
+
+    with tab_mensal:    
+        st.image(mapa_imet_precipita_mensal, width = "stretch")
+        texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
+    with tab_semestral:    
+        st.image(mapa_imet_precipita_semestral, width = "stretch")
+        texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
+        
     data_por_extenso(data_hoje, fontsize = 18)
-    texto_local = f"🌍 {local['cidade']}/{local['uf']} - {local['regiao']} do {local['pais']}"
-    texto_alinhado(texto_local,fontsize = 14)
-    texto_alinhado(f"🌐 ({local['lat']}, {local['long']})")
-    texto_alinhado(f"📍{local['obs']}")
+    
 
 
 

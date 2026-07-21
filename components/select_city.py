@@ -9,7 +9,8 @@ Versão     : 1.0
 Python     : Python 3.13.14 | packaged by Anaconda, Inc. 
 
 Descrição:
-    Componenmte seletor de cidades com autocomplete real a partir da quarta letra digitada
+    Componente seletor de cidades com autocomplete real a partir da quarta letra digitada
+    chama o serviço busca_cidades() para encontrar a lista de cidades recebidas
 
 Histórico:
        18/07/2026 - Inicio 
@@ -30,43 +31,17 @@ def find_cities():
     letras_cidade = st.session_state.__letras_cidade__
     
     if letras_cidade is not None:
-        if len(letras_cidade.strip()) >= 4:
-            resp_json =  buscar_cidades(letras_cidade)
-            
-            if "response" in resp_json[0]:
-                st.write() 
-            
-               # cidades_json =  resp_json.get('response').get('data')
-            st.json(resp_json)
+        resp_cidades =  buscar_cidades(letras_cidade)
+        st.session_state.resp_busca_cidades = resp_cidades.copy()
 
-def select_city_weather(atual_city: str) :
-   # lst_cidades = [atual_city]
+def find_cities_weather() -> bool:
     
-    st.text_input("🔍Busque por uma cidade...",
+    st.text_input("🔍Busque por cidades...",
                            placeholder="Digite no mínimo 4 letras...",
                            key = "__letras_cidade__",
                            on_change = find_cities,
                            icon = ":material/search:"
                            )
-    
-   
-    
-    return 
 
-"""
+    return (st.session_state.resp_busca_cidades[0]["type"] != "vazia")
 
-option = st.selectbox(
-    "Cidade",
-    lst_cidades,
-    index=None,
-    placeholder="Busque por uma cidade...",
-    accept_new_options=True,
-)
-
-moeda_final = st.segmented_control(legenda, 
-                                    lista_moedas, 
-                                    selection_mode = "single", 
-                                    default = moeda_final_default,
-                                    on_change = converter_moeda,
-                                        key =  "_moeda_final_") 
-    """

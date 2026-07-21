@@ -19,6 +19,7 @@ Histórico:
 import streamlit as st
 from io import BytesIO
 from PIL import Image
+import cairosvg
 from dotenv import load_dotenv   #Para ler o arquivo .env
 import os
 from services.requisicao import faz_requisicao
@@ -331,15 +332,20 @@ def direcao_vento_emoji(direcao : str)-> str:
 
 def direcao_vento_descricao(direcao : str)-> str:
     return WIND_DIRECTION.get(direcao).get('descricao')
+
     
-def weather_icon(json_weather : dict) -> Image.Image | None: 
-    url_icon = json_weather.get('current').get('weather_icons')[0]
+def weather_icon(url_icon : str) -> Image.Image | None: 
+
     resp = faz_requisicao(
        url_icon,
        use_raise=True
    )
     if resp is None:
        return None
+
+    if url_icon.lower().endswith(".svg"):
+        img = cairosvg.svg2png(bytestring=resp.content)
+        return Image.open(BytesIO(img))
 
     img_weather = Image.open(BytesIO(resp.content))
   
@@ -354,16 +360,64 @@ def clima_descricao(weather_code : int ) -> dict:
 
 @st.cache_data(show_spinner="⏳ Carregando condicções climaticas . . .",  ttl = 1800)
 def clima_agora(lat : str, long: str) -> dict:
+    
     text_request =f"{Base_URL_API}current?access_key={ws_token}&query={lat},{long}"
            
     resposta = faz_requisicao(text_request, use_raise = False)
-    
+      
     if resposta is None:
         return None
 
     dados = resposta.json()
-
+  
     if not dados.get("success", True):
         return None
+    
+    dados['img_clima'] =  weather_icon(dados.get('current').get('weather_icons')[0])
+        
+    descr = clima_descricao(int(dados.get("current").get("weather_code")))
+    texto_descricao = f"{descr.get('emoji')} {descr.get('descricao')}"
+    
+    vento_veloc = dados.get('current').get('wind_speed')
+    vento_dir = dados.get('current').get('wind_dir')
+    vento_dir_emoji = direcao_vento_emoji(vento_dir)
+    texto_vento = f"💨 Vento {vento_veloc} km/h {vento_dir_emoji}{vento_dir}"
+    
+    umidade =  dados.get('current').get('humidity')
+    texto_umidade = f"💧 Umidade {umidade} %"
+   
+    sens  = dados.get('current').get('feelslike')
+    texto_sensacao = f"🌡️ Sensação {sens} ºC"
+
+    dados['tab_clima'] = [texto_descricao, texto_vento, texto_umidade, texto_sensacao]
+  
+    txt_sol_up_h = "🧭 "+dados.get('current').get('astro').get('sunrise')
+    txt_sol_up = astro_evento('sunrise')
+    txt_sol_down_h = "🧭 "+dados.get('current').get('astro').get('sunset')
+    txt_sol_down = astro_evento('sunset')
+    txt_moon_up_h = "🧭 "+dados.get('current').get('astro').get('moonrise')
+    txt_moon_up = astro_evento('moonrise')
+    txt_moon_down_h = "🧭 "+dados.get('current').get('astro').get('moonset')
+    txt_moon_down = astro_evento('moonset')
+    txt_precipita = "🌧️ Precipitação"
+    txt_preci_valor = f"💧 {dados.get('current').get('precip')} mm"
+    txt_uv = "☀️ Índice UV"
+    vlr_uv = int(dados.get('current').get('uv_index'))
+    txt_uv_desc = f"{classificar_indice_uv(vlr_uv)} ({vlr_uv})"
+    
+    tab_astro = [
+            [txt_sol_up, txt_sol_up_h ],
+            [txt_sol_down, txt_sol_down_h],
+            [txt_moon_up, txt_moon_up_h],
+            [txt_moon_down, txt_moon_down_h],
+            [txt_precipita, txt_preci_valor],
+            [txt_uv, txt_uv_desc]
+        ]
+        
+    dados['tab_astro'] = tab_astro
+    dados['fonte_dados'] = f"Fonte: {fonte_dados()}"
+    
+    fase_lua = fase_da_lua(dados.get("current").get("astro").get("moon_phase"))
+    dados['fase_lua'] = fase_lua
     
     return dados

@@ -7,3 +7,6 @@ geopy
 lxml
 pandas
 Babel
+python-slugify
+cairosvg
+plotly

@@ -35,6 +35,13 @@ substituindo parte de um processo que atualmente é realizado manualmente.
 - 
 - **API INMET (Instituto Nacional de Meteorologia)** – obtenção automática do mapa de prognóstico de precipitação trimestral
 
+## Explicacao do codigo regex
+    (.+?): Captura o nome da cidade (qualquer caractere até encontrar o hífen).
+    -: Encontra o hífen que separa a cidade da UF.
+    ([A-Z]{2}): Captura exatamente as duas letras maiúsculas da UF.
+    \s*: Ignora espaços em branco que possam existir antes dos parênteses.
+    \((.+?)\): Captura o texto que está dentro dos parênteses, que representa o país."
+
 ## Objetivo
 
 Este projeto nasceu como um protótipo para automatizar a geração da aba **PREVISÃO DO TEMPO** de um relatório operacional utilizado em projetos.

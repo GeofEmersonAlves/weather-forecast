@@ -22,7 +22,7 @@ from io import BytesIO
 from PIL import Image
 import streamlit as st
 
-@st.cache_data(show_spinner="⏳ Carregando mapa de precipitacao . . .",  ttl = 1800)
+@st.cache_data(show_spinner="⏳ Carregando mapa de precipitacao . . .",  ttl = 43200) #Cache de 12 hora para o mapa de precipitacao
 def mapa_precipitacao(ANO : int, PERIODO : str, MES : int) -> Image.Image | None:
     HEAD = {
         "User-Agent": (
@@ -33,6 +33,7 @@ def mapa_precipitacao(ANO : int, PERIODO : str, MES : int) -> Image.Image | None
     }
     
     url = f"https://apiclima.inmet.gov.br/progp/{ANO}/{PERIODO}/{MES}"
+   
     resposta = faz_requisicao(url, HEAD = HEAD, use_raise = True)
     
     if resposta:

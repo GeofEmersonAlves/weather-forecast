@@ -18,7 +18,8 @@ Histórico:
 """
 
 import streamlit as st
-from services.local import local_default, local_empty
+from components.local import local_default, local_empty
+from services.busca_cidades import lst_empty_resp
 
 def inicializar_estado_app():
     if "user_location" not in st.session_state:
@@ -26,10 +27,24 @@ def inicializar_estado_app():
     
     if "local_select" not in st.session_state:
         st.session_state.local_select = local_empty()
-        
+    
+    if "resp_busca_cidades" not in st.session_state:
+        st.session_state.resp_busca_cidades = lst_empty_resp()
+    
+def alterar_resp_busca_cidades(resp_busca_cidades : list[dict[str, object]]):
+    st.session_state.resp_busca_cidades = resp_busca_cidades.copy()
+
+def alterar_local_select(local_select : dict):
+    st.session_state.local_select = local_select.copy()
+
 def alterar_user_location(local : dict):
     st.session_state.user_location =  local
-
+    
+def restaurar_local_select():
+    alterar_local_select(local_empty())
+    
 def restaura_estado_inical():
     alterar_user_location(local_default())
+    alterar_local_select(local_empty())
+    alterar_resp_busca_cidades(lst_empty_resp())
     
