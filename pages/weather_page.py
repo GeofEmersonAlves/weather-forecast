@@ -35,7 +35,7 @@ import components.graficos_previsao as graf_prev
 from services.imet_api import mapa_precipitacao
 from services.pega_infoclima import  info_clima_agora
 import services.previsao_tempo as previsao_tempo
-from utils.datas import hojeSSSs
+from utils.datas import hoje
 #from services.salva_dict import salvar_json
 
 
