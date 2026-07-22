@@ -51,7 +51,6 @@
 ## Fontes de Dados
 
 - **API Weatherstack** –  Excelente para dados ao vivo, com velocidade na entrega e cobertura global massiva
-- 
 - **API INMET (Instituto Nacional de Meteorologia)** – obtenção automática do mapa de prognóstico de precipitação trimestral
 
 ## Diferenciais
@@ -131,18 +130,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-
 ## Explicacao do codigo regex
+```
     (.+?): Captura o nome da cidade (qualquer caractere até encontrar o hífen).
     -: Encontra o hífen que separa a cidade da UF.
     ([A-Z]{2}): Captura exatamente as duas letras maiúsculas da UF.
     \s*: Ignora espaços em branco que possam existir antes dos parênteses.
     \((.+?)\): Captura o texto que está dentro dos parênteses, que representa o país."
+```
 
 ## Objetivo
-
+```
 Este projeto nasceu como um protótipo para automatizar a geração da aba **PREVISÃO DO TEMPO** de um relatório operacional utilizado em projetos.
 
-Além de servir como estudo de consumo de APIs, Web Scraping, manipulação de Excel e desenvolvimento com Streamlit.
+Ao longo do desenvolvimento, evoluiu para uma aplicação completa de consulta meteorológica, reunindo dados de diferentes fontes e oferecendo uma interface interativa construída com **Streamlit**. O projeto também serviu como laboratório para o estudo e a aplicação de **consumo de APIs**, **Web Scraping**, **manipulação de planilhas Excel** e desenvolvimento de aplicações web em **Python**.
+```
 
 
