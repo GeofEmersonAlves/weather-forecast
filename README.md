@@ -1,3 +1,5 @@
+![Banner](assets/banner.png)
+
 # 🌦️ Weather Forecast
   Dashboard meteorológico desenvolvido com Python, Streamlit, Plotly e Web Scraping.
   
@@ -5,16 +7,18 @@
 ![License](https://img.shields.io/badge/License-MIT-green) ![Plotly](https://img.shields.io/badge/Plotly-6-blueviolet)
 
 ## Funcionalidades
-- 📍 Geolocalização
-- 🌤️ Consulta das condições meteorológicas atuais
+- 🌎 Geolocalização automática
+- 🔍 Busca inteligente de cidades
+- 🌤️ Condições climáticas atuais
 - 📅 Previsão do tempo para os próximos dias 
-- 🏙️ Consulta de múltiplas cidades brasileiras 
+- 🌙 Informações astronômicas
+- 🌧️ Precipitação
 - 🌧️ Consumo da API do Weatherstack 
-- 🗺️ Comsumo da API  d o INMET para mapa de precipitação mensal
+- 🗺️ Mapas oficiais do INMET (Comsumo da API do INMET )
 - 🗺️ Coleta de dados (webscraping) de paginas de clima 
 - 📊 Interface interativa desenvolvida em Streamlit
 - 📄 Geração automática de relatórios em Excel a partir de um modelo pré-definido (em implementação)
-- 📊 Gráficos interativos
+- 📈 Gráficos interativos
 
 ## Tecnologias
 
@@ -49,6 +53,15 @@
 - **API Weatherstack** –  Excelente para dados ao vivo, com velocidade na entrega e cobertura global massiva
 - 
 - **API INMET (Instituto Nacional de Meteorologia)** – obtenção automática do mapa de prognóstico de precipitação trimestral
+
+## Diferenciais
+
+✔ Fallback automático entre API e Web Scraping.
+✔ Geolocalização automática.
+✔ Integração com mapas do INMET.
+✔ Previsão de 15 dias.
+✔ Visualização em gráficos interativos.
+✔ Interface responsiva.
 
 ## 📁 Estrutura do Projeto
 ```
@@ -107,6 +120,17 @@ weather-forecast/
 ├── README.md
 └── LICENSE
 ```
+## Como executar
+```bash
+git clone https://github.com/usuario/weather-forecast
+
+cd weather-forecast
+
+pip install -r requirements.txt
+
+streamlit run app.py
+```
+
 
 ## Explicacao do codigo regex
     (.+?): Captura o nome da cidade (qualquer caractere até encontrar o hífen).
