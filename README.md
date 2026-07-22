@@ -1,13 +1,8 @@
 # 🌦️ Weather Forecast
   Dashboard meteorológico desenvolvido com Python, Streamlit, Plotly e Web Scraping.
   
-![Python](https://img.shields.io/badge/Python-3.13-blue)
-
-![Streamlit](https://img.shields.io/badge/Streamlit-1.50-red)
-
-![License](https://img.shields.io/badge/License-MIT-green)
-
-![Plotly](https://img.shields.io/badge/Plotly-6-blueviolet)
+![Python](https://img.shields.io/badge/Python-3.13-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-1.50-red)
+![License](https://img.shields.io/badge/License-MIT-green) ![Plotly](https://img.shields.io/badge/Plotly-6-blueviolet)
 
 ## Funcionalidades
 - 📍 Geolocalização
