@@ -1,4 +1,4 @@
-![Banner](assets/banner.png)
+![Banner](assets/banner.jpg)
 
 # 🌦️ Weather Forecast
   Dashboard meteorológico desenvolvido com Python, Streamlit, Plotly e Web Scraping.
