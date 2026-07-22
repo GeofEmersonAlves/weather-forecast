@@ -141,9 +141,13 @@ streamlit run app.py
 
 ## Objetivo
 ```
-Este projeto nasceu como um protótipo para automatizar a geração da aba **PREVISÃO DO TEMPO** de um relatório operacional utilizado em projetos.
+   Este projeto nasceu como um protótipo para automatizar a geração da aba **PREVISÃO DO TEMPO** 
+de um relatório operacional em Excel utilizado em projetos anteriores.
 
-Ao longo do desenvolvimento, evoluiu para uma aplicação completa de consulta meteorológica, reunindo dados de diferentes fontes e oferecendo uma interface interativa construída com **Streamlit**. O projeto também serviu como laboratório para o estudo e a aplicação de **consumo de APIs**, **Web Scraping**, **manipulação de planilhas Excel** e desenvolvimento de aplicações web em **Python**.
+   Ao longo do desenvolvimento, evoluiu para uma aplicação completa de consulta meteorológica, reunindo 
+dados de diferentes fontes e oferecendo uma interface interativa construída com **Streamlit**. 
+O projeto também serviu como laboratório para o estudo e a aplicação de **consumo de APIs**, **Web Scraping**, 
+**manipulação de planilhas Excel** e desenvolvimento de aplicações web em **Python**.
 ```
 
 
