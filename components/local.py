@@ -74,18 +74,6 @@ def local_default():
            "regiao": "Região Sudeste",
            "obs": "Local padrão"}
 
-def local_empty():
-    return {"lat": None,
-           "long": None,
-           "pais": None,
-           "estado": None,
-           "uf": None,
-           "cidade": None,
-           "idcity": None,
-           "litoral": None,
-           "bairro": "",
-           "regiao": None,
-           "obs": "Local vazio"}
 
 #Pega a localizacao do usuario pelo gps ou pelo IP, e retorna 
 def retorna_local() -> dict:   

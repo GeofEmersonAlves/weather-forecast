@@ -2,7 +2,7 @@
 """
 ===============================================================================
 Projeto    : Weather Forecast
-Arquivo    : info_clima.py.py
+Arquivo    : info_clima.py
 Autor      : Emerson A. Silva
 Data       : Mon Jul 20 11:16:36 2026
 Versão     : 1.0

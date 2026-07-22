@@ -18,8 +18,9 @@ Histórico:
 """
 
 import streamlit as st
-from components.local import local_default, local_empty
+from components.local import local_default
 from services.busca_cidades import lst_empty_resp
+from models.local_vazio import local_empty
 
 def inicializar_estado_app():
     if "user_location" not in st.session_state:

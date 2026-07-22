@@ -1,9 +1,13 @@
 # 🌦️ Weather Forecast
+  Dashboard meteorológico desenvolvido com Python, Streamlit, Plotly e Web Scraping.
+  
+![Python](https://img.shields.io/badge/Python-3.13-blue)
 
-  Aplicação desenvolvida em **Python** e **Streamlit** para consulta das condições meteorológicas e previsão do tempo em cidades brasileiras.
+![Streamlit](https://img.shields.io/badge/Streamlit-1.50-red)
 
-  O projeto integra dados meteorológicos de diferentes fontes para automatizar a geração de relatórios operacionais em Excel, 
-substituindo parte de um processo que atualmente é realizado manualmente.
+![License](https://img.shields.io/badge/License-MIT-green)
+
+![Plotly](https://img.shields.io/badge/Plotly-6-blueviolet)
 
 ## Funcionalidades
 - 📍 Geolocalização
@@ -51,6 +55,64 @@ substituindo parte de um processo que atualmente é realizado manualmente.
 - 
 - **API INMET (Instituto Nacional de Meteorologia)** – obtenção automática do mapa de prognóstico de precipitação trimestral
 
+## 📁 Estrutura do Projeto
+```
+weather-forecast/
+│
+├── assets/                  # Ícones e imagens da aplicação
+│   ├── icons/
+│   └── images/
+│
+├── components/              # Componentes da interface Streamlit
+│   ├── city_options.py
+│   ├── downloads.py
+│   ├── graficos_previsao.py
+│   ├── layout.py
+│   ├── local.py
+│   ├── quadro_clima.py
+│   ├── select_city.py
+│   ├── stream_geolocation.py
+│   └── tabela_previsao.py
+│
+├── models/                  # Modelos de dados
+│   ├── info_clima.py
+│   └── local_vazio.py
+│
+├── pages/                   # Páginas da aplicação
+│   ├── weather_page.py
+│   └── testes.py
+│
+├── services/                # APIs, Web Scraping e regras de negócio
+│   ├── busca_cidades.py
+│   ├── fase_da_lua.py
+│   ├── geolocation.py
+│   ├── gerar_img_base64.py
+│   ├── imet_api.py
+│   ├── pega_infoclima.py
+│   ├── previsao_tempo.py
+│   ├── requisicao.py
+│   ├── salva_dict.py
+│   ├── weather_api.py
+│   └── weatherinfo_scraped.py
+│
+├── state/                   # Gerenciamento de estado da aplicação
+│   └── estado_app.py
+│
+├── templates/
+│   └── excel/
+│
+├── utils/
+│   └── datas.py
+│
+├── .streamlit/
+│   └── config.toml
+│
+├── app.py                   # Ponto de entrada da aplicação
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
+
 ## Explicacao do codigo regex
     (.+?): Captura o nome da cidade (qualquer caractere até encontrar o hífen).
     -: Encontra o hífen que separa a cidade da UF.
@@ -63,3 +125,5 @@ substituindo parte de um processo que atualmente é realizado manualmente.
 Este projeto nasceu como um protótipo para automatizar a geração da aba **PREVISÃO DO TEMPO** de um relatório operacional utilizado em projetos.
 
 Além de servir como estudo de consumo de APIs, Web Scraping, manipulação de Excel e desenvolvimento com Streamlit.
+
+

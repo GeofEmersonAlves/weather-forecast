@@ -13,7 +13,7 @@ Descrição:
       
 
 Histórico:
-       17/07/2026 - Inicio ......
+       17/07/2026 - Inicio 
 ===============================================================================
 """
 from services.requisicao import faz_requisicao
@@ -22,7 +22,7 @@ from io import BytesIO
 from PIL import Image
 import streamlit as st
 
-@st.cache_data(show_spinner="⏳ Carregando mapa de precipitacao . . .",  ttl = 43200) #Cache de 12 hora para o mapa de precipitacao
+@st.cache_data(show_spinner="⏳ Carregando mapa de precipitação . . .",  ttl = 43200) #Cache de 12 hora para o mapa de precipitacao
 def mapa_precipitacao(ANO : int, PERIODO : str, MES : int) -> Image.Image | None:
     HEAD = {
         "User-Agent": (
