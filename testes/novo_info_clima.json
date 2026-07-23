@@ -1,0 +1,92 @@
+{
+    "request": {
+        "type": "Scrapping",
+        "query": null,
+        "language": "PT-BR",
+        "unit": "m"
+    },
+    "location": {
+        "name": "São Paulo",
+        "country": "Brasil",
+        "region": "Região Sudeste",
+        "lat": -23.5475,
+        "lon": -46.6361,
+        "timezone_id": null,
+        "localtime": null,
+        "localtime_epoch": null,
+        "utc_offset": null
+    },
+    "current": {
+        "observation_time": null,
+        "temperature": "21",
+        "weather_code": null,
+        "weather_icons": [],
+        "weather_descriptions": [],
+        "astro": {
+            "sunrise": null,
+            "sunset": null,
+            "moonrise": null,
+            "moonset": null,
+            "moon_phase": null,
+            "moon_illumination": null
+        },
+        "air_quality": {
+            "co": null,
+            "no2": null,
+            "o3": null,
+            "so2": null,
+            "pm2_5": null,
+            "pm10": null,
+            "us-epa-index": null,
+            "gb-defra-index": null
+        },
+        "wind_speed": null,
+        "wind_degree": null,
+        "wind_dir": null,
+        "pressure": null,
+        "precip": null,
+        "humidity": null,
+        "cloudcover": null,
+        "feelslike": null,
+        "uv_index": null,
+        "visibility": null,
+        "is_day": null
+    },
+    "img_clima": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDojYzljOWM5fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTEuMzY0IDM3LjQzM2ExLjE3MiAxLjE3MiAwIDAxLTEuMTM2IDEuMiAxLjE3MiAxLjE3MiAwIDAxLTEuMTM2LTEuMnYtMy4yNzhhMS4xNzIgMS4xNzIgMCAwMTEuMTM2LTEuMiAxLjE3MiAxLjE3MiAwIDAxMS4xMzYgMS4yem0yOS41NDUgMGExLjE3MiAxLjE3MiAwIDAxLTEuMTM2IDEuMiAxLjE3MiAxLjE3MiAwIDAxLTEuMTM2LTEuMnYtMy4yNzhhMS4xNzIgMS4xNzIgMCAwMTEuMTM2LTEuMiAxLjE3MiAxLjE3MiAwIDAxMS4xMzYgMS4yem0tMjEuNTkgMTEuMzY0YTEuMTcyIDEuMTcyIDAgMDEtMS4xMzYgMS4yIDEuMTcxIDEuMTcxIDAgMDEtMS4xMzYtMS4ydi0zLjI3OGExLjE3MSAxLjE3MSAwIDAxMS4xMzYtMS4yIDEuMTcyIDEuMTcyIDAgMDExLjEzNiAxLjJ6bTEzLjYzNiAwYTEuMTcyIDEuMTcyIDAgMDEtMS4xMzcgMS4yIDEuMTcyIDEuMTcyIDAgMDEtMS4xMzYtMS4ydi0zLjI3OGExLjE3MiAxLjE3MiAwIDAxMS4xMzYtMS4yIDEuMTcyIDEuMTcyIDAgMDExLjEzNyAxLjJ6bS02LjgxOC05LjA5MWExLjE3MiAxLjE3MiAwIDAxLTEuMTM2IDEuMiAxLjE3MSAxLjE3MSAwIDAxLTEuMTM2LTEuMnYtMy4yNzhhMS4xNzEgMS4xNzEgMCAwMTEuMTM2LTEuMiAxLjE3MiAxLjE3MiAwIDAxMS4xMzYgMS4yeiIvPjxwYXRoIGQ9Ik00My40NjUgMjcuNjk5Yy0uMTA1IDAtLjIxIDAtLjMxNC0uMDA5SDMyLjE3MmMtLjExOCAwLS4yMzYuMDA5LS4zNTUuMDA5SDEwLjIyNmE5LjUyOCA5LjUyOCAwIDAxLTkuNTE3LTkuNTE3IDkuNDY4IDkuNDY4IDAgMDE5LjIyNS05LjUwOWwuNTUtLjAxNy4xMjEtLjUzNkE5LjQ2IDkuNDYgMCAwMTE5Ljg4NC43MTFhOS41IDkuNSAwIDAxOS41MDYgOS4wODZsLjA2NiAxLjQ2OSAxLjExLS45NjVhNi42NjkgNi42NjkgMCAwMTQuMzc1LTEuNjM2IDYuNjg0IDYuNjg0IDAgMDE2LjY3NiA2LjY3NnYuMDkybC0uMDEuODU3Ljg0NC0uMTQ4YTUuODc5IDUuODc5IDAgMDExLjAxNi0uMDkgNS44MyA1LjgzIDAgMDE1LjgyNCA1LjgyNCA1Ljg0MyA1Ljg0MyAwIDAxLTUuMzg2IDUuODA1bC0uMTQ0LjAxMWE3LjMwOCA3LjMwOCAwIDAxLS4yOTYuMDA3eiIgZmlsbD0iI2YyZjJmMiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTkuODg2IDEuNDJhOC43ODcgOC43ODcgMCAwMTguOCA4LjQwOGwuMTMxIDIuOTM4IDIuMjItMS45MjlhNS45NiA1Ljk2IDAgMDEzLjkwOS0xLjQ2MiA1Ljk3MSA1Ljk3MSAwIDAxNS45NjYgNS45NTd2LjA5MmwtLjAyMSAxLjcxMyAxLjY4OC0uM2E1LjE2NyA1LjE2NyAwIDAxLjg5My0uMDggNS4xMiA1LjEyIDAgMDE1LjExNCA1LjExNCA1LjEzIDUuMTMgMCAwMS00LjcyOSA1LjFsLS4xLjAwOGgtLjAwOWMtLjA5MiAwLS4xODQuMDA4LS4yNzcuMDA4cy0uMTg1IDAtLjI3Ni0uMDA4SDMyLjE1Yy0uMTA4IDAtLjIxNy4wMDktLjMyNi4wMDlIMTAuMjMzYTguODE3IDguODE3IDAgMDEtOC44MDYtOC44MDcgOC43NTQgOC43NTQgMCAwMTIuNDkxLTYuMTM2IDguNzYxIDguNzYxIDAgMDE2LjA0NS0yLjY2NGwxLjEtLjAzMy4yNDMtMS4wNzNhOC44NDUgOC44NDUgMCAwMTMuMDU1LTQuOSA4LjcgOC43IDAgMDE1LjUzMi0xLjk1Nm0wLTEuNDJhMTAuMjI5IDEwLjIyOSAwIDAwLTkuOTcyIDcuOTYyQTEwLjIyNSAxMC4yMjUgMCAwMDAgMTguMTgyIDEwLjIyNyAxMC4yMjcgMCAwMDEwLjIyNyAyOC40MWgyMS41OTFjLjEyOSAwIC4yNTYgMCAuMzg0LS4wMWgxMC45MTJxLjE3NS4wMDkuMzUyLjAxYy4xMTggMCAuMjM2IDAgLjM1Mi0uMDFoLjEzOHYtLjAxMUE2LjUzMyA2LjUzMyAwIDAwNTAgMjEuODc1YTYuNTM0IDYuNTM0IDAgMDAtNi41MzQtNi41MzQgNi41OTQgNi41OTQgMCAwMC0xLjEzOS4xdi0uMWE3LjM4NyA3LjM4NyAwIDAwLTcuMzg2LTcuMzg3QTcuMzU1IDcuMzU1IDAgMDAzMC4xIDkuNzY1IDEwLjIyNyAxMC4yMjcgMCAwMDE5Ljg4NiAweiIvPjwvc3ZnPg==",
+    "tab_clima": [
+        "Nublado",
+        "💨 Vento 6km/h ↘️SE",
+        "💧 Umidade 52%",
+        "🌡️ Sensação 21 ºC"
+    ],
+    "tab_astro": [
+        [
+            "🌡️⬆️Temp. Máxima:",
+            "🔺21 °C"
+        ],
+        [
+            "🌡️⬇️Temp. Mínima:",
+            "🔻14 °C"
+        ],
+        [
+            "🌅⬆️Nascer do Sol",
+            "🧭 06:45:58h"
+        ],
+        [
+            "🌇⬇️Pôr do Sol",
+            "🧭 17:39:57h"
+        ],
+        [
+            "🌧️ Precipitação",
+            "💧 10mm - 84% "
+        ]
+    ],
+    "fonte_dados": "https://tempoagora.uol.com.br/",
+    "fase_lua": {
+        "nome": "Lua crescente",
+        "emoji": "🌒",
+        "image": "assets/images/lua_crescente.jpg",
+        "descricao": "Lua Crescente"
+    },
+    "texto_local": "Tempo agora em São Paulo-SP (Brasil)"
+}

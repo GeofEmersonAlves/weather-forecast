@@ -14,14 +14,17 @@ Descrição:
 
 Histórico:
        21/07/2026 - Inicio 
+       23/07/2026 - Melhoras no componente para melhorar a performance do app
 ===============================================================================
 """
 import streamlit as st
 import pandas as pd
 import services.gerar_img_base64 as gerar_img
 
-def tabela_previsao_tempo(previsoes :list[dict]):
+
+def gera_df_previsao(previsoes :list[dict]) -> pd.DataFrame:
      dados_exibir=[]
+     
      for dia in previsoes:
          dia_bola = gerar_img.gerar_dia_base64(dia['dia'], dia['dia_semana'])
          if dia["temp_min"] == None:
@@ -73,6 +76,10 @@ def tabela_previsao_tempo(previsoes :list[dict]):
          dados_exibir.append(dados)
         
      df_previsao = pd.DataFrame(dados_exibir)
+     
+     return df_previsao
+ 
+def tabela_previsao_tempo(df_previsao: pd.DataFrame):
     
      st.dataframe(df_previsao,
          height  = 490 ,  
@@ -96,3 +103,5 @@ def tabela_previsao_tempo(previsoes :list[dict]):
          },
          hide_index=True
          )
+     
+     return df_previsao

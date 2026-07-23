@@ -43,7 +43,7 @@ def faz_requisicao(URL : str, HEAD : dict[str, str] | None = None, use_raise : b
       res = requests.get(
             url=URL,
             headers=HEAD,
-            timeout=15
+            timeout=(15, 30)
         )
       
       if use_raise:

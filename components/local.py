@@ -87,7 +87,7 @@ def retorna_local() -> dict:
     if geolocalizacao.get('latitude') is not None:
         location = geoloc.geolocation_with_latlon(geolocalizacao.get('latitude'), 
                                                  geolocalizacao.get('longitude'))
-        print(location)
+        #print(location)
         local['lat'] = geolocalizacao.get('latitude')
         local['long'] = geolocalizacao.get('longitude')
         local['obs'] = "Localização atual"

@@ -10,3 +10,4 @@ Babel
 python-slugify
 cairosvg
 plotly
+openpyxl 

@@ -22,6 +22,11 @@ div class="_none" data-visualization-content="calendar">
 Histórico:
        20/07/2026 - Inicio 
        21/07/2026 - Correção da url, estava pegando a previsao sempre de sao paulo
+       23/07/2026 - Alteração para evitar erro que estava acontecendo no Gerador de relatório Excel.
+                 Para o icone do clima de cada dia era armazenado a URL do icone, quando o relatório
+                 era gerado, um for percorria todos os dias e para cada dia fazia uma requisicao para
+                 pegar o icone, como são 15 requisiçoes seguidas, alguma delas dava erro de timeout,
+                 além de deixar a geração do relatório lenta.
 ===============================================================================
 """
 import streamlit as st
@@ -31,6 +36,7 @@ import json
 import services.requisicao as req
 from services.busca_cidades import traz_cidade_clima
 from services.weatherinfo_scraped import gera_url
+from services.weather_api import weather_icon
 
 #558/saopaulo-sp
 __URLS__ =["https://tempoagora.uol.com.br/previsao-do-tempo/15-dias/cidade/",
@@ -58,6 +64,9 @@ def pega_previsao_tempo(dados_cidade : dict)->dict:
     soup = BeautifulSoup(resp.text, "lxml")
 
     calendario = soup.select_one("#calendar")
+    if calendario is None:
+        return None
+    
     dados_json = calendario.get("data-infos")
     dados = json.loads(dados_json)
 
@@ -106,7 +115,7 @@ def pega_previsao_tempo(dados_cidade : dict)->dict:
         # Download do ícone 
         url_weather_icon = urljoin(__URLS__[1], f"{cod_ico}.svg")
         
-        day["icone"] = url_weather_icon
+        day["icone"] = weather_icon(url_weather_icon)
         
     return previsoes
     

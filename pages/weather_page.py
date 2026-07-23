@@ -16,6 +16,9 @@ Histórico:
        19/07/2026 - Atualizações para incluir a busca de cidades
                     O quadro de dados do tempo virou um componente
        20/07/2026 - Inicio do scrapping da pagina do tempoagora.uol
+       22/07/2026 - Inclusão da aba "Fases da lua" com a tabela de fases da lua 
+       22/07/2026 - Inclusão da funcionalidade de Geração de Relatório em Excel
+       23/07/2026 - Alterações para melhorar a performance devido à Geração de Relatório em Excel
 ===============================================================================
 """
 
@@ -30,19 +33,24 @@ from components.local import retorna_local
 from components.select_city import find_cities_weather
 from components.city_options import seleciona_uma_cidade
 from components.quadro_clima import mostrar_quadro_clima, texto_localizacao
-from components.tabela_previsao import tabela_previsao_tempo
+import components.tabela_previsao as tbprevtemp
 import components.graficos_previsao as graf_prev 
 from components.nota_rodape import nota_de_rodape
+from components.quadro_fases_da_lua import quadro_fases_da_lua
+from components.buttonExcelReport import button_ExcelReport
 from services.imet_api import mapa_precipitacao
 from services.pega_infoclima import  info_clima_agora
 import services.previsao_tempo as previsao_tempo
+from services.fase_da_lua import info_fase_da_lua_com_none
 from utils.datas import hoje
 #from services.salva_dict import salvar_json
-
 
 __LOGO50_X_50 = "assets/icons/weather_50px_50px.png"
 __LOGO100_X_100 = "assets/icons/weather_100px_100px.png"
 icone = Image.open(__LOGO50_X_50)
+
+#if "cont" not in st.session_state:
+#    st.session_state.cont =0
 
 st.set_page_config("Weather Forecast",
                    page_icon=icone,
@@ -53,7 +61,7 @@ st.set_page_config("Weather Forecast",
 st.logo(__LOGO100_X_100, icon_image = __LOGO50_X_50)
 
 data_hoje = hoje()
-
+    
 with st.sidebar: 
     local = retorna_local()  #Componente mostra um botão para pegar a localização, caso nao pegar busca pelo IP
     estado.alterar_user_location(local)
@@ -69,9 +77,8 @@ with st.sidebar:
             estado.restaurar_local_select()
         else: 
             seleciona_uma_cidade()  #Permite o usuario selecionar uma cidade entre as cidades encontradas
-        
-    #st.map(latitude = user_local['lat'], longitude = user_local['long'])
     
+    button_ExcelReport()
     #Mostra as informações da localização do usuário
     texto_local = f"🌍 {user_local['cidade']}/{user_local['uf']} - {user_local['regiao']} do {user_local['pais']}"
     texto_alinhado(texto_local,fontsize = 14)
@@ -95,20 +102,32 @@ with col1:  #Quadro com clima atual
         mostrar_quadro_clima(info_clima_json)
         
     else:
-        st.error("Sem dados para mostrar.")
+        st.error("⚠️ Não foi possível obter os dados do clima. Tente novamente...")
         
 with col2: #Previsão do tempo
-   texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
-   st.write(texto_localizacao("Previsão para 15 dias",local_clima))
+   #texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
+   st.write(texto_localizacao("🌤️🌦️🌥️ Previsão para 15 dias",local_clima))
    previsoes = previsao_tempo.pega_previsao_tempo(local_clima)
-   #salvar_json(previsoes,"previsoes.json")
+  
+   #st.session_state.cont += 1
    
    if previsoes:
-       tab_tabela, tab_grafico  = st.tabs(["📋 Tabela","📈 Gráficos"], on_change = "ignore")
+       fase_lua = previsoes[0]["fase_lua"]
+       emojilua = info_fase_da_lua_com_none(fase_lua)
+       emojilua = emojilua["emoji"]
+       tab_tabela, tab_faselua, tab_grafico  = st.tabs(["📋 Tabela Clima", f"{emojilua} Tabela Fases da Lua", "📈 Gráficos"], on_change = "ignore")
        
        with tab_tabela:
-            tabela_previsao_tempo(previsoes)
-            
+            #Por questão de performance, o df_previsões é gerado só uma vez e guardado na session
+    
+            st.session_state._df_previsao_ = tbprevtemp.gera_df_previsao(previsoes)
+                
+            df_previsao = st.session_state._df_previsao_
+            tbprevtemp.tabela_previsao_tempo(df_previsao)
+       
+       with tab_faselua:
+           quadro_fases_da_lua(previsoes)
+           
        with tab_grafico: 
             cols_tempmaxmin = ["temp_min","temp_max"]
             cols_umidademaxmin =["umidade_min","umidade_max"]
@@ -138,7 +157,7 @@ with col2: #Previsão do tempo
        fonte_previsao =  previsao_tempo.fonte_dados()
        texto_alinhado(f"Fonte: {fonte_previsao}", alinhamento = 'right', fontsize = 12)
    else:
-       st.error("Sem dados para mostrar.")
+       st.error("⚠️ Não foi possível obter dados da previsão do tempo. Tente novamente...")
        
 with col3: #Mapas de precipitacão
     tab_mensal, tab_semestral = st.tabs(["Precipitação Mensal", "Precipitação Trimestral"], on_change = "ignore")
@@ -151,7 +170,11 @@ with col3: #Mapas de precipitacão
     with tab_semestral:    
         st.image(mapa_imet_precipita_semestral, width = "stretch")
         texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
-        
+   
+    texto_local =texto_localizacao("Tempo agora em", local_clima, False)
+    if info_clima_json:
+        info_clima_json["texto_local"] = texto_local
+    
     data_por_extenso(data_hoje, fontsize = 18)
     
 nota_de_rodape()

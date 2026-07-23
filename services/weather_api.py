@@ -11,18 +11,29 @@ Python     : Python 3.13.14 | packaged by Anaconda, Inc.
 Descrição:
         Faz todo o tratamento com a api de Clima
       
-
 Histórico:
        16/07/2026 - Inicio 
+       23/07/2026 - Melhoras na requisição do icone da previsao para melhorar a performance
+                 e também evitar erro de timeout nas requisições.
+                 A imagem é salva em um buffer, assim não serão realizadas as 15 requisições.
+                 O weather_ico verifica se o icone ja existe em icons/weather se sim pega o icone 
+                 na pasta local, senão baixa o icone e salva na pasta local.
+                 Desta forma com o tempo a biblioteca de icones cresce e cada vez menos precisa busca os 
+                 icones via requisição.
 ===============================================================================
 """
 import streamlit as st
+import base64
 from io import BytesIO
 from PIL import Image
 import cairosvg
 from dotenv import load_dotenv   #Para ler o arquivo .env
+from pathlib import Path
+from urllib.parse import urlparse
 import os
+from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 from services.requisicao import faz_requisicao
+#from services.gerar_img_base64 import imagem_para_base64
 
 load_dotenv()
 
@@ -333,23 +344,49 @@ def direcao_vento_emoji(direcao : str)-> str:
 def direcao_vento_descricao(direcao : str)-> str:
     return WIND_DIRECTION.get(direcao).get('descricao')
 
-    
-def weather_icon(url_icon : str) -> Image.Image | None: 
+# Ao encontrar novamente uma URL já baixada, 
+# Python devolve o resultado armazenado sem fazer uma nova requisição
+@lru_cache(maxsize=50)
+def weather_icon(url_icon: str) -> str | None:
+    base_dir = Path(__file__).parent.parent
+    path_weather_icons = base_dir / "assets" / "icons" / "weather"
+    path_weather_icons.mkdir(parents=True, exist_ok=True)
 
-    resp = faz_requisicao(
-       url_icon,
-       use_raise=True
-   )
+    icon_file = Path(urlparse(url_icon).path).name
+    path_icon = path_weather_icons / icon_file
+
+    if path_icon.exists():
+        dados = path_icon.read_bytes()
+        imagem_base64 = base64.b64encode(dados).decode("utf-8")
+
+        if path_icon.suffix.lower() == ".svg":
+            return f"data:image/svg+xml;base64,{imagem_base64}"
+        else:
+            return f"data:image/png;base64,{imagem_base64}"
+   
+    #print("-------------- Fez a requisição do ícone ------")
+    #print(url_icon)
+
+    resp = faz_requisicao(url_icon, use_raise=True)
+
     if resp is None:
-       return None
+        return None
 
+    # Salva exatamente como veio da internet
+    path_icon.write_bytes(resp.content)
+    
     if url_icon.lower().endswith(".svg"):
-        img = cairosvg.svg2png(bytestring=resp.content)
-        return Image.open(BytesIO(img))
+            png_bytes = cairosvg.svg2png(bytestring=resp.content)
+    else:
+        img = Image.open(BytesIO(resp.content))
+        buffer = BytesIO()
+        img.save(path_icon, format="PNG")
+        img.save(buffer, format="PNG")
+        png_bytes = buffer.getvalue()
+    
+    imagem_base64 = base64.b64encode(png_bytes).decode("utf-8")
 
-    img_weather = Image.open(BytesIO(resp.content))
-  
-    return img_weather
+    return f"data:image/png;base64,{imagem_base64}"
 
 
 def fase_da_lua(moon_phase : str ) -> dict:

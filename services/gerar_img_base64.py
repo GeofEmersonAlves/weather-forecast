@@ -21,8 +21,73 @@ Histórico:
 import base64
 from io import BytesIO
 from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont, UnidentifiedImageError
+import cairosvg
 
-from PIL import Image, ImageDraw, ImageFont
+DIAS_ABREVIADOS = {
+    "Segunda": "Seg",
+    "Terça": "Ter",
+    "Quarta": "Qua",
+    "Quinta": "Qui",
+    "Sexta": "Sex",
+    "Sábado": "Sáb",
+    "Domingo": "Dom",
+}
+
+def base64_para_imagem(imagem_base64: str) -> Image.Image | None:
+    if not imagem_base64:
+        return None
+
+    if "," not in imagem_base64:
+        return None
+
+    cabecalho, dados_base64 = imagem_base64.split(",", 1)
+
+    try:
+        dados_imagem = base64.b64decode(dados_base64)
+        # SVG
+        if "image/svg+xml" in cabecalho.lower():
+            dados_png = cairosvg.svg2png(bytestring=dados_imagem)
+            imagem = Image.open(BytesIO(dados_png))
+
+        # PNG, JPG, WEBP...
+        else:
+            imagem = Image.open(BytesIO(dados_imagem))
+
+        imagem.load()
+
+        if imagem.mode not in ("RGB", "RGBA"):
+            imagem = imagem.convert("RGBA")
+
+        return imagem
+
+    except (ValueError,
+            UnidentifiedImageError,
+            OSError,
+            base64.binascii.Error):
+        return None
+
+    except Exception:
+        # Qualquer outro erro inesperado
+        return None
+
+def imagem_para_base64(caminho_imagem: str | Path) -> str:
+    caminho = Path(caminho_imagem)
+    if not caminho.exists():
+       return None
+   
+    imagem_base64 = base64.b64encode(caminho.read_bytes()).decode("utf-8")
+
+    return f"data:image/png;base64,{imagem_base64}"
+
+def Image_para_base64(Image_imagem: Image.Image) -> str:
+    buffer = BytesIO()
+    Image_imagem.save(buffer, format="PNG")
+
+    imagem_base64 = base64.b64encode(buffer.getvalue()).decode("utf-8")
+
+    return f"data:image/png;base64,{imagem_base64}"
+
 
 
 def carregar_fonte(tamanho: int, negrito: bool = False) -> ImageFont.FreeTypeFont:
@@ -440,3 +505,97 @@ def clima_chuva_base64(
     ).decode("utf-8")
 
     return f"data:image/png;base64,{imagem_base64}"
+
+
+#Gera uma imagem com a fase da Lua, data e dia da semana.
+def gerar_imagem_fase_lua(
+    nome_fase: str,
+    data: str,
+    dia_semana: str,
+    imagem_lua_base64: str,
+    largura: int = 500,
+    altura: int = 500,
+    ) -> Image.Image:
+    
+ 
+    # Fundo preto
+    imagem_final = Image.new(
+        mode="RGB",
+        size=(largura, altura),
+        color="black",
+    )
+
+   
+    # Espaço reservado para os textos inferiores
+    margem = 0
+    altura_textos = 15
+
+    tamanho_maximo_lua = (
+        largura - 2 * margem,
+        altura - altura_textos - margem,
+    )
+     
+    imagem_lua = base64_para_imagem(imagem_lua_base64)
+     
+    # Redimensiona sem deformar
+    imagem_lua.thumbnail(
+        tamanho_maximo_lua,
+        Image.Resampling.LANCZOS,
+    )
+
+    posicao_x = (largura - imagem_lua.width) // 2
+    posicao_y = 10
+
+    imagem_final.paste(
+        imagem_lua,
+        (posicao_x, posicao_y),
+    )
+
+    desenho = ImageDraw.Draw(imagem_final)
+
+    fonte_data = carregar_fonte(27, negrito=True)
+    fonte_dia = carregar_fonte(27, negrito=True)
+    fonte_fase = carregar_fonte(27, negrito=True)
+
+    dia_abreviado = DIAS_ABREVIADOS.get(
+        dia_semana,
+        dia_semana[:3],
+    )
+
+    # Data, no canto inferior esquerdo
+    desenho.text(
+        (15, altura - 500),
+        data,
+        fill="white",
+        font=fonte_data,
+    )
+
+    # Dia da semana, abaixo da data
+    desenho.text(
+        (20, altura - 470),
+        dia_abreviado,
+        fill="white",
+        font=fonte_dia,
+    )
+
+    # Calcula o tamanho do texto para alinhar à direita
+    caixa_texto = desenho.textbbox(
+        (0, 0),
+        nome_fase,
+        font=fonte_fase,
+    )
+
+    largura_texto = caixa_texto[2] - caixa_texto[0]
+
+    desenho.text(
+        (
+            largura - largura_texto - 15,
+            altura - 40,
+        ),
+        nome_fase,
+        fill="white",
+        font=fonte_fase,
+    )
+
+    return imagem_final
+

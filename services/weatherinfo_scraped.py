@@ -24,7 +24,7 @@ from slugify import slugify
 
 from models.info_clima import novo_info_clima
 from services.busca_cidades import traz_cidade_clima
-from services.weather_api import direcao_vento_emoji, astro_evento #weather_icon
+from services.weather_api import direcao_vento_emoji, astro_evento, weather_icon
 import services.requisicao as req
 from services.fase_da_lua import fase_da_lua
 
@@ -44,12 +44,13 @@ def gera_url(base, id_cidade: int, cidade: str, uf: str ) -> str:
     return url_final
 
 def scrap_page1(dados_cidade : dict) -> dict:
-    
-    if (dados_cidade['city'] == None or 
-          dados_cidade["uf"] == None or 
-          dados_cidade["idcity"] == None):
-        return None
+    campos = ("city", "uf", "idcity")
+
+    if (dados_cidade is None or
+        any(dados_cidade.get(campo) is None for campo in campos)):
         
+        return None
+    
     cidade = dados_cidade['city']
     estado = dados_cidade["uf"]
     id_cid = dados_cidade["idcity"]
@@ -67,6 +68,9 @@ def scrap_page1(dados_cidade : dict) -> dict:
     soup = BeautifulSoup(resposta.text, "lxml")
     card = soup.select_one("div.card._justify-center")
 
+    if card is None:
+        return None
+    
     # Temperatura principal e ícone
     span_temperatura = card.select_one("span.-font-55")
 
@@ -98,7 +102,7 @@ def scrap_page1(dados_cidade : dict) -> dict:
     # Download do ícone principal do clima
     url_weather_icon = urljoin(URLS[2], icone_clima)
     
-    weather_icon_img = url_weather_icon #weather_icon(url_weather_icon)
+    weather_icon_img = weather_icon(url_weather_icon)
 
     final = {"temperatura": temperatura.replace("º", ""),
             'img_clima': weather_icon_img,
@@ -198,10 +202,16 @@ def clima_agora(dados_cidade : dict) -> dict:
     info_clima_vazio['img_clima'] = mais_info['img_clima']
     
     vento = mais_info['vento']
-    direcao = vento.split(" - ")[0]
-    vento_veloc =  vento.split(" - ")[1]
-    vento_dir_emoji = direcao_vento_emoji(direcao)
-    texto_vento = f"💨 Vento {vento_veloc} {vento_dir_emoji}{direcao}"
+    vento = vento.split(" - ")
+    
+    if len(vento) >= 2:
+        direcao = vento[0]
+        vento_veloc =  vento[1]
+        vento_dir_emoji = direcao_vento_emoji(direcao)
+        texto_vento = f"💨 Vento {vento_veloc} {vento_dir_emoji}{direcao}"
+     
+    else:
+         texto_vento ="💨 Sem informações do vento"
     
     texto_umidade = f"💧 Umidade {mais_info['umidade']}"
     
