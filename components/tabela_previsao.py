@@ -19,7 +19,7 @@ Histórico:
 """
 import streamlit as st
 import pandas as pd
-import services.gerar_img_base64 as gerar_img
+import services.gerador_de_imagens as gerar_img
 
 
 def gera_df_previsao(previsoes :list[dict]) -> pd.DataFrame:

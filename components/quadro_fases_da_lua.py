@@ -22,8 +22,8 @@ from PIL import Image
 from pathlib import Path
 #from components.layout import texto_alinhado 
 import services.fase_da_lua as lua
-import services.gerar_img_base64 as gerar_img
-from services.gerar_img_base64 import imagem_para_base64
+import services.gerador_de_imagens as gerar_img
+from services.gerador_de_imagens import imagem_para_base64
 
 BASE_DIR = Path(__file__).parent.parent
 

@@ -16,9 +16,9 @@ Histórico:
        16/07/2026 - Inicio do cogigo
 ===============================================================================
 """
-import streamlit as st
 import services.requisicao as req
 from geopy.geocoders import Nominatim  # OpenStreetMap(GRATUITO)
+from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 
 __ESTADO_UF__ = {
     "acre": "AC", "alagoas": "AL", "amapá": "AP", "amazonas": "AM",
@@ -42,7 +42,7 @@ def geolocation_with_latlon(lat : str, lon : str)-> dict | None:
     
     return local.raw
 
-@st.cache_data(show_spinner="⏳ Carregando coordenadas pelo IP . . .",  ttl = 1800)
+@lru_cache(maxsize=5)
 def geolocation_by_IP() -> dict | None:
     url = (
          "http://ip-api.com/json/"

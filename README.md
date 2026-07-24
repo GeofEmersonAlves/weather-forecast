@@ -93,7 +93,7 @@ weather-forecast/
 │   ├── busca_cidades.py
 │   ├── fase_da_lua.py
 │   ├── geolocation.py
-│   ├── gerar_img_base64.py
+│   ├── gerador_de_imagens.py
 │   ├── imet_api.py
 │   ├── pega_infoclima.py
 │   ├── previsao_tempo.py

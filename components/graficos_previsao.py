@@ -125,7 +125,7 @@ def grafico_max_min(dados_previsao: dict, cols_minmax: list, title_graf: str, ti
     return fig
 
 
-def grafico_chuva(dados_previsao: dict) -> go.Figure:
+def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
     cols_para_grafico = ["dia", "dia_semana", "precipitacao_mm", "probabilidade_chuva"]
     
     for item in dados_previsao:
@@ -155,6 +155,7 @@ def grafico_chuva(dados_previsao: dict) -> go.Figure:
     fig.add_bar(
         x=df["eixo_x"],
         y=[limite] * len(df),
+    
         customdata=df[
         ["precipitacao_mm","probabilidade_chuva"]
         ],
@@ -224,9 +225,8 @@ def grafico_chuva(dados_previsao: dict) -> go.Figure:
         )
 
     fig.update_layout(
-
         barmode="overlay",
-
+        title=title_graf,
         plot_bgcolor="white",
         paper_bgcolor="white",
 

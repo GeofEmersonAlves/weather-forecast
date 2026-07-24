@@ -49,6 +49,18 @@ __LOGO50_X_50 = "assets/icons/weather_50px_50px.png"
 __LOGO100_X_100 = "assets/icons/weather_100px_100px.png"
 icone = Image.open(__LOGO50_X_50)
 
+# =========== FUNCÃO PARA LIMPAR O CACHE ===========
+def limpar_cache():
+    st.cache_data.clear()
+    
+
+@st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
+def pega_previsao_cache(local_clima : dict)->dict: 
+    previsoes=  previsao_tempo.pega_previsao_tempo(local_clima)
+    
+    return previsoes
+
+
 #if "cont" not in st.session_state:
 #    st.session_state.cont =0
 
@@ -95,6 +107,10 @@ else:
 #Chama o servico que retorna as informações do clima    
 info_clima_json = info_clima_agora(local_clima)
 
+texto_local = texto_localizacao("Tempo agora em", local_clima, False)
+if info_clima_json:
+    info_clima_json["texto_local"] = texto_local
+
 col1, col2, col3 = st.columns([1.5, 3.2, 1.2])
 with col1:  #Quadro com clima atual
   
@@ -107,7 +123,7 @@ with col1:  #Quadro com clima atual
 with col2: #Previsão do tempo
    #texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
    st.write(texto_localizacao("🌤️🌦️🌥️ Previsão para 15 dias",local_clima))
-   previsoes = previsao_tempo.pega_previsao_tempo(local_clima)
+   previsoes = pega_previsao_cache(local_clima)
   
    #st.session_state.cont += 1
    
@@ -120,9 +136,9 @@ with col2: #Previsão do tempo
        with tab_tabela:
             #Por questão de performance, o df_previsões é gerado só uma vez e guardado na session
     
-            st.session_state._df_previsao_ = tbprevtemp.gera_df_previsao(previsoes)
+            df_previsao = tbprevtemp.gera_df_previsao(previsoes)
+            st.session_state._df_previsao_ = df_previsao
                 
-            df_previsao = st.session_state._df_previsao_
             tbprevtemp.tabela_previsao_tempo(df_previsao)
        
        with tab_faselua:
@@ -131,49 +147,58 @@ with col2: #Previsão do tempo
        with tab_grafico: 
             cols_tempmaxmin = ["temp_min","temp_max"]
             cols_umidademaxmin =["umidade_min","umidade_max"]
-            fig_temp_maxmin = graf_prev.grafico_max_min(previsoes, 
+            graf_temp_maxmin = graf_prev.grafico_max_min(previsoes, 
                                                         cols_tempmaxmin,
                                                         "Previsão para 15 dias de temperatura",
                                                         "Celsius (°C)")
             
-            fig_umidade_maxmim = graf_prev.grafico_max_min(previsoes, 
+            graf_umid_maxmim = graf_prev.grafico_max_min(previsoes, 
                                                         cols_umidademaxmin,
                                                         "Previsão para 15 dias de umidade do ar",
                                                         "Porcentagem (%)")
             
-            fig_chuva = graf_prev.grafico_chuva(previsoes)
+            graf_chuva = graf_prev.grafico_chuva(previsoes,"Previsão de chuva para 15 dias")
+            
+            #Guarda os tres gráficos na session, assim podem ser usados para o Relatório
+            st.session_state._graf_temp_maxmin_ = graf_temp_maxmin
+            st.session_state._graf_umid_maxmim_ = graf_umid_maxmim
+            st.session_state._graf_chuva_ = graf_chuva
             
             tab_graf_temp, tab_graf_chuva , tab_graf_umidade = st.tabs(["🌡️Temperatura",
                                                                         "🌧️Chuva",
                                                                         "💧 Umidade do ar"], 
                                                                       on_change = "ignore")
             with tab_graf_temp:
-                st.plotly_chart(fig_temp_maxmin, height = 400)
+                st.plotly_chart(graf_temp_maxmin, height = 400)
             with tab_graf_chuva:
-                st.plotly_chart(fig_chuva, height = 400)
+                st.plotly_chart(graf_chuva, height = 400)
             with tab_graf_umidade:
-                st.plotly_chart(fig_umidade_maxmim, height = 400)
+                st.plotly_chart(graf_umid_maxmim, height = 400)
         
        fonte_previsao =  previsao_tempo.fonte_dados()
        texto_alinhado(f"Fonte: {fonte_previsao}", alinhamento = 'right', fontsize = 12)
    else:
        st.error("⚠️ Não foi possível obter dados da previsão do tempo. Tente novamente...")
+       st.button("🗑 Limpar Cache",
+          type="tertiary",
+          on_click = limpar_cache)
+       
        
 with col3: #Mapas de precipitacão
     tab_mensal, tab_semestral = st.tabs(["Precipitação Mensal", "Precipitação Trimestral"], on_change = "ignore")
-    mapa_imet_precipita_mensal = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
-    mapa_imet_precipita_semestral = mapa_precipitacao(data_hoje.year, "Trimestral", data_hoje.month)
+    mapa_imet_mensal = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
+    mapa_imet_semestral = mapa_precipitacao(data_hoje.year, "Trimestral", data_hoje.month)
+    
+    st.session_state._mapa_imet_mensal_ = mapa_imet_mensal
+    st.session_state._mapa_imet_semestral_ = mapa_imet_semestral
 
     with tab_mensal:    
-        st.image(mapa_imet_precipita_mensal, width = "stretch")
+        st.image(mapa_imet_mensal, width = "stretch")
         texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
     with tab_semestral:    
-        st.image(mapa_imet_precipita_semestral, width = "stretch")
+        st.image(mapa_imet_semestral, width = "stretch")
         texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
    
-    texto_local =texto_localizacao("Tempo agora em", local_clima, False)
-    if info_clima_json:
-        info_clima_json["texto_local"] = texto_local
     
     data_por_extenso(data_hoje, fontsize = 18)
     

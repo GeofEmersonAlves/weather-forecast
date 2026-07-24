@@ -11,3 +11,4 @@ python-slugify
 cairosvg
 plotly
 openpyxl 
+kaleido

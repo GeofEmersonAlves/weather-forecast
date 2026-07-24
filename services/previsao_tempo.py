@@ -29,7 +29,6 @@ Histórico:
                  além de deixar a geração do relatório lenta.
 ===============================================================================
 """
-import streamlit as st
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import json
@@ -46,8 +45,6 @@ __URLS__ =["https://tempoagora.uol.com.br/previsao-do-tempo/15-dias/cidade/",
 def fonte_dados()->str:
     return __URLS__[0]
 
-
-@st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
 def pega_previsao_tempo(dados_cidade : dict)->dict:    
     cidade_clima = traz_cidade_clima(dados_cidade)
 

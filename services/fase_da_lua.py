@@ -17,7 +17,7 @@ Histórico:
        20/07/2026 - Inicio 
 ===============================================================================
 """
-import  services.requisicao as req
+import services.requisicao as req
 from bs4 import BeautifulSoup
 
 __URL__ = "https://www.calendarr.com/brasil/lua-hoje/"

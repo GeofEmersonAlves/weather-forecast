@@ -27,6 +27,7 @@ from services.busca_cidades import traz_cidade_clima
 from services.weather_api import direcao_vento_emoji, astro_evento, weather_icon
 import services.requisicao as req
 from services.fase_da_lua import fase_da_lua
+from utils.datas import hoje
 
 #pip install python-slugify
 
@@ -198,6 +199,7 @@ def clima_agora(dados_cidade : dict) -> dict:
     if mais_info is None:
         return None
     
+    info_clima_vazio["location"]["localtime"]  = hoje().strftime('%Y-%m-%d')
     info_clima_vazio["current"]["temperature"] = mais_info["temperatura"]
     info_clima_vazio['img_clima'] = mais_info['img_clima']
     

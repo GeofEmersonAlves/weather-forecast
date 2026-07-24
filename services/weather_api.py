@@ -33,7 +33,7 @@ from urllib.parse import urlparse
 import os
 from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 from services.requisicao import faz_requisicao
-#from services.gerar_img_base64 import imagem_para_base64
+#from services.gerador_de_imagens import imagem_para_base64
 
 load_dotenv()
 

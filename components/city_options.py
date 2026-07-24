@@ -40,6 +40,8 @@ def escolheu_cidade():
         
         local = pega_local_API(local_select)
         estado.alterar_local_select(local)
+        st.session_state.pop('_info_clima_', None)     
+        st.session_state.pop('_df_previsao_', None) 
     
     return
 
