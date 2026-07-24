@@ -14,7 +14,15 @@ Descrição:
   /template/excel/ReportTemplate.xlsx
     
   Abre o arquivo de modelo, coloca as informações atuais do clima e manda um BytesIO  
+  
+  Cálculo da largura dos gráficos no excel, para isto fiz uma regra de 3 a partir de uma imagem que 
+foi gerada no codigo, no codigo a largura da image era de 60, no excel a figura ficou com 1,59 cm
 
+                                      1,59 ---- 60 
+Largura desejada no excel em cm      20,00 ---- X          
+                                       x = (20,00 * 60)/1,59  
+                                       x = 740 (arredondei para cima)
+                                            
 Histórico:
        22/07/2026 - Inicio 
        23/07/2026 - Alterações para melhoria da performance na geração do relatório
@@ -54,22 +62,13 @@ def pil_para_imagem_excel(imagem: Image.Image, largura: int = 80, altura: int = 
 
     return imagem_excel
 
-def plotly_para_imagem_excel(
-    fig: go.Figure,
-    largura_exportacao: int = 1400,
-    altura_exportacao: int = 650,
-    largura_excel: int = 900,
-    largura_borda: int = 3,
-    cor_borda: str = "#202020",
-) -> ExcelImage:
-    """
-    Converte um gráfico Plotly em PNG, adiciona borda
-    e retorna uma imagem pronta para inserir no Excel.
-
-    A altura no Excel é calculada automaticamente para
-    preservar a proporção da imagem.
-    """
-
+def plotly_para_imagem_excel(fig: go.Figure,
+                            largura_exportacao: int = 1400,
+                            altura_exportacao: int = 650,
+                            largura_excel: int = 900,
+                            largura_borda: int = 3,
+                            cor_borda: str = "#202020") -> ExcelImage:
+    
     fig.update_layout(
         width=largura_exportacao,
         height=altura_exportacao,
@@ -156,32 +155,31 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
                                      fill="#000000",   # cor da borda
                                     )
         imagem_excel = pil_para_imagem_excel(mapa_imet2, largura=310, altura = 310)
-        planilha.add_image(imagem_excel, "G2")
+        planilha.add_image(imagem_excel, "H2")
         
         #Coloca os gráficos no relatório
-        larg_grfs = 414
-        alt_grfs = 263.2
+        largura_graficos = 440 #Acima explico como chegar neste número
          
         imagem_excel = plotly_para_imagem_excel(graf_temp_maxmin,
                                                 largura_exportacao=1400,
                                                 altura_exportacao=650,
-                                                largura_excel=larg_grfs,
+                                                largura_excel=largura_graficos
                                                )
-        planilha.add_image(imagem_excel, "B20")
+        planilha.add_image(imagem_excel, "B37")
         
         imagem_excel = plotly_para_imagem_excel(graf_umid_maxmim,
                                                 largura_exportacao=1400,
                                                 altura_exportacao=650,
-                                                largura_excel=larg_grfs,
+                                                largura_excel=largura_graficos
                                                )
-        planilha.add_image(imagem_excel, "F20")
+        planilha.add_image(imagem_excel, "G37")
         
         imagem_excel = plotly_para_imagem_excel(graf_chuva,
                                                 largura_exportacao=1400,
                                                 altura_exportacao=650,
-                                                largura_excel=larg_grfs,
+                                                largura_excel=755     #Acima explico como chegar neste número
                                                )
-        planilha.add_image(imagem_excel, "B34")
+        planilha.add_image(imagem_excel, "C20")
         
     
         #Monta a tabela de previsões
