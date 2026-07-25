@@ -11,10 +11,12 @@ Python     : Python 3.13.14 | packaged by Anaconda, Inc.
 Descrição:
         Só para organizar a pagina principal, movi este componente para ca
       
-
 Histórico:
        21/07/2026 - Inicio 
        23/07/2026 - Melhoras no componente para melhorar a performance do app
+       25/07/2026 -Quando vi o gráfico de chuva notei uma inconsistência que ocorre as vezes no dado, 
+       por exemplo, probabilidade 75% de chover 0mm, faço a correção no gráfico e mantenho os dados originais,
+       no site do Tempo Agora eles também corrigem no gráfico porém matém no Timeline. 
 ===============================================================================
 """
 import streamlit as st
@@ -50,19 +52,24 @@ def gera_df_previsao(previsoes :list[dict]) -> pd.DataFrame:
              umidade_max =  dia["umidade_max"]
          
          if dia["precipitacao_mm"] == None:
-             precipitacao = 0
+             precipitacao_mm = 0
          else:
-             precipitacao =  dia["precipitacao_mm"]
+             precipitacao_mm =  dia["precipitacao_mm"]
          
          if dia["probabilidade_chuva"] == None:
              probabilidade_chuva = 0
          else:
              probabilidade_chuva =  dia["probabilidade_chuva"]
          
+         #Faço a CORREÇÃO da inconsistência na e mantenho os dados originais
+         if probabilidade_chuva > 0  and precipitacao_mm == 0:
+             probabilidade_chuva = 0   
+         
+            
          img_chuva_umidade = gerar_img.clima_chuva_base64(
                                                   umidade_min=umidade_min,
                                                   umidade_max=umidade_max,
-                                                  precipitacao=precipitacao,
+                                                  precipitacao=precipitacao_mm,
                                                   probabilidade_chuva=probabilidade_chuva,
                                               )
          

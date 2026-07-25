@@ -13,14 +13,19 @@ Descrição:
     Precisei mudar os parametros de layout dos gráficos para que, na hora da conversão
 do gráfico em imagem para o Excel, o layout não seja alterado, para isto os layouts foram
 definidos explicitamente.
+    Quando vi o gráfico de chuva notei uma inconsistência que ocorre as vezes no dado, 
+por exemplo, probabilidade 75% de chover 0mm, faço a correção no gráfico e mantenho os dados originais,
+no site do Tempo Agora eles também corrigem no gráfico porém matém no Timeline. 
 
 Histórico:
        21/07/2026 - Inicio 
        24/07/2026 - Ajustes no layout dos dos gráficos para que nao mudem o layout 
                 na exportacao da figura para o excel
+       25/07/2026 - Ajustes no gráfico de precipitação e probabilidade de chuva
 ===============================================================================
 """
 import pandas as pd
+from copy import deepcopy
 
 #Biblioteca para gráficos
 import plotly.graph_objects as go
@@ -104,7 +109,7 @@ def grafico_max_min(dados_previsao: dict, cols_minmax: list, title_graf: str, ti
 
 def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
     cols_para_grafico = ["dia", "dia_semana", "precipitacao_mm", "probabilidade_chuva"]
-    
+    copia_dados_previsao = deepcopy(dados_previsao)
     #Codígo para o hovertemplate das barras cinza e azul
     hover_template ="<span style='color:#999999'>" \
                     "<b>%{x}</b>" \
@@ -117,17 +122,20 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
                     "<b>🌧️ Chuva %{customdata[0]} mm</b>" \
                     "<extra></extra>"                
                      
-    
+
     #Alguma vezes esses dados chegam como Nulos no dicionario de previsao do tempo
-    for item in dados_previsao:
+    for item in copia_dados_previsao:
         if item["precipitacao_mm"] == None:
             item["precipitacao_mm"] = 0
         
         if item["probabilidade_chuva"] == None:
             item["probabilidade_chuva"] = 0   
+         
+        #Faço a CORREÇÃO da inconsistência no gráfico e mantenho os dados originais
+        if item["probabilidade_chuva"] > 0  and item["precipitacao_mm"] == 0:
+            item["probabilidade_chuva"] =0
     
-    
-    df = pd.DataFrame([{col: item.get(col) for col in cols_para_grafico} for item in dados_previsao])
+    df = pd.DataFrame([{col: item.get(col) for col in cols_para_grafico} for item in copia_dados_previsao])
 
     # texto do eixo x
     df["eixo_x"] = df["dia"] + "<br>" + df["dia_semana"].str[:3]
@@ -136,12 +144,10 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
     fig = go.Figure()
 
     # Altura da barra cinza de fundo.
-    # Pega o valor máximo de precipitacao, e depois pega o méximo ente precipitacao e 1,
-    #isso por que as vezes o valor de precipitacao vem 0 e a barra cinza nao aparece
-    limite = max(df["precipitacao_mm"].max(), 1) 
-    limite *= 1.25
+    # Representa 100% de probabilidade de chuva,
+    limite =  100 
 
-    # Barra cinza de fundo
+    # Barra cinza de fundo (100% de probabilidade de chuva)
     fig.add_bar(x=df["eixo_x"],
                 y=[limite] * len(df), #Cria uma lista tipo [limite, limite, ...] com len(df) elementos. Todas as barras com tamanho igual
                 customdata=df[["precipitacao_mm","probabilidade_chuva"]],  #Campos que serão mostrados ho hovertemplate em customdata[]
@@ -151,9 +157,9 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
                 showlegend=False
               )
 
-    # Barra azul, um gráfico de barras simples
+    # Barra azul, um gráfico de barras simples com a probabilidade de chuva no eixo y
     fig.add_bar(x=df["eixo_x"],
-                y=df["precipitacao_mm"],
+                y=df["probabilidade_chuva"],
                 customdata=df[["precipitacao_mm","probabilidade_chuva"]], #Campos que serão mostrados ho hovertemplate em customdata[]
                 width=0.24,
                 marker=dict(color="#4E97D1",line=dict(width=0)),
@@ -161,17 +167,20 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
                 showlegend=False
                )
 
-    # Valor dentro da "caixinha"
+    # Valor dentro da "caixinha -> precipitacao_mm"
     for _, linha in df.iterrows():
-        fig.add_annotation(x=linha["eixo_x"],
-                           y=max(linha["precipitacao_mm"], 0.8),
-                           text=f"<b>{linha['precipitacao_mm']}</b>",
-                           showarrow=False,
-                           bgcolor= "rgba(255,255,255,0)", #'rgba(0,0,0,0)',  #"white",
+        #Desloca para cima a caixima quando o valor probabilidade_chuva < 2 pa não sobrepor o rótulo do eixo X
+        deslocy_caixa = 4
+      
+        fig.add_annotation(x = linha["eixo_x"],
+                           y = max(linha["probabilidade_chuva"] + 2, deslocy_caixa),
+                           text = f"<b>{linha['probabilidade_chuva']}%<br>{linha['precipitacao_mm']}mm</b>",
+                           showarrow = False,
+                           bgcolor = "rgba(255, 255, 255, 0.4)", #"rgba(255,255,255,0)", #'rgba(0,0,0,0)',  #"white",
                            bordercolor="#E4E4E4",
-                           borderwidth=1,
-                           borderpad=4,
-                           font=dict(size=13,color="#001A5F")
+                           borderwidth = 1,
+                           borderpad = 4,
+                           font = dict(size = 10, color = "#001A5F")
                           )
 
     fig.update_layout(barmode="overlay",
@@ -190,12 +199,19 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
                                  showgrid=False,
                                  tickfont=dict(family="Arial",size=13,color="#000000")
                                 ),
-                      yaxis=dict(title=dict(text="Milímetros (mm)",
-                                 font=dict(family="Arial",size=14,color="#000000")),
-                                 tickfont=dict(family="Arial",size=13,color="#000000"),
-                                 showgrid=False,
-                                 showticklabels=False,
-                                 zeroline=False,
+                      yaxis=dict(title = dict(text="Probabilidade de chuva",
+                                 font = dict(family="Arial",size=14,color="#000000")),
+                                 showgrid = True,
+                                 gridcolor="rgba(0,0,0,0.3)",
+                                 gridwidth=1,
+                                 griddash='dot',  # Opções: 'solid', 'dash', 'dot', 'dashdot', 'longdash'
+                                 showticklabels = True,
+                                 tickvals=[0, 25, 50, 75, 100], 
+                                 ticktext = ["0%","25%","50%","75%","100%"],
+                                 tickfont = dict(family="Arial",size=10,color="#000000"),
+                                 #tickformat = '.0%',
+                                 #ticksuffix =  "%",
+                                 zeroline  =False,
                                  range=[0, limite]
                                 )
                     )

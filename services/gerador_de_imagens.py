@@ -19,6 +19,8 @@ Histórico:
        20/06/2026 - Inicio
        22/06/2026 - Adicionado novos geradores de imagens
        23/07/2026 - Adicionado o gerador da imagem do Quadro do clima
+       25/07/2026 - Ajustes na imagem do infoclima para melhorar a visualização e 
+                possicionamento dos elementos na imagem
 ===============================================================================
 """
 
@@ -855,7 +857,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
         # =========================================================
        # fonte_titulo = carregar_fonte(13)
         fonte_temperatura = carregar_fonte(40, True)
-        fonte_clima = carregar_fonte(11, True)  #True para negrito
+        fonte_clima = carregar_fonte(12, True)  #True para negrito
         fonte_tabela = carregar_fonte(14)
         fonte_lua = carregar_fonte(14)
 
@@ -920,7 +922,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
         # =========================================================
         # Informações de tab_clima
         # =========================================================
-        y_tab_clima = 100
+        y_tab_clima = 90
 
         quantidade_colunas = max(
             min(len(tab_clima), 4),
@@ -934,7 +936,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
             x_coluna = margem + indice * largura_coluna
 
             # Reserva um pequeno espaço entre as colunas.
-            largura_texto_maxima = largura_coluna - 5
+            largura_texto_maxima = largura_coluna - 2
 
             texto_ajustado = ajustar_texto(
                 draw=draw,
@@ -958,10 +960,10 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
         # =========================================================
         # Tabela tab_astro
         # =========================================================
-        inicio_tabela_y = 125
-        altura_linha = 25
+        inicio_tabela_y = 115
+        altura_linha = 22
 
-        x_texto_esquerdo = 40
+        x_texto_esquerdo = 60
         x_texto_direito = int(largura * 0.58)
 
         for indice, linha in enumerate(tab_astro):
