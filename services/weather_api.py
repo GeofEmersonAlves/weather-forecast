@@ -20,6 +20,7 @@ Histórico:
                  na pasta local, senão baixa o icone e salva na pasta local.
                  Desta forma com o tempo a biblioteca de icones cresce e cada vez menos precisa busca os 
                  icones via requisição.
+        23/07/2026 - Inclusão da chamada do serviço get_weatherstack_token
 ===============================================================================
 """
 import streamlit as st
@@ -27,18 +28,14 @@ import base64
 from io import BytesIO
 from PIL import Image
 import cairosvg
-from dotenv import load_dotenv   #Para ler o arquivo .env
 from pathlib import Path
 from urllib.parse import urlparse
-import os
 from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 from services.requisicao import faz_requisicao
-#from services.gerador_de_imagens import imagem_para_base64
+import services.get_tokens as get_tokens
 
-load_dotenv()
 
 Base_URL_API = "http://api.weatherstack.com/"
-ws_token = os.getenv("WEATHERSTACK_TOKEN")
 
 WEATHER_CODES = {
     113: "Céu limpo",
@@ -395,21 +392,61 @@ def fase_da_lua(moon_phase : str ) -> dict:
 def clima_descricao(weather_code : int ) -> dict:
     return WEATHER_INFO.get(weather_code)
 
-@st.cache_data(show_spinner="⏳ Carregando condicções climaticas . . .",  ttl = 1800)
-def clima_agora(lat : str, long: str) -> dict:
-    
+def tenta_ws_token(ws_token: str, lat : str, long: str) -> dict | None:
     text_request =f"{Base_URL_API}current?access_key={ws_token}&query={lat},{long}"
-           
-    resposta = faz_requisicao(text_request, use_raise = False)
-      
+    resposta = faz_requisicao(text_request, use_raise = False)    
+   
     if resposta is None:
-        return None
-
+        return None    
+    
     dados = resposta.json()
-  
     if not dados.get("success", True):
         return None
     
+    else:
+        get_tokens.set_weatherstack_token_usar(ws_token)
+            
+    return dados
+
+def testa_tokens(lat : str, long: str) -> dict | None:
+    ws_token1 = get_tokens.get_weatherstack_token1()
+    
+    teste_tk1 = tenta_ws_token(ws_token1, lat, long) 
+    if teste_tk1:
+        dados = teste_tk1
+    else:
+        ws_token2 = get_tokens.get_weatherstack_token2()
+        teste_tk2 = tenta_ws_token(ws_token2, lat, long) 
+        if teste_tk2:
+            dados = teste_tk2
+        else:
+            return None
+
+    return dados
+
+@st.cache_data(show_spinner="⏳ Carregando condicções climaticas . . .",  ttl = 1800)
+def clima_agora(lat : str, long: str) -> dict:
+    ws_token = get_tokens.get_weatherstack_token_usar()
+    
+    #Tenho dois tokens, para garantir a rotatividade dos dois tokens
+    #agora tenho o dobro de acessos na api, uma vez para cada token 
+    if not ws_token:
+        test_result = testa_tokens(lat, long)
+        if test_result:
+            dados = test_result
+        else:
+            return None
+    else:
+        tentativa = tenta_ws_token(ws_token, lat, long)
+        if tentativa:
+            dados = tentativa
+        else:
+            test_result = testa_tokens(lat, long)
+            if test_result:
+                dados = test_result
+            else:
+                return None
+             
     dados['img_clima'] =  weather_icon(dados.get('current').get('weather_icons')[0])
         
     descr = clima_descricao(int(dados.get("current").get("weather_code")))
