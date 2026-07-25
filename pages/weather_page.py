@@ -47,10 +47,10 @@ from utils.datas import hoje, data_por_extenso
 
 # =========== FUNCÃO PARA LIMPAR O CACHE ===========
 def limpar_cache_previsao():
-    st.pega_previsao_cache.clear()
+    pega_previsao_cache.clear()
 
 def limpar_cache_info_clima():
-    st.pega_previsao_cache.clear()
+    info_clima_agora.clear()
 
 #Cache de 30 minutos
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
@@ -128,6 +128,7 @@ with col1:  #Quadro com clima atual
         st.error("⚠️ Não foi possível obter os dados do clima. Tente novamente...")
         st.button("🗑 Limpar Cache",
            type="tertiary",
+           key = "cache_clima",
            on_click = limpar_cache_info_clima)
         
 with col2: #Previsão do tempo
@@ -191,6 +192,7 @@ with col2: #Previsão do tempo
        st.error("⚠️ Não foi possível obter dados da previsão do tempo. Tente novamente...")
        st.button("🗑 Limpar Cache",
           type="tertiary",
+          key = "cache_prev",
           on_click = limpar_cache_previsao)
        
        

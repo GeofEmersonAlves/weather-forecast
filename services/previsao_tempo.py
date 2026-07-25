@@ -45,8 +45,11 @@ __URLS__ =["https://tempoagora.uol.com.br/previsao-do-tempo/15-dias/cidade/",
 def fonte_dados()->str:
     return __URLS__[0]
 
-def pega_previsao_tempo(dados_cidade : dict)->dict:    
+def pega_previsao_tempo(dados_cidade : dict) -> dict | None:    
     cidade_clima = traz_cidade_clima(dados_cidade)
+    
+    if not cidade_clima:
+        return None
 
     cidade = cidade_clima['city']
     estado = cidade_clima["uf"]
