@@ -135,6 +135,7 @@ with col2: #Previsão do tempo
    previsoes = pega_previsao_cache(local_clima)
   
    if previsoes:
+       st.session_state._previsoes_ = previsoes
        fase_lua = previsoes[0]["fase_lua"]
        emojilua = info_fase_da_lua_com_none(fase_lua)
        emojilua = emojilua["emoji"]

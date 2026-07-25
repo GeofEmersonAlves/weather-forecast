@@ -35,14 +35,14 @@ Histórico:
 from copy import deepcopy
 from io import BytesIO
 from pathlib import Path
-from openpyxl import load_workbook
+from openpyxl import load_workbook, Workbook
 from openpyxl.drawing.image import Image as ExcelImage
 from openpyxl.worksheet.worksheet import Worksheet
+from openpyxl.utils.dataframe import dataframe_to_rows
 from PIL import Image, ImageOps
 import plotly.graph_objects as go
 import pandas as pd
 from services.gerador_de_imagens import base64_para_imagem, quadro_clima_base64
-
 
 __PATH_MODELS__=  Path("templates/excel")
 __MODEL_FILE__ = "ReportTemplate.xlsx"
@@ -150,8 +150,25 @@ def plotly_para_imagem_excel(fig: go.Figure,
 
     return imagem_excel
 
+#Cria uma nova planilha e descarrega o conteudo do da lista clima_json
+def gerar_planilha_Dados_Brutos(workbook: Workbook, clima_json: dict):
+        nova_planilha = workbook.create_sheet(title="Dados_Brutos_Previsao")
+    
+    df = pd.DataFrame(clima_json)
+    
+    # Célula onde o DataFrame começará
+    linha_inicial = 1
+    coluna_inicial = 1  
+    
+    for i, row in enumerate(dataframe_to_rows(df.drop(columns='icone'), index = False, header = True), start = linha_inicial):
+        for j, valor in enumerate(row, start = coluna_inicial):
+            nova_planilha.cell(row=i, column=j, value = valor)
+    
+    return
+
 def preencher_relatorio_clima_Tempo_Agora(clima_json: dict, 
                                           info_user_local: dict,
+                                          previsoes_dict: dict, 
                                           previsoes: pd.DataFrame,
                                           mapa_imet1: Image.Image,
                                           mapa_imet2: Image.Image,
@@ -259,6 +276,10 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
            planilha[f"F{row_excel}"] = registro.get('Descrição')
            
            row_excel += 1
+           
+           
+        #Descarrega o clima_json em uma nova planilha chamada 
+        gerar_planilha_Dados_Brutos(workbook, previsoes_dict)
            
         workbook.save(buffer_file)
         buffer_file.seek(0) #faz o "cursor" do arquivo voltar para o início

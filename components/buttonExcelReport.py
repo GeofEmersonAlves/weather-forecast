@@ -32,6 +32,9 @@ def button_ExcelReport():
         if "_info_clima_" in st.session_state: 
             info_clima = st.session_state._info_clima_
         
+        if "_previsoes_" in st.session_state:
+            previsoes_dict = st.session_state._previsoes_  
+        
         user_local = st.session_state.user_location
         info_user_local = local_formatado(user_local)
         
@@ -45,6 +48,7 @@ def button_ExcelReport():
         
         st.session_state._excel_report_ = excel_report(info_clima,
                                                        info_user_local,
+                                                       previsoes_dict,
                                                        df_previsao,
                                                        mapa_imet_mensal,
                                                        mapa_imet_semestral,
