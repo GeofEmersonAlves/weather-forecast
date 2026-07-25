@@ -13,23 +13,19 @@ Descrição:
       
 
 Histórico:
-       16/07/2026 - Inicio do projeto
-/===============================================================================
+       24/07/2026 - Geração automátioca do código esta página a partir de 
+                informações passadas por mim e tiradas do código do projeto
+       25/07/2026 - Edição do código da página para fazer ajustes necessários
+===============================================================================
 """
-
 from pathlib import Path
-
 import streamlit as st
-
-
-# =========================================================
-# CONFIGURAÇÃO DA PÁGINA
-# =========================================================
 
 st.set_page_config(
     page_title="Sobre | Weather Forecast",
-    page_icon="🌦️",
+    #page_icon="🌦️",
     layout="wide",
+    initial_sidebar_state="collapsed"  # Fecha a sidebar por padrão
 )
 
 

@@ -47,7 +47,6 @@ from services.gerador_de_imagens import base64_para_imagem, quadro_clima_base64
 __PATH_MODELS__=  Path("templates/excel")
 __MODEL_FILE__ = "ReportTemplate.xlsx"
 
-
 def pil_para_imagem_excel(imagem: Image.Image, largura: int = 80, altura: int = 60,) -> ExcelImage:
     buffer = BytesIO()
     imagem.convert("RGBA").save(buffer,format="PNG")
@@ -179,8 +178,11 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
   
     BASE_DIR = Path(__file__).parent.parent
     caminho_modelo = Path(BASE_DIR / __PATH_MODELS__  / __MODEL_FILE__)
-    buffer_file = BytesIO()
     
+    caminho_logo = Path(BASE_DIR / "assets" / "icons" / "weather_forecast_580px_580px.png")
+    logo_report = Image.open(caminho_logo)
+    
+    buffer_file = BytesIO()
     if caminho_modelo.exists():
         # Abre o arquivo modelo
         workbook = load_workbook(caminho_modelo)
@@ -189,8 +191,15 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
         
         if clima_json is not None:
             # Coloca o Titulo
-            planilha["A1"] = clima_json["local_clima"]
-            planilha["J1"] = clima_json["local_clima"]
+            planilha["D1"] = clima_json["local_clima"]
+            planilha["M1"] = clima_json["local_clima"]
+            
+            #Insere o logo
+            logo_excel = pil_para_imagem_excel(logo_report, largura = 110, altura = 110)
+            planilha.add_image(logo_excel, "B1")
+            logo_excel = pil_para_imagem_excel(logo_report, largura = 110, altura = 110)
+            planilha.add_image(logo_excel, "K1")
+            
             planilha["B2"] = clima_json["data_por_extenso"]
             planilha["K2"] = clima_json["data_por_extenso"]
             

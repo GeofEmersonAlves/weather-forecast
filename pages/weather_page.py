@@ -25,8 +25,6 @@ Histórico:
 
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
 import streamlit as st
-from PIL import Image
-
 #Bibliotecas do projeto
 import state.estado_app as estado
 from components.layout import  mostra_data_por_extenso, texto_alinhado 
@@ -46,10 +44,6 @@ from services.fase_da_lua import info_fase_da_lua_com_none
 from utils.datas import hoje, data_por_extenso
 #from services.salva_dict import salvar_json
 
-__LOGO50_X_50 = "assets/icons/weather_50px_50px.png"
-__LOGO100_X_100 = "assets/icons/weather_100px_100px.png"
-icone = Image.open(__LOGO50_X_50)
-
 
 # =========== FUNCÃO PARA LIMPAR O CACHE ===========
 def limpar_cache():
@@ -65,12 +59,12 @@ def pega_previsao_cache(local_clima : dict)->dict:
 #    st.session_state.cont =0
 
 st.set_page_config("Weather Forecast",
-                   page_icon=icone,
+                   page_icon = st.session_state._icone_app_,
                    layout="wide",
                    initial_sidebar_state="expanded"
                     )
 
-st.logo(__LOGO100_X_100, icon_image = __LOGO50_X_50)
+st.logo(st.session_state._icone_app_, icon_image = st.session_state._icone_app_)
 
 data_hoje = hoje()
     
