@@ -125,7 +125,7 @@ with col1:  #Quadro com clima atual
         
 with col2: #Previsão do tempo
    #texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
-   st.write(texto_localizacao("🌤️🌦️🌥️ Previsão para 15 dias",local_clima))
+   st.write(texto_localizacao("🌤️🌦️🌥️ Previsão para 15 dias em",local_clima))
    previsoes = pega_previsao_cache(local_clima)
   
    if previsoes:
