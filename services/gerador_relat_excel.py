@@ -152,7 +152,7 @@ def plotly_para_imagem_excel(fig: go.Figure,
 
 #Cria uma nova planilha e descarrega o conteudo do da lista clima_json
 def gerar_planilha_Dados_Brutos(workbook: Workbook, clima_json: dict):
-        nova_planilha = workbook.create_sheet(title="Dados_Brutos_Previsao")
+    nova_planilha = workbook.create_sheet(title="Dados_Brutos_Previsao")
     
     df = pd.DataFrame(clima_json)
     
