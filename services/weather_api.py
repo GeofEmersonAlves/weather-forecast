@@ -403,8 +403,7 @@ def tenta_ws_token(ws_token: str, lat : str, long: str) -> dict | None:
     if not dados.get("success", True):
         return None
     
-    else:
-        get_tokens.set_weatherstack_token_usar(ws_token)
+    get_tokens.set_weatherstack_token_usar(ws_token)
             
     return dados
 
