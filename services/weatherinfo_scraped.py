@@ -102,7 +102,6 @@ def scrap_page1(dados_cidade : dict) -> dict:
 
     # Download do ícone principal do clima
     url_weather_icon = urljoin(URLS[2], icone_clima)
-    
     weather_icon_img = weather_icon(url_weather_icon)
 
     final = {"temperatura": temperatura.replace("º", ""),

@@ -1,0 +1,3742 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+	<title>Previsão do tempo e clima | Meteorologia no Tempo Agora
+</title>
+
+  <meta charset="UTF-8">
+
+	<!-- This one can help to identify and solve our design issue for Mobile which Google has threatened stopping the ads on Chrome browser. -->
+	<meta name="google-site-verification" content="f-v1CUADcZO9RTlI5wOpt11LsuNyyqWC6zHgEG43hQA" />
+	<!-- and of google site verificatipn -->
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store">
+	<meta http-equiv="Pragma" content="no-cache, no-store">
+
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="author" content="Tempo Agora">
+	<meta name="copyright" content="© Tempo Agora">
+	<meta name="url" content="https://tempoagora.uol.com.br/">
+  	<meta name="description" content="Saiba mais sobre a previsão do tempo e clima no Tempo Agora! Confira se vai chover, a sensação térmica e as condições de tempo para os próximos dias. Clique agora mesmo!">
+	<meta name="publisher" content="Tempo Agora">
+
+	<meta property="og:type" content="website"> 
+	<meta property="og:title" content="Previsão do tempo e clima | Meteorologia no Tempo Agora">
+	<meta property="og:description" content="Saiba mais sobre a previsão do tempo e clima no Tempo Agora! Confira se vai chover, a sensação térmica e as condições de tempo para os próximos dias. Clique agora mesmo!">
+	<meta property="og:url" content="https://tempoagora.uol.com.br/">
+	<meta property="og:locale" content="pt-br">
+	
+				<meta property="og:image" content="https://beta2.tempoagora.com.br/dist/images/compartilhamento.png">
+
+	
+	
+		<meta name="premiumAds" content="0">
+	
+	<!-- METATAGS TARGETING -->
+		<meta name="ab" content="20">
+		<meta name="robots" content="all">
+		<meta name="regiao" content="se">
+	<meta name="uf" content="sp">
+	<meta name="idCidade" content="558">
+	<meta name="tmin" content="">
+	<meta name="tmax" content="">
+	<meta name="cmomento" content="">
+	<meta name="tmomento" content="">
+	<meta name="icoman" content="">
+	<meta name="icotar" content="">
+	<meta name="iconoi" content="">
+	<meta name="icodia" content="">
+	<meta name="chuvamm" content="">
+	<meta name="urmax" content="">
+	<meta name="uvmax" content="">
+	<meta name="agricola" content="">
+	<meta name="litoranea" content="">
+	<meta name="secao" content="home">
+	<meta name="website" content="producao">
+
+	
+		<meta name="lancamento" content="">
+	<meta name="vitaminaD" content="">
+	<meta name="qualidadeAr" content="">
+	<meta name="resfriado" content="">
+	<meta name="mosquito" content="">
+	<meta name="raiosUV" content="">
+	<meta name="pele" content="">
+	
+	
+	<!-- FAVICONS -->
+		<link rel="icon" href="/dist/images/favicon.ico">
+	<link rel="shortcut icon" href="/dist/images/favicon.ico">
+	
+	<!-- DNS-PREFETCH -->
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="preconnect" href="//imagens.climatempo.com.br">
+	<link rel="preconnect" href="//pagead2.googlesyndication.com">
+	<link rel="preconnect" href="//securepubads.g.doubleclick.net">
+	<link rel="preconnect" href="//cm.g.doubleclick.net">
+	<link rel="preconnect" href="//tpc.googlesyndication.com">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//www.googletagservices.com">
+	<link rel="preconnect" href="//www.googleadservices.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//www.googleads.g.doubleclick.net">
+	<link rel="preconnect" href="//tags.t.tailtarget.com">
+	<link rel="preconnect" href="//d.tailtarget.com">
+	<link rel="preconnect" href="//b.scorecardresearch.com">
+	<link rel="preconnect" href="//cdn.taboola.com">
+	<link rel="preconnect" href="//ads.rubiconproject.com/">
+	<link rel="preconnect" href="//optimized-by.rubiconproject.com/">
+	<link rel="preconnect" href="//tru.webelapp.com">
+	<link rel="preconnect" href="//ib.adnxs.com">
+	<link rel="preconnect" href="//scripts.curtivendi.com.br">
+	<link rel="preconnect" href="//prg.smartadserver.com">
+	<link rel="preconnect" href="//cdn.ampproject.org">
+	<link rel="preconnect" href="//boostbox.com.br">
+
+	<!-- LOMADEE-->
+	<meta name="lomadee-verification" content="22867836" />
+
+	<!-- TESTE AAX -->
+
+	<!-- CLICKIO | GDPR Somente Europeu -->
+	<script async type="text/javascript" src="https://clickio.mgr.consensu.org/t/consent_213407.js"></script>
+
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NZJCJDQ');</script>
+	
+	
+	<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"name": "Tempo Agora",
+		"description": "Clima e Previsão do tempo agora é na Tempo Agora! Confira todas as previsões de temperaturas pelo país agora e daqui a 15 e 30 dias!",
+		"url": "https://tempoagora.uol.com.br",
+		"image": "https://imagens.climatempo.com.br/site/imagens/logo-climatempo-stormgeo.png",
+		"sameAs": [
+			"https://twitter.com/climatempo",
+			"https://www.linkedin.com/company/climatempo",
+			"https://www.youtube.com/climatempo",
+			"https://www.instagram.com/climatempo",
+			"https://www.facebook.com/Climatempo.Meteorologia"
+		],
+		"isFamilyFriendly": "https://schema.org/True"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Tempo Agora",
+		"url": "https://tempoagora.uol.com.br",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://imagens.climatempo.com.br/site/imagens/logo-climatempo-stormgeo.png",
+			"width": 120,
+			"height": 31
+		},
+		"sameAs": [
+			"https://twitter.com/climatempo",
+			"https://www.linkedin.com/company/climatempo",
+			"https://www.youtube.com/climatempo",
+			"https://www.instagram.com/climatempo",
+			"https://www.facebook.com/Climatempo.Meteorologia"
+		]
+	}
+	</script>
+	
+	<!-- Preload key requests fonts -->
+	<link rel="preload" href="/dist/fonts/Roboto-Bold.ttf" as="font" crossorigin="anonymous">
+	<link rel="preload" href="/dist/fonts/Roboto-Regular.ttf" as="font" crossorigin="anonymous">
+	<link rel="preload" href="/dist/fonts/fontawesome-webfont.woff2" as="font" crossorigin="anonymous">
+
+	<!-- CSS -->
+  
+	  
+	
+<link rel="canonical" href="https://tempoagora.uol.com.br/">
+<link rel="preload" href="/dist/css/indexstyle.bundle.min.css" as="style" crossorigin="anonymous">
+<link rel="stylesheet" href="/dist/css/indexstyle.bundle.min.css">
+
+	
+
+	
+	<script type="text/javascript">
+		(function () {
+			window.universal_variable = window.universal_variable || {};
+			window.universal_variable.dfp = window.universal_variable.dfp || {};
+			window.uolads = window.uolads || [];
+		})();
+	</script>
+	<script type="text/javascript" src="//tm.jsuol.com.br/uoltm.js?id=amamtm" async></script>
+
+</head>
+
+<body data-slug=558/saopaulo-sp>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZJCJDQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="_none _fixed _flex-column-md _center-sm _space-between _justify -white alert-cookie">
+	<span class='teste'>
+		Usamos cookies para personalizar a sua experiência. Ao utilizar nossos sites e serviços, você concorda com o uso de cookies por nossa parte conforme estabelecido na nossa <a href="https://assetslite.climatempo.com.br/termos-tempoagora" target="_blank">Política de privacidade</a>.
+	</span>
+	<button class="_margin-l-20 _margin-t-md-10 _pointer -white cookie-consent-btn" type="button">OK</button>
+</div>
+
+<script>
+const cookieConsent = document.cookie.match(new RegExp('(^| )cookieConsent=([^;]+)'));
+
+if (!cookieConsent) {
+	const alertElement = document.querySelector('.alert-cookie')
+	if (alertElement) {
+	alertElement.classList.add("_flex");
+	alertElement.classList.remove("_none");
+	document.querySelector('.cookie-consent-btn').addEventListener('click', function() {
+		document.cookie = `cookieConsent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; domain=.climatempo.com.br; path=/`;
+		alertElement.remove()
+	});
+	}
+}
+</script>
+
+
+
+
+<div class="player_dynad_tv"></div>
+
+<input type="checkbox" id="chkHamburguerMenu" class="_none">
+
+<nav class="modal-menu" data-section="modal-menu">
+	<div class="container _overflow-auto custom-scrollbar">
+		<section class="wrapper-menu">
+			<div id="column-1">
+				<div class="column-menu">
+					<div class="menu-item act-open-menu-itens act-control-mobile-menu" data-menu="previsao" data-after="3">
+						<div class="bg">
+							<img class="lazyload" data-src="/dist/images/v2/svg/forecast.svg" width="30" height="30" alt="Ícone menu previsão do tempo"/>
+						</div>
+
+						<p>Previsão</p>
+					</div>
+
+					<div class="menu-item act-open-menu-itens act-control-mobile-menu" data-menu="clima" data-after="3">
+						<div class="bg">
+							<img class="lazyload" data-src="/dist/images/v2/svg/clima.svg" width="30" height="30" alt="Ícone menu clima"/>
+						</div>
+
+						<p>Clima</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="column-2">
+				<div class="column-menu">
+					<div class="menu-item act-open-menu-itens act-control-mobile-menu" data-menu="chuva" data-after="3">
+						<div class="bg">
+							<img class="lazyload" data-src="/dist/images/v2/svg/rain.svg" width="30" height="30" alt="Ícone menu chuva"/>
+						</div>
+
+						<p>Chuva</p>
+					</div>
+
+					<div class="menu-item act-open-menu-itens act-control-mobile-menu" data-menu="graficos" data-after="3">
+						<div class="bg">
+							<img class="lazyload" data-src="/dist/images/v2/svg/charts.svg" width="30" height="30" alt="Ícone menu gráficos"/>
+						</div>
+
+						<p>Gráficos</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="column-3">
+				<div class="column-menu">
+					<div class="menu-item act-open-menu-itens act-control-mobile-menu" data-menu="noticias" data-after="3">
+						<div class="bg">
+							<img class="lazyload" data-src="/dist/images/v2/svg/news.svg" width="30" height="30" alt="Ícone menu notícias"/>
+						</div>
+
+						<p>Notícias</p>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+		<section class="wrapper-menu-itens" data-wrapper-menu-itens>
+			<div class="wrapper-links" data-menu-itens="previsao">
+				<a data-link="/previsao-do-tempo/agora/cidade/{slug}" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Previsao_Agora" data-category="Links do Menu" data-dynamic-link>Agora</a>
+				<a data-link="/previsao-do-tempo/cidade/{slug}" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Previsao_Hoje" data-category="Links do Menu" data-dynamic-link>Hoje</a>
+				<a data-link="/previsao-do-tempo/amanha/cidade/{slug}" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Previsao_Amanha" data-category="Links do Menu" data-dynamic-link>Amanhã</a>
+				<a data-link="/previsao-do-tempo/fim-de-semana/cidade/{slug}" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Previsao_Fim_de_Semana" data-category="Links do Menu" data-dynamic-link>Fim de semana</a>
+				<a data-link="/previsao-do-tempo/15-dias/cidade/{slug}" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Previsao_15_Dias" data-category="Links do Menu" data-dynamic-link>15 dias</a>
+			</div>
+
+			<div class="wrapper-links" data-menu-itens="clima">
+				<a href="/noticia/2020/09/09/clima-o-que-e-fatores-elementos-e-muito-mais--5667" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Clima_Diferenca_Entre_Clima_e_Tempo" data-category="Links do Menu">Diferença entre clima e tempo</a>
+
+			</div>
+
+			<div class="wrapper-links" data-menu-itens="chuva">
+				<a data-link="/previsao-do-tempo/15-dias/cidade/{slug}#chuva" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Chuva_Chuva_Prevista" data-category="Links do Menu" data-dynamic-link>Chuva prevista</a>
+			</div>
+
+			<div class="wrapper-links" data-menu-itens="graficos">
+				<a data-link="/graficos/cidade/{slug}#chuva" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Graficos_Previsao_de_Chuva" data-category="Links do Menu" data-dynamic-link>Previsão de chuva</a>
+				<a data-link="/graficos/cidade/{slug}#temperatura" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Graficos_Previsao_de_Temperatura" data-category="Links do Menu" data-dynamic-link>Previsão de temperatura</a>
+				<a data-link="/graficos/cidade/{slug}#umidade" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Graficos_Previsao_de_Umidade" data-category="Links do Menu" data-dynamic-link>Previsão de umidade</a>
+				<a data-link="/uv/{slug}" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Graficos_Indice_UV" data-category="Links do Menu" data-dynamic-link>Índice UV</a>
+			</div>
+
+			<div class="wrapper-links _flex" data-menu-itens="noticias">
+				<a href="/noticias" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_Ultimas_Noticias" data-category="Links do Menu">Últimas notícias</a>
+				<a href="/noticias/alimentacao" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_Alimentacao" data-category="Links do Menu">Alimentação</a>
+				<a href="/noticias/saude" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_Saude" data-category="Links do Menu">Saúde</a>
+				<a href="/noticias/meio-ambiente" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_Meio_Ambiente" data-category="Links do Menu">Meio Ambiente</a>
+				<a href="/noticias/o-clima-que-queremos" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_O_Clima_que_Queremos" data-category="Links do Menu">O Clima que queremos</a>
+				<a href="/alertas" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_Alertas" data-category="Links do Menu">Alertas</a>
+				<a href="/noticias/sustentabilidade" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_Sustentabilidade" data-category="Links do Menu">Sustentabilidade</a>
+				<a href="/noticias/internacional" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Noticias_Internacional" data-category="Links do Menu">Internacional</a>
+			</div>
+
+			<div class="wrapper-links" data-menu-itens="descontos">
+				<a href="https://descontos.climatempo.com.br/cupom-desconto-americanas" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Americanas</a>
+				<a href="https://descontos.climatempo.com.br/descontos-submarino" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Submarino</a>
+				<a href="https://descontos.climatempo.com.br/cupom-desconto-netshoes" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Netshoes</a>
+				<a href="https://descontos.climatempo.com.br/cupom-desconto-casas-bahia" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Casas Bahia</a>
+				<a href="https://descontos.climatempo.com.br/cupom-de-desconto-ponto-frio" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Ponto Frio</a>
+				<a href="https://descontos.climatempo.com.br/cupom-de-desconto-extra" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Extra</a>
+				<a href="https://descontos.climatempo.com.br/cupom-desconto-zattini" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Zattini</a>
+				<a href="https://descontos.climatempo.com.br/cupom-desconto-carrefour" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Cupons" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Cupom Carrefour</a>
+				<a href="https://descontos.climatempo.com.br/" class="link actTriggerGA" data-label="Menu" data-action="Link_Menu_Descontos_Ver_Todos_os_Descontos" data-category="Links do Menu" target="_blank" rel="noopener" rel="noreferrer">Ver todos os descontos</a>
+			</div>
+		</section>
+
+		<section class="_none _block-xl _center _margin-t-30 _margin-b-20">
+			<p class="-gray-dark-2" style="font-weight: 700">Siga-nos</p>
+
+			<ul class="_margin-t-20">
+				<li class="_inline-block _margin-r-10">
+					<a class="actTriggerGA" data-label="Menu" data-action="Link_Menu_Facebook" data-category="Links do Menu" href="https://www.facebook.com/Climatempo.Meteorologia" target="_blank" rel="noopener" rel="noreferrer">
+						<img width="40" height="40" class="lazyload" data-src="/dist/images/v2/svg/facebook.svg" alt="Facebook Climatempo"/>
+					</a>
+				</li>
+				<li class="_inline-block _margin-r-10">
+					<a class="actTriggerGA" data-label="Menu" data-action="Link_Menu_Twitter" data-category="Links do Menu" href="https://twitter.com/climatempo" target="_blank" rel="noopener" rel="noreferrer">
+						<img width="40" height="40" class="lazyload" data-src="/dist/images/v2/svg/twitter.svg" alt="Twitter Climatempo"/>
+					</a>
+				</li>
+				<li class="_inline-block _margin-r-10">
+					<a class="actTriggerGA" data-label="Menu" data-action="Link_Menu_Linkedin" data-category="Links do Menu" href="https://www.linkedin.com/company/climatempo" target="_blank" rel="noopener" rel="noreferrer">
+						<img width="40" height="40" class="lazyload" data-src="/dist/images/v2/svg/linkedin.svg" alt="Linkedin Climatempo"/>
+					</a>
+				</li>
+				<li class="_inline-block _margin-r-10">
+					<a class="actTriggerGA" data-label="Menu" data-action="Link_Menu_Instagram" data-category="Links do Menu" href="https://instagram.com/climatempo/" target="_blank" rel="noopener" rel="noreferrer">
+						<img width="40" height="40" class="lazyload" data-src="/dist/images/v2/svg/instagram.svg" alt="Instagram Climatempo"/>
+					</a>
+				</li>
+				<li class="_inline-block">
+					<a class="actTriggerGA" data-label="Menu" data-action="Link_Menu_Youtube" data-category="Links do Menu" href="https://www.youtube.com/user/climatempo" target="_blank" rel="noopener" rel="noreferrer">
+						<img width="40" height="40" class="lazyload" data-src="/dist/images/v2/svg/youtube.svg" alt="Youtube Climatempo"/>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</nav>
+
+<header class="header-site " >
+  <div class="container">
+    <div class="_flex _align-center _space-between">
+      <div class="_flex _align-center">
+        <label for="chkHamburguerMenu" class="hamburguer-menu" id="hamburguer-menu">
+          <span class="bar-hamburguer"></span>
+        </label>
+        
+        <a href="https://tempoagora.uol.com.br/">
+          <img class="logo lazyload" width="74" height="33" data-src="/dist/images/logotempoagora.png" alt="Tempo Agora">
+        </a>
+      </div>
+
+      <form class="_relative _none-xl">
+        <input
+          type="search"
+          placeholder="Busque por uma cidade..."
+          id="searchGeneral"
+          class="general-search-input"
+          autocomplete="off"
+          data-hj-whitelist
+          required
+        >
+        <i class="fa fa-search"></i>
+
+        <div class="autocomplete-list">
+          <ul id="searchGeneral_autocomplete"></ul>
+        </div>
+      </form>
+
+      <div class="_flex _align-center">
+        <a class="-white _none _block-xl act-control-mobile-search _margin-r-20 actTriggerGA"
+          id="bt_modalSearch_mobile"
+          data-category="Buscar_cidade"
+          data-action="Abrir_modal_busca_por_cidade"
+          data-label="Busca_por_cidade"
+        >
+          <i class="fa fa-search"></i>
+        </a>
+        <!--
+        <a href="/login" class="-white login-button actTriggerGA"
+          data-category="Meu Climatempo"
+          data-action="Clique no botão de login - canto superior direito do site (Menu)"
+          data-label="Ir para a tela de login no Meu Climatempo"
+          id="isnt-logged-content">
+          <i class="fa fa-user-circle"></i>
+          <span><span class="_none-sm">Faça seu </span>login</span>
+        </a>
+        -->
+        <div class="_relative _none" id="is-logged-content">
+          <a href="#" class="user-avatar _margin-l-20 act-control-logged-menu">
+            <span id="user-initials">-</span>
+          </a>
+
+          <ul class="user-logged-menu _none" data-modal="user-logged-menu">
+            <li class="head">
+              <span id="user-name" class="featured"></span>
+              <span id="user-email"></span>
+            </li>
+            <li class="item">
+              <a class="link" href="/meu-climatempo/favoritos">Locais Favoritos</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/meu-climatempo/configuracoes#email-forecast">Previsão por e-mail</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/meu-climatempo/configuracoes">Editar Perfil</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/sair">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="mainContent" data-id-city="558" data-id-locale="3477"
+  data-ac="BR">
+  <ul class="header-breadcrumb _flex _align-center">
+  <div class="container _flex _space-between _align-center _relative" style="height: 100%">
+    <div class="_none-sm">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="https://tempoagora.uol.com.br" class="link" itemprop="item">
+          <h1 class="-font-13 -normal" itemprop="name">Clima e Previsão do Tempo</h1>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      
+            <li class="item -font-13" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                / <span itemprop="name">Tempo Agora</span>
+                <meta itemprop="position" content="3" />
+      </li>
+      
+            </ol>
+    </div>
+
+    <div class="-white _margin-l-auto _relative _flex _align-center -hidden-geolocated" data-id="geolocated" style="height: 100%">
+      <div class="_flex _align-center _relative">
+        <a class="_flex _align-center -white _pointer link">
+          <img class="ico _margin-r-10" src="" width="25" height="25" alt="Ícone de temperatura atual">
+          <span class="city _margin-r-5 -font-13">-</span> / <span class="temperature _margin-l-5 -font-13">-</span>
+        </a>
+        <a class="_margin-l-10 _pointer act-control-favorites-locales-breadcrumb">
+          <i class="fa fa-sort-down -arrow-down _none" data-id="list-favorites-locales-arrow"></i>
+        </a>
+
+      <ul class="list-favorites _absolute _none" data-id="list-favorites-locales-breadcrumb"></ul>
+      </div>
+      <div class="language-flags _none">
+        <a class="flag -br"></a>
+        <a class="flag -us"></a>
+        <a class="flag -es"></a>
+      </div>
+    </div>
+  </div>
+</ul>
+
+  <div 
+  class="mobile-search container"
+  data-id="mobile-search"
+  style="display: none;"
+>
+  <form class="_relative">
+    <input
+      type="text"
+      placeholder="Busque por uma cidade..."
+      id="searchGeneralMobile"
+      autocomplete="off"
+      data-hj-whitelist
+      required
+          >
+    <i class="fa fa-search"></i>
+
+    <div class="autocomplete-list">
+      <ul id="searchGeneralMobile_autocomplete"></ul>
+    </div>
+  </form>
+</div>
+  <div class="bg-mega-featured" data-id="bgMegaFeatured" data-type="ad_space">
+    <div class="img-mega-featured" id="D_background" data-id="banner-mega-featured" data-type="ad_unit">
+      
+    </div>
+  </div>
+
+  <div class="wrapper-banner -bg-dark _none _flex-md -horizontal-bar" data-id="m_all_header" data-type="ad_space">
+    <div class id="M_home_sticky" data-type="ad_unit"></div>
+  </div>
+
+  <div class="container" data-id="mainContainer">
+
+    <div class="row _sticky-lg">
+  <div class="container alert-news" data-alert>
+    <div class="">
+      <i class="ico -circle" style="background-color: #F4511E;">
+        <img src="/dist/images/v2/svg/ic-alert.svg" width="14" height="14" alt="Ícone de alerta" />
+      </i>
+
+      <div class="carousel">
+        <div class="owl-carousel owl-theme owl-default" data-alert-carousel></div>
+      </div>
+
+      <div class="wrapper-icons">
+        <i class="ico -circle _pointer actTriggerGA"
+          id="Botao_seta_prev"
+          data-category="Barra_de_alertas"
+          data-action="Clique_botao_seta_prev"
+          data-label="Barra_de_alertas_geral" data-alert-prev>
+          <img src="/dist/images/v2/svg/ic-previous.svg" alt="Alerta anterior" width="15" height="15" />
+        </i>
+        <i class="ico -circle _pointer actTriggerGA"
+          id="Botao_seta_next"
+          data-category="Barra_de_alertas"
+          data-action="Clique_botao_seta_next"
+          data-label="Barra_de_alertas_geral" data-alert-next>
+          <img src="/dist/images/v2/svg/ic-next.svg" alt="Próximo alerta" width="15" height="15" />
+        </i>
+        <i class="ico -circle _pointer actTriggerGA"
+          id="Botao_seta_close"
+          data-category="Barra_de_alertas"
+          data-action="Clique_botao_seta_close"
+          data-label="Barra_de_alertas_geral" data-close-alert>
+          <img src="/dist/images/v2/svg/close.svg" width="12.81" height="12.81" alt="Fechar alerta" />
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="row _margin-t-20">
+      <div class="col-lg-4 _margin-b-sm-10">
+        <div class="card _justify-center _height-100-perc _padding-b-sm-40" data-id="Card_TempoAgora" data-type="Card_FirstElement" data-current-weather>
+  <h2 class="-bold -font-18 -gray-dark-2 _center _margin-b-10">
+    Tempo agora em <br>
+    <span id="current-weather-city" class="shimmer-placeholder -text">
+  </h2>
+
+  <div class="_flex _justify-center _align-center">
+    <span id="current-weather-icon" class="shimmer-placeholder -image"></span>
+    <span class="shimmer-placeholder -text -bold -gray-dark-2 -font-55 _margin-l-15" id="current-weather-temperature"></span>
+  </div>
+
+  <div class="-gray _flex _margin-b-15 _margin-t-10 _space-around">
+    <div class="_flex _align-center">
+      <img class="_margin-r-10" src="/dist/images/v2/svg/ic-cloud.svg" alt="Condição do tempo agora" />
+      <span id="current-weather-condition" class="shimmer-placeholder -text"></span>
+    </div>
+
+    <div class="_flex _align-center">
+      <img class="_margin-r-10" src="/dist/images/v2/svg/ic-sensation.svg" alt="Sensação térmica agora" />
+      <span class="_flex">
+        Sensação
+        <span id="current-weather-sensation" class="shimmer-placeholder -text _margin-l-5"></span>
+      </span>
+    </div>
+  </div>
+
+  <ul class="variables-list _border-b-light-1 _border-t-light-1">
+    <li class="item">
+      <div class="_flex">
+        <span class="variables-border-identifier -wind -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+        <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Vento</span>
+      </div>
+      <span class="_flex _align-center -gray shimmer-placeholder -text" id="current-weather-wind"></span>
+    </li>
+    <li class="item">
+      <div class="_flex">
+        <span class="variables-border-identifier -humidity -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+        <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Umidade</span>
+      </div>
+      <div class="_flex _align-center -gray">
+        <img src="/dist/images/v2/svg/ic-humidity-max.svg" alt="Umidade no momento">
+        <span class="_margin-l-5 shimmer-placeholder -text" id="current-weather-humidity"></span>
+      </div>
+    </li>
+  </ul>
+
+  <div class="_flex _margin-t-10 _flex-column _align-center">
+    <a
+      href="/previsao-do-tempo/cidade/558/saopaulo-sp"
+      class="-bold -white actTriggerGA"
+      id="Botao_mais_detalhes_card_tempo_no_momento"
+      data-category="Pagina_home"
+      data-action="Clique_botao_mais_detalhes_card_tempo_no_momento"
+      data-label="Home_site"
+      style="
+        background: #375c71;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 10px 15px;
+      "
+      title="Mais detalhes"
+    >Mais detalhes</a>
+
+    <div class="_flex _space-between _align-center _width-100-pct _margin-t-10">
+      <h2 class="-gray-dark-2 -font-12 -normal" style="font-style:italic;">Clima e previsão do tempo na Tempo Agora</h2>
+      <span class="-gray-2 -font-12 _flex _align-center">
+        <img class="_margin-r-5" src="/dist/images/updated-at.png" alt="Horário de atualização do tempo no momento" width="12" height="17">
+        <time datetime="" id="current-weather-updated-at" class="shimmer-placeholder -text"></time>
+      </span>
+    </div>
+  </div>
+</div>
+      </div>
+
+      <div class="wrapper-banner -bg-light -retangle _none _flex-md _margin-t-md-10" data-type="ad_space">
+        <div id="M_home_smart_topo" data-type="ad_unit">
+        </div>
+      </div>
+
+      <div class="col-lg-8 _margin-t-md-20 _margin-t-md-10">
+        <div class="featured-news-carousel -full owl-carousel owl-theme" data-owl-carousel data-items="1" data-autoplay="true">          
+  
+    <div class="wrapper-news">
+      <a data-dynamic-news-link data-link="2024/10/23/projecao-aponta-queda-de-9-4-na-safra-2024-25-de-cana-6747" class="actTriggerGA"
+        data-category="Pagina_home"
+        data-action="Clique_noticia_card_destaques"
+        data-label="Home_site"
+      >
+        <figure class="image">
+          <img 
+            data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/515x380_db3fca262e3962cc524b6566751c4668.jpg"
+            data-fallback="https://imagens.climatempo.com.br/climapress/galeria/2024/10/970x453_db3fca262e3962cc524b6566751c4668.jpg"
+            class="lazyload fallback"
+            alt="Foto: Carol Gama - SP - SP " />
+        </figure>
+      </a>
+
+      <div class="infos">
+        <a data-dynamic-news-link data-link="2024/10/23/projecao-aponta-queda-de-9-4-na-safra-2024-25-de-cana-6747" title="Projeção aponta queda de 9,4% na safra 2024/25 de cana"
+          class="actTriggerGA"
+          data-category="Pagina_home"
+          data-action="Clique_noticia_card_destaques"
+          data-label="Home_site"
+        >
+          <h3 class="title -gray-dark-2 _margin-b-10">Projeção aponta queda de 9,4% na safra 2024/25 de cana</h3>
+        
+          <h4 class="-gray-dark-2 -normal -font-base">Informações foram divulgadas durante a Conferência Internacional de Açúcar e Etanol que reuniu mais de 1300 pessoas em São Paulo</h4>
+        </a>
+      </div>        
+    </div>
+
+  
+    <div class="wrapper-news">
+      <a data-dynamic-news-link data-link="2024/10/22/semeadura-da-soja-avanca-em-ritmo-acelerado-no-pr-6740" class="actTriggerGA"
+        data-category="Pagina_home"
+        data-action="Clique_noticia_card_destaques"
+        data-label="Home_site"
+      >
+        <figure class="image">
+          <img 
+            data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/515x380_e812ac002824006e8747216e85d64dd7.jpg"
+            data-fallback="https://imagens.climatempo.com.br/climapress/galeria/2024/10/970x453_e812ac002824006e8747216e85d64dd7.jpg"
+            class="lazyload fallback"
+            alt="Fonte: Getty Images" />
+        </figure>
+      </a>
+
+      <div class="infos">
+        <a data-dynamic-news-link data-link="2024/10/22/semeadura-da-soja-avanca-em-ritmo-acelerado-no-pr-6740" title="Semeadura da soja avança em ritmo acelerado no PR"
+          class="actTriggerGA"
+          data-category="Pagina_home"
+          data-action="Clique_noticia_card_destaques"
+          data-label="Home_site"
+        >
+          <h3 class="title -gray-dark-2 _margin-b-10">Semeadura da soja avança em ritmo acelerado no PR</h3>
+        
+          <h4 class="-gray-dark-2 -normal -font-base">Chuvas ajudaram na reserva hídrica do solo e beneficia os trabalhos em campo   </h4>
+        </a>
+      </div>        
+    </div>
+
+  
+    <div class="wrapper-news">
+      <a data-dynamic-news-link data-link="2024/10/22/colheita-do-trigo-esta-finalizada-no-parana-6739" class="actTriggerGA"
+        data-category="Pagina_home"
+        data-action="Clique_noticia_card_destaques"
+        data-label="Home_site"
+      >
+        <figure class="image">
+          <img 
+            data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/515x380_55e69d96b127e87e2dd44489a6cbed05.jpg"
+            data-fallback="https://imagens.climatempo.com.br/climapress/galeria/2024/10/970x453_55e69d96b127e87e2dd44489a6cbed05.jpg"
+            class="lazyload fallback"
+            alt="Fonte: Getty Images" />
+        </figure>
+      </a>
+
+      <div class="infos">
+        <a data-dynamic-news-link data-link="2024/10/22/colheita-do-trigo-esta-finalizada-no-parana-6739" title="Colheita do trigo está finalizada no Paraná"
+          class="actTriggerGA"
+          data-category="Pagina_home"
+          data-action="Clique_noticia_card_destaques"
+          data-label="Home_site"
+        >
+          <h3 class="title -gray-dark-2 _margin-b-10">Colheita do trigo está finalizada no Paraná</h3>
+        
+          <h4 class="-gray-dark-2 -normal -font-base">Previsão indica chuvas acima de 50 milímetros para algumas localidades paranaenses. Veja no mapa </h4>
+        </a>
+      </div>        
+    </div>
+
+  
+    <div class="wrapper-news">
+      <a data-dynamic-news-link data-link="2024/10/22/risco-de-temporal-na-grande-sp-6738" class="actTriggerGA"
+        data-category="Pagina_home"
+        data-action="Clique_noticia_card_destaques"
+        data-label="Home_site"
+      >
+        <figure class="image">
+          <img 
+            data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/515x380_5e7da75b741e750a8dc1dd318ece0c38.jpg"
+            data-fallback="https://imagens.climatempo.com.br/climapress/galeria/2024/10/970x453_5e7da75b741e750a8dc1dd318ece0c38.jpg"
+            class="lazyload fallback"
+            alt="Foto: Getty Images" />
+        </figure>
+      </a>
+
+      <div class="infos">
+        <a data-dynamic-news-link data-link="2024/10/22/risco-de-temporal-na-grande-sp-6738" title="Risco de temporal na Grande SP"
+          class="actTriggerGA"
+          data-category="Pagina_home"
+          data-action="Clique_noticia_card_destaques"
+          data-label="Home_site"
+        >
+          <h3 class="title -gray-dark-2 _margin-b-10">Risco de temporal na Grande SP</h3>
+        
+          <h4 class="-gray-dark-2 -normal -font-base">Frente fria em alto mar aumenta a umidade no centro-sul e leste paulista. RMSP fica em alerta com risco para transtornos</h4>
+        </a>
+      </div>        
+    </div>
+
+  
+    <div class="wrapper-news">
+      <a data-dynamic-news-link data-link="2024/10/19/brasilia-supera-a-media-de-chuva-de-outubro-com-4-temporais-6722" class="actTriggerGA"
+        data-category="Pagina_home"
+        data-action="Clique_noticia_card_destaques"
+        data-label="Home_site"
+      >
+        <figure class="image">
+          <img 
+            data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/515x380_3baf0eed13a2cea5a3889c761fd5f523.jpg"
+            data-fallback="https://imagens.climatempo.com.br/climapress/galeria/2024/10/970x453_3baf0eed13a2cea5a3889c761fd5f523.jpg"
+            class="lazyload fallback"
+            alt="Foto: Getty Images" />
+        </figure>
+      </a>
+
+      <div class="infos">
+        <a data-dynamic-news-link data-link="2024/10/19/brasilia-supera-a-media-de-chuva-de-outubro-com-4-temporais-6722" title="Brasília supera a média de chuva de outubro com 4 temporais"
+          class="actTriggerGA"
+          data-category="Pagina_home"
+          data-action="Clique_noticia_card_destaques"
+          data-label="Home_site"
+        >
+          <h3 class="title -gray-dark-2 _margin-b-10">Brasília supera a média de chuva de outubro com 4 temporais</h3>
+        
+          <h4 class="-gray-dark-2 -normal -font-base">A chuva da primavera finalmente começou no Centro-Oeste. Os acumulados já passam de 100mm em vários locais da Região e também no Distrito Federal</h4>
+        </a>
+      </div>        
+    </div>
+
+  </div>      
+      </div>
+    </div>
+
+    <div class="row no-gutters _none-md _margin-t-20">
+      <div class="wrapper-banner -bg-dark -super" data-type="ad_space">
+        <div id="D_home_super_topo" data-type="ad_unit">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row _margin-t-20">
+      
+    
+<div class="col-lg-4">
+  <div class="card _flex _relative ">
+    <a
+      href="previsao-do-tempo/cidade/558/saopaulo-sp"
+      class="transparent-link actTriggerGA"
+      title="Ver a previsão completa para Hoje"
+      id="Botao_card_previsao_1"
+      data-category="Pagina_home"
+      data-action="Clique_card_previsao_1"
+      data-label="Home_site"
+    >
+    </a>
+
+    <div class="_flex _flex-column _align-center _margin-r-10" style="width:70px;">
+      <img class="lazyload" data-src="/dist/images/v2/svg/4t.svg" width="40" height="40" alt="Sol com algumas nuvens. Chove rápido durante o dia e à noite." />
+      <p class="-gray-dark-2 -bold _margin-t-10">Hoje</p>
+    </div>
+    <div class="_width-100-pct">
+      <ul class="variables-list -small">
+        <li class="item">
+          <div class="_flex">
+            <span class="variables-border-identifier -temperature -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+            <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Temperatura</span>
+          </div>
+          <p class="-gray _flex _align-center">
+            <img src="/dist/images/v2/svg/ic-arrow-min.svg" height="12" width="12" alt="Temperatura mínima Hoje" class="_margin-r-5">
+            13&deg;
+
+            <img src="/dist/images/v2/svg/ic-arrow-max.svg" height="12" width="12" alt="Temperatura máxima Hoje" class="_margin-l-10 _margin-r-5">
+            17&deg;
+          </p>
+        </li>
+        <li class="item">
+          <div class="_flex">
+            <span class="variables-border-identifier -rain -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+            <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Chuva</span>
+          </div>
+          <div class="_flex _align-center -gray">
+              <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
+
+    <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
+  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
+              <span class="_margin-l-5">
+              30mm
+              -
+              95%
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+<div class="col-lg-4">
+  <div class="card _flex _relative _margin-t-md-20">
+    <a
+      href="previsao-do-tempo/amanha/cidade/558/saopaulo-sp"
+      class="transparent-link actTriggerGA"
+      title="Ver a previsão completa para Amanhã"
+      id="Botao_card_previsao_2"
+      data-category="Pagina_home"
+      data-action="Clique_card_previsao_2"
+      data-label="Home_site"
+    >
+    </a>
+
+    <div class="_flex _flex-column _align-center _margin-r-10" style="width:70px;">
+      <img class="lazyload" data-src="/dist/images/v2/svg/3.svg" width="40" height="40" alt="Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens." />
+      <p class="-gray-dark-2 -bold _margin-t-10">Amanhã</p>
+    </div>
+    <div class="_width-100-pct">
+      <ul class="variables-list -small">
+        <li class="item">
+          <div class="_flex">
+            <span class="variables-border-identifier -temperature -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+            <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Temperatura</span>
+          </div>
+          <p class="-gray _flex _align-center">
+            <img src="/dist/images/v2/svg/ic-arrow-min.svg" height="12" width="12" alt="Temperatura mínima Amanhã" class="_margin-r-5">
+            14&deg;
+
+            <img src="/dist/images/v2/svg/ic-arrow-max.svg" height="12" width="12" alt="Temperatura máxima Amanhã" class="_margin-l-10 _margin-r-5">
+            21&deg;
+          </p>
+        </li>
+        <li class="item">
+          <div class="_flex">
+            <span class="variables-border-identifier -rain -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+            <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Chuva</span>
+          </div>
+          <div class="_flex _align-center -gray">
+              <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
+
+    <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+              <span class="_margin-l-5">
+              1mm
+              -
+              74%
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+<div class="col-lg-4">
+  <div class="card _flex _relative _margin-t-md-20">
+    <a
+      href="previsao-do-tempo/15-dias/cidade/558/saopaulo-sp"
+      class="transparent-link actTriggerGA"
+      title="Ver a previsão completa para Domingo"
+      id="Botao_card_previsao_3"
+      data-category="Pagina_home"
+      data-action="Clique_card_previsao_3"
+      data-label="Home_site"
+    >
+    </a>
+
+    <div class="_flex _flex-column _align-center _margin-r-10" style="width:70px;">
+      <img class="lazyload" data-src="/dist/images/v2/svg/2r.svg" width="40" height="40" alt="Sol com algumas nuvens. Não chove." />
+      <p class="-gray-dark-2 -bold _margin-t-10">Domingo</p>
+    </div>
+    <div class="_width-100-pct">
+      <ul class="variables-list -small">
+        <li class="item">
+          <div class="_flex">
+            <span class="variables-border-identifier -temperature -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+            <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Temperatura</span>
+          </div>
+          <p class="-gray _flex _align-center">
+            <img src="/dist/images/v2/svg/ic-arrow-min.svg" height="12" width="12" alt="Temperatura mínima Domingo" class="_margin-r-5">
+            13&deg;
+
+            <img src="/dist/images/v2/svg/ic-arrow-max.svg" height="12" width="12" alt="Temperatura máxima Domingo" class="_margin-l-10 _margin-r-5">
+            24&deg;
+          </p>
+        </li>
+        <li class="item">
+          <div class="_flex">
+            <span class="variables-border-identifier -rain -fluid _height-60-perc _margin-t-5 _margin-r-5"></span>
+            <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Chuva</span>
+          </div>
+          <div class="_flex _align-center -gray">
+              <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+            <span class="_margin-l-5">
+              0mm
+              -
+              0%
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <div class="wrapper-banner -bg-light -retangle-mobile _none _flex-md _margin-t-md-20" data-type="ad_space">
+          <div id="M_home_retangulo_1" data-type="ad_unit"></div>
+      </div>
+      
+    </div>
+
+    <div class="row _margin-t-20">
+      <div class="col-lg-8">
+        <div class="card -no-top">
+          <h2 class="-gray-dark-2 _margin-b-20 _padding-t-20" style="font-size: 18px; border-top: .5px solid #E0E1E2;">
+            Mais notícias sobre clima e previsão do tempo</h2>
+          <section class="feed-news">
+      
+    <input type="checkbox" class="chk-accordion _none" id="chk-more-news-1">
+
+    <div class="wrapper-articles ">
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/19/interior-do-pais-continua-com-previsao-de-chuva-forte-6721">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_afad56cb32f2e45c14afc06ba84d719f.jpg" class="lazyload" alt="Grandes áreas de chuva crescem na tarde deste sábado sobre o interior do Brasil ">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/19/interior-do-pais-continua-com-previsao-de-chuva-forte-6721">
+              <h3 class="title -gray-dark-2">Interior do país continua com previsão de chuva forte </h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">A previsão é que estas áreas de instabilidades que atuam no país se intensifiquem sobre Minas Gerais e o Rio de Janeiro até o fim deste sábado</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/go" class="link actTriggerGA" title="Notícias sobre GO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_GO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >GO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rj" class="link actTriggerGA" title="Notícias sobre RJ"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RJ_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RJ</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rio-de-janeiro" class="link actTriggerGA" title="Notícias sobre Rio de Janeiro"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Rio de Janeiro_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Rio de Janeiro</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mg" class="link actTriggerGA" title="Notícias sobre MG"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MG_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MG</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pa" class="link actTriggerGA" title="Notícias sobre PA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ro" class="link actTriggerGA" title="Notícias sobre RO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/to" class="link actTriggerGA" title="Notícias sobre TO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_TO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >TO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/df" class="link actTriggerGA" title="Notícias sobre DF"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_DF_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >DF</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mt" class="link actTriggerGA" title="Notícias sobre MT"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MT_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MT</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ms" class="link actTriggerGA" title="Notícias sobre MS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/temporal" class="link actTriggerGA" title="Notícias sobre Temporal"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Temporal_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Temporal</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/19 14:52:55 às ">
+                2024/10/19 14:52:55 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/18/clima-e-preco-favorecem-cultivo-da-soja-no-brasil-6715">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_c7759ab8fb79a9eeda0cbff392af0013.jpg" class="lazyload" alt="Foto: Getty Images">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/18/clima-e-preco-favorecem-cultivo-da-soja-no-brasil-6715">
+              <h3 class="title -gray-dark-2">Clima e preço favorecem cultivo da soja no Brasil </h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">América do Sul terá safra recorde de soja em área e produção, revela projeção da DATAGRO</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/go" class="link actTriggerGA" title="Notícias sobre GO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_GO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >GO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mg" class="link actTriggerGA" title="Notícias sobre MG"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MG_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MG</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pa" class="link actTriggerGA" title="Notícias sobre PA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/to" class="link actTriggerGA" title="Notícias sobre TO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_TO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >TO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rs" class="link actTriggerGA" title="Notícias sobre RS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sc" class="link actTriggerGA" title="Notícias sobre SC"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SC_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SC</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/df" class="link actTriggerGA" title="Notícias sobre DF"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_DF_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >DF</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mt" class="link actTriggerGA" title="Notícias sobre MT"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MT_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MT</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ms" class="link actTriggerGA" title="Notícias sobre MS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ba" class="link actTriggerGA" title="Notícias sobre BA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_BA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >BA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ma" class="link actTriggerGA" title="Notícias sobre MA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pi" class="link actTriggerGA" title="Notícias sobre PI"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PI_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PI</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/18 18:56:03 às ">
+                2024/10/18 18:56:03 às 
+              </time>
+                            | Atualizado
+                <time datetime="2024/10/18 às 19:19:01">
+                  2024/10/18 às 19:19:01
+                </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/18/climatempo-alerta-perigo-de-chuvas-volumosas-na-regiao-sudeste-6712">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_a6bf95a3267b4fa27cca4a7bfbb992c4.jpg" class="lazyload" alt="">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/18/climatempo-alerta-perigo-de-chuvas-volumosas-na-regiao-sudeste-6712">
+              <h3 class="title -gray-dark-2">Climatempo alerta: Perigo de chuvas volumosas na Região Sudeste</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Chuva volumosa e persistente neste final de semana, dias 19 e 20 de outubro. A chuva pode se prolongar por muitas horas seguidas, variando de intensidade! </h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rj" class="link actTriggerGA" title="Notícias sobre RJ"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RJ_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RJ</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rio-de-janeiro" class="link actTriggerGA" title="Notícias sobre Rio de Janeiro"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Rio de Janeiro_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Rio de Janeiro</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/es" class="link actTriggerGA" title="Notícias sobre ES"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_ES_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >ES</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mg" class="link actTriggerGA" title="Notícias sobre MG"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MG_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MG</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/temporal" class="link actTriggerGA" title="Notícias sobre Temporal"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Temporal_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Temporal</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/18 15:16:45 às ">
+                2024/10/18 15:16:45 às 
+              </time>
+                            | Atualizado
+                <time datetime="2024/10/19 às 11:30:24">
+                  2024/10/19 às 11:30:24
+                </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/18/clima-impacta-e-safra-de-trigo-de-sp-encerra-com-volume-menor-6711">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2022/07/410x300_9087d9382673339b683439c70de0243f.jpg" class="lazyload" alt="GettyImages">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/18/clima-impacta-e-safra-de-trigo-de-sp-encerra-com-volume-menor-6711">
+              <h3 class="title -gray-dark-2">Clima impacta e safra de trigo de SP encerra com volume menor</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">O acumulado do ano deve ficar abaixo de 300 mil toneladas. Mudança climática afetou mercado global. Entenda</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/18 12:07:31 às ">
+                2024/10/18 12:07:31 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/18/alerta-temporais-ganham-mais-forca-no-interiorndensp-6709">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_a17c29bde47e799886166065375410f8.jpg" class="lazyload" alt="Foto: Getty Images">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/18/alerta-temporais-ganham-mais-forca-no-interiorndensp-6709">
+              <h3 class="title -gray-dark-2">Alerta: temporais ganham mais força no interior de SP</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Grandes áreas de instabilidades se formam no fim de semana e acumulados podem superar os 100mm até o domingo, 20 de outubro</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/temporal" class="link actTriggerGA" title="Notícias sobre Temporal"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Temporal_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Temporal</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/18 07:43:02 às ">
+                2024/10/18 07:43:02 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+      
+              <label for="chk-more-news-2" class="action-button act-render-banner  actTriggerGA"
+          onclick="this.style.display = 'none';"
+          id="Botao_1_mais_noticias_home_noticias"
+          data-category="Pagina_home_noticias"
+          data-action="Clique_botao_1_mostra_mais_noticias_home_noticias"
+          data-label="Mais_noticias_home_noticias"
+          data-id="Feed_News_Button_SeeMore-01"
+        >Veja mais
+        </label>
+
+        <div class="wrapper-banner -bg-light _none _flex-md _padding-b-20 _padding-t-20" data-type="ad_space">
+          <div id="M_noticias_retangulo_1" data-type="ad_unit"></div>
+        </div>
+        
+        <div class="wrapper-banner -bg-light _none-md" data-type="ad_space">
+          <div id="D_noticias_middle_1" data-type="ad_unit"></div>
+        </div>
+
+          </div>
+      
+    <input type="checkbox" class="chk-accordion _none" id="chk-more-news-2">
+
+    <div class="wrapper-articles _none">
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/17/mudancas-climaticas-novas-perspectivas-para-o-mercado-de-trigo-6703">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_feb0d7ddc3faeb481092ff7d8894d6d4.jpg" class="lazyload" alt="Foto: Divulgação Abitrigo">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/17/mudancas-climaticas-novas-perspectivas-para-o-mercado-de-trigo-6703">
+              <h3 class="title -gray-dark-2">Mudanças Climáticas: novas perspectivas para o mercado de trigo</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Especialistas definiram cenários e expectativas para safra nos principais players internacionais</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rs" class="link actTriggerGA" title="Notícias sobre RS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sc" class="link actTriggerGA" title="Notícias sobre SC"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SC_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SC</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/17 10:13:19 às ">
+                2024/10/17 10:13:19 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/16/forca-no-campo-mais-de-3-mil-mulheres-estarao-reunidas-no-cnma-6693">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_c46157e7ce7962608d328745112ae43e.jpg" class="lazyload" alt="">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/16/forca-no-campo-mais-de-3-mil-mulheres-estarao-reunidas-no-cnma-6693">
+              <h3 class="title -gray-dark-2">Força no campo: mais de 3 mil mulheres estarão reunidas no CNMA</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">A 9º edição do evento irá realizar uma final de reality show culinário ao vivo com produtoras </h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/go" class="link actTriggerGA" title="Notícias sobre GO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_GO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >GO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pe" class="link actTriggerGA" title="Notícias sobre PE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rj" class="link actTriggerGA" title="Notícias sobre RJ"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RJ_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RJ</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rio-de-janeiro" class="link actTriggerGA" title="Notícias sobre Rio de Janeiro"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Rio de Janeiro_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Rio de Janeiro</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/es" class="link actTriggerGA" title="Notícias sobre ES"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_ES_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >ES</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mg" class="link actTriggerGA" title="Notícias sobre MG"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MG_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MG</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ac" class="link actTriggerGA" title="Notícias sobre AC"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_AC_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >AC</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ap" class="link actTriggerGA" title="Notícias sobre AP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_AP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >AP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/am" class="link actTriggerGA" title="Notícias sobre AM"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_AM_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >AM</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pa" class="link actTriggerGA" title="Notícias sobre PA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ro" class="link actTriggerGA" title="Notícias sobre RO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rr" class="link actTriggerGA" title="Notícias sobre RR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/to" class="link actTriggerGA" title="Notícias sobre TO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_TO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >TO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rs" class="link actTriggerGA" title="Notícias sobre RS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sc" class="link actTriggerGA" title="Notícias sobre SC"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SC_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SC</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/df" class="link actTriggerGA" title="Notícias sobre DF"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_DF_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >DF</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mt" class="link actTriggerGA" title="Notícias sobre MT"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MT_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MT</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ms" class="link actTriggerGA" title="Notícias sobre MS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/al" class="link actTriggerGA" title="Notícias sobre AL"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_AL_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >AL</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ba" class="link actTriggerGA" title="Notícias sobre BA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_BA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >BA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ce" class="link actTriggerGA" title="Notícias sobre CE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_CE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >CE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ma" class="link actTriggerGA" title="Notícias sobre MA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pb" class="link actTriggerGA" title="Notícias sobre PB"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PB_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PB</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pi" class="link actTriggerGA" title="Notícias sobre PI"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PI_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PI</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rn" class="link actTriggerGA" title="Notícias sobre RN"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RN_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RN</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/se" class="link actTriggerGA" title="Notícias sobre SE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agrotalk" class="link actTriggerGA" title="Notícias sobre Agrotalk"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agrotalk_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agrotalk</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/16 17:11:24 às ">
+                2024/10/16 17:11:24 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/16/plantio-do-milho-1o-safra-avanca-no-parana-6692">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_3d0cf29058e61c9daf9e8aa130f9c320.jpg" class="lazyload" alt="Foto: Carla Rossato - Sertaneja - PR">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/16/plantio-do-milho-1o-safra-avanca-no-parana-6692">
+              <h3 class="title -gray-dark-2">Plantio do milho 1ª safra avança no Paraná</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Semeadura da soja tende a aumentar ainda mais após as chuvas    </h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/16 15:03:56 às ">
+                2024/10/16 15:03:56 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/15/umidade-alta-pode-impactar-qualidade-do-trigo-no-parana-6684">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_aa47462419b466990e5e905e1d05b675.jpg" class="lazyload" alt="Foto: Simone Vargas - Campina do Simão - PR">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/15/umidade-alta-pode-impactar-qualidade-do-trigo-no-parana-6684">
+              <h3 class="title -gray-dark-2">Umidade alta pode impactar qualidade do trigo no Paraná</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Estado tem mais chuva prevista. Veja no mapa como fica as condições do tempo nos próximos dias </h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/temporal" class="link actTriggerGA" title="Notícias sobre Temporal"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Temporal_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Temporal</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/15 11:41:25 às ">
+                2024/10/15 11:41:25 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/14/chuva-favorece-inicio-da-semeadura-da-soja-no-pr-e-em-go-6674">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_9959ae747e0a3f97b9e235d6c866594a.jpg" class="lazyload" alt="Foto: Ezio Machado - Quirinopolis - GO ">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/14/chuva-favorece-inicio-da-semeadura-da-soja-no-pr-e-em-go-6674">
+              <h3 class="title -gray-dark-2">Chuva favorece início da semeadura da soja no PR e em GO </h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Veja o vídeo enviado pelos produtores que marca o início do plantio nas duas regiões </h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/go" class="link actTriggerGA" title="Notícias sobre GO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_GO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >GO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/14 15:38:13 às ">
+                2024/10/14 15:38:13 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+      
+              <label for="chk-more-news-3" class="action-button act-render-banner  actTriggerGA"
+          onclick="this.style.display = 'none';"
+          id="Botao_2_mais_noticias_home_noticias"
+          data-category="Pagina_home_noticias"
+          data-action="Clique_botao_2_mostra_mais_noticias_home_noticias"
+          data-label="Mais_noticias_home_noticias"
+          data-id="Feed_News_Button_SeeMore-02"
+        >Veja mais
+        </label>
+
+        <div class="wrapper-banner -bg-light _none _flex-md _padding-b-20 _padding-t-20" data-type="ad_space">
+          <div id="M_noticias_retangulo_2" data-type="ad_unit"></div>
+        </div>
+        
+        <div class="wrapper-banner -bg-light _none-md" data-type="ad_space">
+          <div id="D_noticias_middle_2" data-type="ad_unit"></div>
+        </div>
+
+          </div>
+      
+    <input type="checkbox" class="chk-accordion _none" id="chk-more-news-3">
+
+    <div class="wrapper-articles _none">
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/14/chuva-se-espalha-sobre-as-areas-e-cana-do-brasil-6671">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_427234b44d205317946522fe8b4334fb.jpg" class="lazyload" alt="Foto: Getty Images">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/14/chuva-se-espalha-sobre-as-areas-e-cana-do-brasil-6671">
+              <h3 class="title -gray-dark-2">Chuva se espalha sobre as áreas de cana do Brasil</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Veja no mapa quantos milímetros de chuva está previsto para sua região ao longo da semana</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/14 11:36:51 às ">
+                2024/10/14 11:36:51 às 
+              </time>
+                            | Atualizado
+                <time datetime="2024/10/14 às 15:03:49">
+                  2024/10/14 às 15:03:49
+                </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/14/fim-do-vazio-sanitario-marca-o-inicio-do-plantio-da-soja-no-rs-6670">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_d2b56819d7200debe941e56781cef218.jpg" class="lazyload" alt="">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/14/fim-do-vazio-sanitario-marca-o-inicio-do-plantio-da-soja-no-rs-6670">
+              <h3 class="title -gray-dark-2">Fim do vazio sanitário marca o início do plantio da soja no RS </h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Na Campanha, o plantio está sendo limitado pelo excesso de umidade no solo. Veja como fica o tempo nos próximos dias</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rs" class="link actTriggerGA" title="Notícias sobre RS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/14 11:07:54 às ">
+                2024/10/14 11:07:54 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/13/inicio-de-semana-sem-alertas-meteorologicos-no-estado-de-sp-6667">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_43879689daadf793913469c0c6203b04.jpg" class="lazyload" alt="">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/13/inicio-de-semana-sem-alertas-meteorologicos-no-estado-de-sp-6667">
+              <h3 class="title -gray-dark-2">Início de semana sem alertas meteorológicos no estado de SP</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">A partir de meados da semana, a condição de novas pancadas de chuva retornam a boa parte do estado! </h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/13 11:55:55 às ">
+                2024/10/13 11:55:55 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/13/chuva-aumenta-no-nordeste-6666">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_905a822cbd14ecbbf5df03bf4702870a.jpg" class="lazyload" alt="Foto: Getty Images">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/13/chuva-aumenta-no-nordeste-6666">
+              <h3 class="title -gray-dark-2">Chuva aumenta no Nordeste</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Tempo fica mais instável neste começo de semana no estado da Bahia. Instabilidades avançam mais para o interior da Região nos próximos dias</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/pe" class="link actTriggerGA" title="Notícias sobre PE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ba" class="link actTriggerGA" title="Notícias sobre BA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_BA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >BA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ce" class="link actTriggerGA" title="Notícias sobre CE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_CE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >CE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ma" class="link actTriggerGA" title="Notícias sobre MA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pb" class="link actTriggerGA" title="Notícias sobre PB"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PB_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PB</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pi" class="link actTriggerGA" title="Notícias sobre PI"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PI_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PI</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/13 11:33:46 às ">
+                2024/10/13 11:33:46 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/11/atualizacao-mostra-cenario-de-la-nina-entre-outubro-e-novembro-6661">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_6352c2b14f93f2578afad2b7b43b6a4d.jpg" class="lazyload" alt="Fonte: Getty Images">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/11/atualizacao-mostra-cenario-de-la-nina-entre-outubro-e-novembro-6661">
+              <h3 class="title -gray-dark-2">Atualização mostra cenário de La Niña entre Outubro e Novembro</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Impacto do fenômeno será pontual. Veja a tendência para agricultura nos próximos meses</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/go" class="link actTriggerGA" title="Notícias sobre GO"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_GO_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >GO</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pe" class="link actTriggerGA" title="Notícias sobre PE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rs" class="link actTriggerGA" title="Notícias sobre RS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sc" class="link actTriggerGA" title="Notícias sobre SC"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SC_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SC</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/df" class="link actTriggerGA" title="Notícias sobre DF"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_DF_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >DF</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/mt" class="link actTriggerGA" title="Notícias sobre MT"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MT_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MT</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ms" class="link actTriggerGA" title="Notícias sobre MS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/al" class="link actTriggerGA" title="Notícias sobre AL"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_AL_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >AL</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ba" class="link actTriggerGA" title="Notícias sobre BA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_BA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >BA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ce" class="link actTriggerGA" title="Notícias sobre CE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_CE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >CE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ma" class="link actTriggerGA" title="Notícias sobre MA"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_MA_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >MA</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pb" class="link actTriggerGA" title="Notícias sobre PB"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PB_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PB</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pi" class="link actTriggerGA" title="Notícias sobre PI"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PI_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PI</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rn" class="link actTriggerGA" title="Notícias sobre RN"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RN_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RN</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/se" class="link actTriggerGA" title="Notícias sobre SE"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SE_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SE</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/11 12:56:07 às ">
+                2024/10/11 12:56:07 às 
+              </time>
+                            | Atualizado
+                <time datetime="2024/10/11 às 21:15:29">
+                  2024/10/11 às 21:15:29
+                </time>
+                          </p>
+          </div>
+        </article>
+      
+              <label for="chk-more-news-4" class="action-button act-render-banner  actTriggerGA"
+          onclick="this.style.display = 'none';"
+          id="Botao_3_mais_noticias_home_noticias"
+          data-category="Pagina_home_noticias"
+          data-action="Clique_botao_3_mostra_mais_noticias_home_noticias"
+          data-label="Mais_noticias_home_noticias"
+          data-id="Feed_News_Button_SeeMore-03"
+        >Veja mais
+        </label>
+
+        <div class="wrapper-banner -bg-light _none _flex-md _padding-b-20 _padding-t-20" data-type="ad_space">
+          <div id="M_noticias_retangulo_3" data-type="ad_unit"></div>
+        </div>
+        
+        <div class="wrapper-banner -bg-light _none-md" data-type="ad_space">
+          <div id="D_noticias_middle_3" data-type="ad_unit"></div>
+        </div>
+
+          </div>
+      
+    <input type="checkbox" class="chk-accordion _none" id="chk-more-news-4">
+
+    <div class="wrapper-articles _none">
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/10/clima-impactou-segunda-safra-de-batata-e-cafe-no-parana-6653">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_1dd58e4f97f7a8284f51fe98f8eae0d8.jpg" class="lazyload" alt="Fonte: Getty Images">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/10/clima-impactou-segunda-safra-de-batata-e-cafe-no-parana-6653">
+              <h3 class="title -gray-dark-2">Clima impactou segunda safra de batata e café no Paraná</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Colheitas das duas culturas está praticamente encerrada no estado e com volume inferior ao projetado, segundo o Deral</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/10 12:13:40 às ">
+                2024/10/10 12:13:40 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/09/o-impacto-das-mudancas-climaticas-no-agronegocio-brasileiro-6643">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_d767a1487420b9c8e45b39d01342a106.jpg" class="lazyload" alt="">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/09/o-impacto-das-mudancas-climaticas-no-agronegocio-brasileiro-6643">
+              <h3 class="title -gray-dark-2">O impacto das mudanças climáticas no agronegócio brasileiro</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Quais são as soluções sustentáveis disponíveis para garantir resiliência do agronegócio diante deste cenário</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agrotalk" class="link actTriggerGA" title="Notícias sobre Agrotalk"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agrotalk_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agrotalk</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/09 14:39:58 às ">
+                2024/10/09 14:39:58 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/09/chuva-persistente-e-volumosa-em-santa-catarina-6641">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_d92d976e7d54d9ebc85761aa91a26727.jpg" class="lazyload" alt="Foto: Getty Images">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/09/chuva-persistente-e-volumosa-em-santa-catarina-6641">
+              <h3 class="title -gray-dark-2">Chuva persistente e volumosa em Santa Catarina</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">O risco de transtornos é alto até a sexta-feira, 11 de outubro no estado!</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sc" class="link actTriggerGA" title="Notícias sobre SC"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SC_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SC</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/chuva" class="link actTriggerGA" title="Notícias sobre Chuva"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Chuva_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Chuva</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/temporal" class="link actTriggerGA" title="Notícias sobre Temporal"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Temporal_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Temporal</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/09 13:57:00 às ">
+                2024/10/09 13:57:00 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/09/clima-impacta-produtividade-do-trigo-no-parana-6640">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_604834bdd04c7a7fc20edbd25e4c0180.jpg" class="lazyload" alt="Foto: Patricia Vione - São Gabriel - RS ">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/09/clima-impacta-produtividade-do-trigo-no-parana-6640">
+              <h3 class="title -gray-dark-2">Clima impacta produtividade do trigo no Paraná</h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">No Rio Grande do Sul e em Santa Catarina, chuvas favorecem doenças e o surgimento de pragas. Veja o acumulado de chuva para os próximos dias </h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/norte" class="link actTriggerGA" title="Notícias sobre Norte"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Norte_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Norte</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/centro-oeste" class="link actTriggerGA" title="Notícias sobre Centro-Oeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Centro-Oeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Centro-Oeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/nordeste" class="link actTriggerGA" title="Notícias sobre Nordeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Nordeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Nordeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/09 10:49:12 às ">
+                2024/10/09 10:49:12 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+              <article class="article">
+          <a data-dynamic-news-link data-link="2024/10/08/temporal-pode-paralisar-semeadura-do-feijao-no-sul-6632">
+            <figure class="featured-image">
+              <img data-src="https://imagens.climatempo.com.br/climapress/galeria/2024/10/410x300_e004cbf4d4e5a604927732046300b934.jpg" class="lazyload" alt="">
+            </figure>
+          </a>
+
+          <div>
+            <a data-dynamic-news-link data-link="2024/10/08/temporal-pode-paralisar-semeadura-do-feijao-no-sul-6632">
+              <h3 class="title -gray-dark-2">Temporal pode paralisar semeadura do feijão no Sul </h3>
+            </a>
+
+            <h4 class="-gray -line-height-20 -normal" style="font-size:15px;">Acumulados serão significativos até o dia 12 de Outubro. SP já finalizou o plantio</h4>
+
+            <ul class="horizontal-scrollable _margin-b-sm-20 _margin-t-sm-20">
+                              <li class="tag">
+                  <a href="/noticias/sudeste" class="link actTriggerGA" title="Notícias sobre Sudeste"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sudeste_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sudeste</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sp" class="link actTriggerGA" title="Notícias sobre SP"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SP_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SP</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sao-paulo" class="link actTriggerGA" title="Notícias sobre São Paulo"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_São Paulo_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >São Paulo</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sul" class="link actTriggerGA" title="Notícias sobre Sul"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Sul_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Sul</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/pr" class="link actTriggerGA" title="Notícias sobre PR"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_PR_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >PR</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/rs" class="link actTriggerGA" title="Notícias sobre RS"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_RS_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >RS</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/sc" class="link actTriggerGA" title="Notícias sobre SC"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_SC_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >SC</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/agricultura" class="link actTriggerGA" title="Notícias sobre Agricultura"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Agricultura_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Agricultura</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/ultimas-noticias" class="link actTriggerGA" title="Notícias sobre Últimas Notícias"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Últimas Notícias_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Últimas Notícias</a>
+                </li>
+                              <li class="tag">
+                  <a href="/noticias/tempo-agora" class="link actTriggerGA" title="Notícias sobre Tempo Agora"
+                    data-category="Pagina_home_noticias"
+                    data-action="Clique_tag_categoria_Tempo Agora_home_noticias"
+                    data-label="Tag_de_categoria_noticia_home_noticias"
+                  >Tempo Agora</a>
+                </li>
+                          </ul>
+
+            <p class="date -gray">
+              <time datetime="2024/10/08 14:09:49 às ">
+                2024/10/08 14:09:49 às 
+              </time>
+                          </p>
+          </div>
+        </article>
+      
+          </div>
+      
+    <input type="checkbox" class="chk-accordion _none" id="chk-more-news-5">
+
+    <div class="wrapper-articles _none">
+      
+              <label for="chk-more-news-6" class="action-button act-render-banner  actTriggerGA"
+          onclick="this.style.display = 'none';"
+          id="Botao_5_mais_noticias_home_noticias"
+          data-category="Pagina_home_noticias"
+          data-action="Clique_botao_5_mostra_mais_noticias_home_noticias"
+          data-label="Mais_noticias_home_noticias"
+          data-id="Feed_News_Button_SeeMore-05"
+        >Veja mais
+        </label>
+
+        <div class="wrapper-banner -bg-light _none _flex-md _padding-b-20 _padding-t-20" data-type="ad_space">
+          <div id="M_noticias_retangulo_5" data-type="ad_unit"></div>
+        </div>
+        
+        <div class="wrapper-banner -bg-light _none-md" data-type="ad_space">
+          <div id="D_noticias_middle_5" data-type="ad_unit"></div>
+        </div>
+
+          </div>
+  </section>
+        </div>
+      </div>
+
+      <div class="col-lg-4 _margin-t-md-20" style="min-height: 280px" >
+        <div class="wrapper-banner -bg-light _none-md _margin-b-20 -retangle" data-type="ad_space">
+          <div id="D_home_retangulo_1" data-type="ad_unit"></div>
+        </div>
+
+        <div>
+          <div class="card -no-bottom">
+            <h2 class="-bold -font-18 -gray-dark-2">Previsão de chuva</h2>
+          </div>
+
+          <div class="card -no-top">
+            <h3 class="-gray-dark-2 -font-base -normal">
+              Confira o volume de chuva previsto para a cidade de
+              <a href="previsao-do-tempo/cidade/558/saopaulo-sp"
+                class="-blue -bold actTriggerGA" title="Ver a previsão completa para São Paulo"
+                id="Link_saopaulo-sp_card_volume_chuva" data-category="Pagina_home"
+                data-action="Clique_link_saopaulo-sp_card_volume_chuva" data-label="Home_site">
+                São Paulo
+              </a>
+            </h3>
+
+            <div class="_flex _margin-t-20 _space-between">
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>30mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="30mm">
+                  <span style="height: 30%"></span>
+                </div>
+                <span>Sex</span>
+                <span>24/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>1mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="1mm">
+                  <span style="height: 1%"></span>
+                </div>
+                <span>Sáb</span>
+                <span>25/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Dom</span>
+                <span>26/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Seg</span>
+                <span>27/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Ter</span>
+                <span>28/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Qua</span>
+                <span>29/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Qui</span>
+                <span>30/07</span>
+              </div>
+                          </div>
+          </div>
+        </div>
+
+        <div class="wrapper-banner -bg-light -retangle _none-md _flex _margin-t-20" data-type="ad_space">
+          <div id="d_home_retangulo_2" data-type="ad_unit"></div>
+        </div>
+
+        <div class="wrapper-banner -bg-light -retangle _none _flex-md _margin-t-md-20" data-type="ad_space">
+          <div id="M_home_retangulo_2" data-type="ad_unit"></div>
+        </div>
+
+        <div class="_margin-t-20">
+          <div class="card -no-bottom _flex _space-between _align-center">
+            <h2 class="-bold -font-18 -gray-dark-2">Praias próximas</h2>
+
+            <a class="-blue actTriggerGA" href="/previsao-do-tempo/litoral" title="Mais praias" id="Link_mais_praias"
+              data-category="Pagina_home" data-action="Clique_link_mais_praias" data-label="Home_site">Mais praias</a>
+          </div>
+
+          <div class="card -no-top">
+            <ul>
+    <li class="
+    item
+    _padding-lr-10
+    _flex
+    _align-center
+    _space-between      _padding-b-20 _border-b-light-1  ">
+    <div class="_flex _align-center">
+      <img class="lazyload _margin-r-20" data-src="/dist/images/v2/svg/.svg" width="33" height="33" alt="" />
+
+      <div>
+        <a href="/previsao-do-tempo/litoral/1350/gonzaguinha-sp" class="-bold -gray-dark-2 _margin-b-5 _block" title="Gonzaguinha">Gonzaguinha</a>
+        <p class="-gray _flex _align-center">
+          <img class="lazyload _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-baixa.svg" alt="Altura mínima da onda">
+          m
+
+          <img class="lazyload _margin-l-10 _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-alta.svg" alt="Altura máxima da onda">
+          m
+        </p>
+      </div>
+    </div>
+    <p class="-gray">58.02 km</p>
+  </li>
+    <li class="
+    item
+    _padding-lr-10
+    _flex
+    _align-center
+    _space-between _padding-t-20     _padding-b-20 _border-b-light-1  ">
+    <div class="_flex _align-center">
+      <img class="lazyload _margin-r-20" data-src="/dist/images/v2/svg/.svg" width="33" height="33" alt="" />
+
+      <div>
+        <a href="/previsao-do-tempo/litoral/1351/praiadeparanapua-sp" class="-bold -gray-dark-2 _margin-b-5 _block" title="Praia de Paranapuã">Praia de Paranapuã</a>
+        <p class="-gray _flex _align-center">
+          <img class="lazyload _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-baixa.svg" alt="Altura mínima da onda">
+          m
+
+          <img class="lazyload _margin-l-10 _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-alta.svg" alt="Altura máxima da onda">
+          m
+        </p>
+      </div>
+    </div>
+    <p class="-gray">58.69 km</p>
+  </li>
+    <li class="
+    item
+    _padding-lr-10
+    _flex
+    _align-center
+    _space-between _padding-t-20     _padding-b-20 _border-b-light-1  ">
+    <div class="_flex _align-center">
+      <img class="lazyload _margin-r-20" data-src="/dist/images/v2/svg/.svg" width="33" height="33" alt="" />
+
+      <div>
+        <a href="/previsao-do-tempo/litoral/80/praiadeitarare-sp" class="-bold -gray-dark-2 _margin-b-5 _block" title="Praia de Itararé">Praia de Itararé</a>
+        <p class="-gray _flex _align-center">
+          <img class="lazyload _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-baixa.svg" alt="Altura mínima da onda">
+          m
+
+          <img class="lazyload _margin-l-10 _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-alta.svg" alt="Altura máxima da onda">
+          m
+        </p>
+      </div>
+    </div>
+    <p class="-gray">58.84 km</p>
+  </li>
+    <li class="
+    item
+    _padding-lr-10
+    _flex
+    _align-center
+    _space-between _padding-t-20      ">
+    <div class="_flex _align-center">
+      <img class="lazyload _margin-r-20" data-src="/dist/images/v2/svg/.svg" width="33" height="33" alt="" />
+
+      <div>
+        <a href="/previsao-do-tempo/litoral/79/josemenino-sp" class="-bold -gray-dark-2 _margin-b-5 _block" title="José Menino">José Menino</a>
+        <p class="-gray _flex _align-center">
+          <img class="lazyload _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-baixa.svg" alt="Altura mínima da onda">
+          m
+
+          <img class="lazyload _margin-l-10 _margin-r-5" data-src="/dist/images/v2/svg/ic-mare-alta.svg" alt="Altura máxima da onda">
+          m
+        </p>
+      </div>
+    </div>
+    <p class="-gray">59.44 km</p>
+  </li>
+  </ul>
+          </div>
+        </div>
+
+        <div class="wrapper-banner -bg-light -retangle _none-md _flex _sticky _margin-t-20" data-type="ad_space">
+          <div id="d_home_retangulo_3" data-type="ad_unit">
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="wrapper-banner -bg-light -retangle _none _flex-md _margin-t-md-20" data-type="ad_space">
+            <div id="m_home_btc" data-type="ad_unit"></div>
+          </div>
+
+          <div class="accordion-card _margin-t-20">
+  <input type="checkbox" class="chk-accordion _none" id="chk-accordion-recommended" checked>
+
+  <div class="card -no-bottom _relative">
+    <label class="label actTriggerGA" for="chk-accordion-recommended" id="accordion-recommended" data-category="Taboola_recommended" data-action="Clique_accordion_taboola_recomendados" data-label="Taboola_recommended">
+      <p class="title _flex _align-center"><span class="icon -circle -recommended common-sprite sprite-recommended"></span> Recomendados para você</p>
+
+      <span class="dropdown-arrow">
+        <i class="fa chevron"></i>
+      </span>
+    </label>
+  </div>
+
+  <div class="accordion-content card -no-top">
+    <div class="wrapper">
+      <div id="native-content-widget" data-type="ad_space">
+        <div id="bloco-native-rodape" data-type="ad_network">
+          
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<footer class="footer-site ">
+  <div class="container _relative">
+    <div class="top">
+      <div class="_flex _align-center" style="flex:1;">
+        <img class="logo lazyload" width="120" height="31" data-src="/dist/images/logotempoagora-footer.png" alt="Tempo Agora">
+      </div>
+
+      
+          </div>
+
+    <div class="row _padding-l-20 _padding-r-20">
+	<div class="col-md-2 col-6">
+		<ul class="footer-links">
+			<li class="item -title">
+				<a href="/previsao-do-tempo" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Previsao" data-category="Links do Rodape">Previsão</a>
+			</li>
+
+			<li class="item">
+				<a data-link="/previsao-do-tempo/agora/cidade/{slug}" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Previsao_Agora" data-category="Links do Rodape" data-dynamic-link>Agora</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/cidade/{slug}" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Previsao_Hoje" data-category="Links do Rodape" data-dynamic-link>Hoje</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/amanha/cidade/{slug}" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Previsao_Amanha" data-category="Links do Rodape" data-dynamic-link>Amanhã</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/fim-de-semana/cidade/{slug}" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Previsao_Fim_de_Semana" data-category="Links do Rodape" data-dynamic-link>Fim de semana</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/15-dias/cidade/{slug}" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Previsao_15_Dias" data-category="Links do Rodape" data-dynamic-link>15 dias</a>
+			</li>
+			<li class="item">
+				<a href="/previsao-do-tempo/cidade/litoral" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Previsao_Praias" data-category="Links do Rodape">Praias</a>
+			</li>
+
+			<li class="item -title">
+				<a class="link">Hub de Cidades</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/?page=HOJE" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Hub_Cidades_Hoje" data-category="Links do Rodape" data-dynamic-link>Hoje</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/?page=AMANHA" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Hub_Cidades_Amanha" data-category="Links do Rodape" data-dynamic-link>Amanhã</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/?page=15DIAS" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Hub_Cidades_15_Dias" data-category="Links do Rodape" data-dynamic-link>15 dias</a>
+			</li>
+			<li class="item">
+				<a data-link="/previsao-do-tempo/?page=FDS" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Hub_Cidades_Fim_de_Semana" data-category="Links do Rodape" data-dynamic-link>Fim de semana</a>
+			</li>
+
+			<li class="item -title">
+				<a class="link">Clima</a>
+			</li>
+			<li class="item">
+				<a href="/noticia/2020/09/09/clima-o-que-e-fatores-elementos-e-muito-mais--5667" target="_blank" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Clima_Diferenca_Entre_Clima_e_Tempo" data-category="Links do Rodape">Diferença entre clima e tempo</a>
+			</li>
+
+
+			<li class="item -title">
+				<a class="link">Chuva</a>
+			</li>
+
+			<li class="item">
+				<a data-link="/previsao-do-tempo/15-dias/cidade/{slug}#chuva" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Chuva_Chuva_Prevista" data-category="Links do Rodape" data-dynamic-link>Chuva prevista</a>
+			</li>
+
+		</ul>
+	</div>
+
+	<div class="col-md-2 col-6">
+		<ul class="footer-links">
+
+			<li class="item -title">
+				<a href="/graficos/cidade/{slug}#chuva" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Graficos" data-category="Links do Rodape">Gráficos</a>
+			</li>
+			<li class="item">
+				<a data-link="/graficos/cidade/{slug}#chuva" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Graficos_Previsao_de_Chuva" data-category="Links do Rodape" data-dynamic-link>Previsão de chuva</a>
+			</li>
+			<li class="item">
+				<a data-link="/graficos/cidade/{slug}#temperatura" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Graficos_Previsao_de_Temperatura" data-category="Links do Rodape" data-dynamic-link>Previsão de temperatura</a>
+			</li>
+			<li class="item">
+				<a data-link="/graficos/cidade/{slug}#umidade" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Graficos_Previsao_de_Umidade" data-category="Links do Rodape" data-dynamic-link>Previsão de umidade</a>
+			</li>
+			<li class="item">
+				<a data-link="/uv/{slug}" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Graficos_Indice_UV" data-category="Links do Rodape" data-dynamic-link>Índice UV</a>
+			</li>
+			<li class="item">
+				<a data-link="/climatologia/{slug}" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Graficos_Climatologia" data-category="Links do Rodape" data-dynamic-link>Climatologia</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-2 col-6 _margin-t-sm-60">
+		<ul class="footer-links">
+			<li class="item -title">
+				<a href="/noticias" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias" data-category="Links do Rodape">Notícias</a>
+			</li>
+			<li class="item">
+				<a href="/noticias" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_Ultimas_Noticias" data-category="Links do Rodape">Últimas notícias</a>
+			</li>
+			<li class="item">
+				<a href="/noticias/alimentacao" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_Alimentacao" data-category="Links do Rodape">Alimentação</a>
+			</li>
+			<li class="item">
+				<a href="/noticias/saude" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_Saude" data-category="Links do Rodape">Saúde</a>
+			</li>
+			<li class="item">
+				<a href="/noticias/meio-ambiente" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_Meio_Ambiente" data-category="Links do Rodape">Meio Ambiente</a>
+			</li>
+			<li class="item">
+				<a href="/noticias/o-clima-que-queremos" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_O_Clima_que_Queremos" data-category="Links do Rodape">O Clima que Queremos</a>
+			</li>
+			<li class="item">
+				<a href="/alertas" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_Alertas" data-category="Links do Rodape">Alertas</a>
+			</li>
+			<li class="item">
+				<a href="/noticias/sustentabilidade" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_Sustentabilidade" data-category="Links do Rodape">Sustentabilidade</a>
+			</li>
+			<li class="item">
+				<a href="/noticias/internacional" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Noticias_Internacional" data-category="Links do Rodape">Internacional</a>
+			</li>
+
+		</ul>
+	</div>
+
+	<div class="col-md-2 col-6 _margin-t-sm-60">
+		<ul class="footer-links">
+			<li class="item -title">
+				<a class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Canais" data-category="Links do Rodape">Canais</a>
+			</li>
+			<li class="item">
+				<a href="/noticias/sustentabilidade" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Canais_Sustentabilidade" data-category="Links do Rodape">Sustentabilidade</a>
+			</li>
+			<li class="item">
+				<a href="/radio" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Canais_Radio" data-category="Links do Rodape">Rádio</a>
+			</li>
+
+
+		</ul>
+	</div>
+
+	<div class="col-md-2 col-6 _margin-t-sm-60">
+		<ul class="footer-links">
+
+			<li class="item -title">
+				<a href="#" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Confira" data-category="Links do Rodape">Confira também</a>
+			</li>
+			<li class="item">
+				<a href="/participe" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Confira_Participe" data-category="Links do Rodape">Participe</a>
+			</li>
+			<li class="item">
+				<a href="/tempo-no-seu-site" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Confira_Tempo_no_seu_Site" data-category="Links do Rodape">Tempo no seu site</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-2 col-6 _margin-t-sm-60">
+		<ul class="footer-links">
+			<li class="item -title">
+				<a href="#" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Contato" data-category="Links do Rodape">Contato</a>
+			</li>
+			<li class="item">
+				<a href="/anuncie" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Contato_Anuncie" data-category="Links do Rodape">Anuncie</a>
+			</li>
+			<li class="item">
+				<a href="/politica-de-privacidade" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Contato_Politica_de_Privacidade" data-category="Links do Rodape">Política de privacidade</a>
+			</li>
+			<li class="item">
+				<a href="#" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Contato_Change_Privace" data-category="Links do Rodape" onclick="if(window.__lxG__consent__!==undefined&&window.__lxG__consent__.getState()!==null){window.__lxG__consent__.showConsent()} else {alert('This function only for users from European Economic Area (EEA)')}; return false">Change privacy settings</a>
+			</li>
+			<li class="item">
+				<a href="/trabalhe-conosco" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Contato_Trabalhe_Conosco" data-category="Links do Rodape">Trabalhe conosco</a>
+			</li>
+			<li class="item">
+				<a href="/faq" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Contato_FAQ" data-category="Links do Rodape">FAQ</a>
+			</li>
+			<li class="item">
+				<a href="/termos-de-uso" class="link actTriggerGA" data-label="Rodape" data-action="Link_Rodape_Contato_Termos_de_Uso" data-category="Links do Rodape">Termos de uso</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+    <h6 class="copyright">Copyright 2026 - Tempo Agora. Todos os direitos reservados.</h6>
+  </div>
+</footer>
+
+
+
+
+<div class="wrapper-modal _flex _justify-center _align-center act-close-modal"></div>
+<!-- JS -->
+<link rel="preload" href="/dist/js/index.bundle.min.js" as="script" crossorigin="anonymous">
+<script src="/dist/js/index.bundle.min.js" async></script>
+
+<!-- TABOOLA BODY
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+FIM TABOOLA BODY -->
+
+
+
+
+</body>
+</html>

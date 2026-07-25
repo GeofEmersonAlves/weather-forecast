@@ -16,7 +16,6 @@ Histórico:
        16/07/2026 - Inicio
 ===============================================================================
 """
-
 import streamlit as st
 from components.local import local_default
 from services.busca_cidades import lst_empty_resp

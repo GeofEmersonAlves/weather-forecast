@@ -32,5 +32,5 @@ def data_futura(data_original : date, dias : int) -> date:
     return data_futura
 
 #Retorna o texto de uma data por extenso, formatada
-def data_texto(data : date) -> str:
+def data_por_extenso(data : date) -> str:
     return format_date(data,format='full',locale='pt_BR')

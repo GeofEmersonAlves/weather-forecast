@@ -10,7 +10,6 @@ Python     : Python 3.13.14 | packaged by Anaconda, Inc.
 
 Descrição:
         Insere uma nota no rodapé da página com as minhas informações
-      
 
 Histórico:
        21/07/2026 - Inicio 
@@ -20,17 +19,16 @@ Histórico:
 import streamlit as st
 
 def nota_de_rodape():
-    st.divider()
-
-    st.markdown("""
-    <div style="text-align:center; line-height:1.8">
-    <b>Weather Forecast</b>
-    Desenvolvido por <b>Emerson Alves da Silva</b>
-    🐍 Python 🎈 Streamlit 📊 Plotly 🌐 Requests 🥣 BeautifulSoup ☁️ WeatherStack 🌧️ INMET
-    <br>
-    <a href="https://github.com/GeofEmersonAlves" target="_blank">🔗GitHub</a> |
-    <a href="https://www.linkedin.com/in/emersonalvesdasilva/" target="_blank">🔗LinkedIn</a>
-    </div>
-    """, unsafe_allow_html=True)
+    with st.container(border = True):
+        st.markdown("""
+        <div style="text-align:center; line-height:1.5">
+        <b>Weather Forecast</b><br>
+        Desenvolvido por <b>Emerson Alves da Silva</b>
+        🐍 Python 🎈 Streamlit 📊 Plotly 🌐 Requests 🥣 BeautifulSoup ☁️ WeatherStack 🌧️ INMET
+        <br>
+        <a href="https://github.com/GeofEmersonAlves" target="_blank">🔗GitHub</a> |
+        <a href="https://www.linkedin.com/in/emersonalvesdasilva/" target="_blank">🔗LinkedIn</a>
+        </div>
+        """, unsafe_allow_html=True)
  
     return

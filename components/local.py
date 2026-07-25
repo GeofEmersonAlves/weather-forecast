@@ -14,6 +14,7 @@ Descrição:
 
 Histórico:
        16/07/2026 - Inicio 
+       24/07/2026 - Para facilitar o relatório e não repedir codigo foi incluido  user_loc_formatado
 ===============================================================================
 """
 import services.geolocation as geoloc
@@ -74,6 +75,17 @@ def local_default():
            "regiao": "Região Sudeste",
            "obs": "Local padrão"}
 
+
+def local_formatado(local: dict) -> dict:
+    txt_loc = f"🌍 {local['cidade']}/{local['uf']} - {local['regiao']} do {local['pais']}"
+    txt_coord = f"🌐 ({local['lat']}, {local['long']})"
+    txt_origem_coord = f"📍{local['obs']}"
+    
+    local_dict = {"local" : txt_loc,
+                  "coordenadas": txt_coord,
+                  "origem_coordenadas":txt_origem_coord}
+    
+    return local_dict
 
 #Pega a localizacao do usuario pelo gps ou pelo IP, e retorna 
 def retorna_local() -> dict:   

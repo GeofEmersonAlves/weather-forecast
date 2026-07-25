@@ -11,7 +11,6 @@ Python     : Python 3.13.14 | packaged by Anaconda, Inc.
 Descrição:
         Classe que gerencia as requisicoes a api e paginas html
       
-
 Histórico:
        16/07/2026 - Inicio 
 ===============================================================================
@@ -43,7 +42,7 @@ def faz_requisicao(URL : str, HEAD : dict[str, str] | None = None, use_raise : b
       res = requests.get(
             url=URL,
             headers=HEAD,
-            timeout=(15, 30)
+            timeout=(20, 60)
         )
       
       if use_raise:

@@ -11,7 +11,7 @@
 import streamlit as st
 import base64
 from datetime import date, time
-from babel.dates import format_date
+from utils.datas import data_por_extenso
 
 def muda_cor_fundo_container(cor_de_fundo: str, key: str, padding : int = 0, border_radius : int = 0):
     estilo_css = f"""
@@ -65,8 +65,8 @@ def mostra_atualizado(hora_atualizado : time):
     """
     st.write(texto, unsafe_allow_html=True)
 
-def data_por_extenso(data : date, alinhamento : str='right', fontsize : int = 10):
-    data_ext = format_date(data, format='full',locale='pt_BR')
+def mostra_data_por_extenso(data : date, alinhamento : str='right', fontsize : int = 10)-> str:
+    data_ext = data_por_extenso
     texto = f"""
     <p style="text-align:{alinhamento}; font-size:{fontsize}px; color:#A0A0A0; margin:0;">
         📅{data_ext}
@@ -75,6 +75,7 @@ def data_por_extenso(data : date, alinhamento : str='right', fontsize : int = 10
   #  f"<p style=text-align:{alinhamento}; font-size:{fontsize}px;>📅{texto}</p>"
     
     st.markdown(texto, unsafe_allow_html=True)
+    return data_ext
 
 def css_box_with_shadow(backcolor : str = "black"): #melhorar depois, premitindo passar cor do fundo 
     # CSS personalizado para a cor e sombra do form

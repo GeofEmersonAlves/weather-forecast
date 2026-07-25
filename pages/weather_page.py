@@ -19,6 +19,7 @@ Histórico:
        22/07/2026 - Inclusão da aba "Fases da lua" com a tabela de fases da lua 
        22/07/2026 - Inclusão da funcionalidade de Geração de Relatório em Excel
        23/07/2026 - Alterações para melhorar a performance devido à Geração de Relatório em Excel
+       24/04/2026 - Alterações para antender o novo layout do relatório em excel
 ===============================================================================
 """
 
@@ -28,8 +29,8 @@ from PIL import Image
 
 #Bibliotecas do projeto
 import state.estado_app as estado
-from components.layout import  data_por_extenso, texto_alinhado 
-from components.local import retorna_local
+from components.layout import  mostra_data_por_extenso, texto_alinhado 
+from components.local import retorna_local, local_formatado
 from components.select_city import find_cities_weather
 from components.city_options import seleciona_uma_cidade
 from components.quadro_clima import mostrar_quadro_clima, texto_localizacao
@@ -42,24 +43,23 @@ from services.imet_api import mapa_precipitacao
 from services.pega_infoclima import  info_clima_agora
 import services.previsao_tempo as previsao_tempo
 from services.fase_da_lua import info_fase_da_lua_com_none
-from utils.datas import hoje
+from utils.datas import hoje, data_por_extenso
 #from services.salva_dict import salvar_json
 
 __LOGO50_X_50 = "assets/icons/weather_50px_50px.png"
 __LOGO100_X_100 = "assets/icons/weather_100px_100px.png"
 icone = Image.open(__LOGO50_X_50)
 
+
 # =========== FUNCÃO PARA LIMPAR O CACHE ===========
 def limpar_cache():
     st.cache_data.clear()
-    
 
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
 def pega_previsao_cache(local_clima : dict)->dict: 
     previsoes=  previsao_tempo.pega_previsao_tempo(local_clima)
     
     return previsoes
-
 
 #if "cont" not in st.session_state:
 #    st.session_state.cont =0
@@ -91,11 +91,19 @@ with st.sidebar:
             seleciona_uma_cidade()  #Permite o usuario selecionar uma cidade entre as cidades encontradas
     
     button_ExcelReport()
+    
+    #   Esse dicionario vai para o info_clima como rodape_info :{...}
+    #assim posso pegar esse texto para colocar o relatóro em excel
+    texto = "Dados obtidos por APIs públicas, INMET e Web Scraping para fins educacionais e demonstrativos."
+    versao = "Versão 1.0.0 • Julho/2026"
+    rodape_info ={"texto_info": texto,
+                  "versao":versao
+                  }
     #Mostra as informações da localização do usuário
-    texto_local = f"🌍 {user_local['cidade']}/{user_local['uf']} - {user_local['regiao']} do {user_local['pais']}"
-    texto_alinhado(texto_local,fontsize = 14)
-    texto_alinhado(f"🌐 ({user_local['lat']}, {user_local['long']})")
-    texto_alinhado(f"📍{user_local['obs']}")
+    info = local_formatado(user_local)
+    texto_alinhado(info["local"], fontsize = 14)
+    texto_alinhado(info["coordenadas"])
+    texto_alinhado(info["origem_coordenadas"])
     
 if st.session_state.local_select["obs"] == "Local vazio":
     local_clima = user_local
@@ -108,13 +116,14 @@ else:
 info_clima_json = info_clima_agora(local_clima)
 
 texto_local = texto_localizacao("Tempo agora em", local_clima, False)
-if info_clima_json:
-    info_clima_json["texto_local"] = texto_local
 
 col1, col2, col3 = st.columns([1.5, 3.2, 1.2])
 with col1:  #Quadro com clima atual
-  
+   
     if info_clima_json:
+        info_clima_json["local_clima"] = texto_local
+        info_clima_json["data_por_extenso"] =  data_por_extenso(data_hoje)
+        info_clima_json["rodape_info"] = rodape_info
         mostrar_quadro_clima(info_clima_json)
         
     else:
@@ -125,8 +134,6 @@ with col2: #Previsão do tempo
    st.write(texto_localizacao("🌤️🌦️🌥️ Previsão para 15 dias",local_clima))
    previsoes = pega_previsao_cache(local_clima)
   
-   #st.session_state.cont += 1
-   
    if previsoes:
        fase_lua = previsoes[0]["fase_lua"]
        emojilua = info_fase_da_lua_com_none(fase_lua)
@@ -200,13 +207,12 @@ with col3: #Mapas de precipitacão
         texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
    
     
-    data_por_extenso(data_hoje, fontsize = 18)
+    mostra_data_por_extenso(data_hoje, fontsize = 18)
     
 nota_de_rodape()
-texto = "Dados obtidos por APIs públicas, INMET e Web Scraping para fins educacionais e demonstrativos."
-versao = "Versão 1.0.0 • Julho/2026"
-texto_alinhado(versao, alinhamento = "right", fontsize = 12, color = "blue")
-texto_alinhado(texto, alinhamento = "right", fontsize = 10, color = "gray")
+
+texto_alinhado(rodape_info["texto_info"], alinhamento = "right", fontsize = 12, color = "blue")
+texto_alinhado(rodape_info["versao"], alinhamento = "right", fontsize = 10, color = "gray")
 
 
 
