@@ -184,6 +184,7 @@ with col2: #Previsão do tempo
                 st.plotly_chart(graf_umid_maxmim, height = 400)
         
        fonte_previsao =  previsao_tempo.fonte_dados()
+       st.session_state._fonte_previsao_ = fonte_previsao
        texto_alinhado(f"Fonte: {fonte_previsao}", alinhamento = 'right', fontsize = 12)
    else:
        st.error("⚠️ Não foi possível obter dados da previsão do tempo. Tente novamente...")

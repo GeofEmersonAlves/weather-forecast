@@ -66,7 +66,7 @@ def mostra_atualizado(hora_atualizado : time):
     st.write(texto, unsafe_allow_html=True)
 
 def mostra_data_por_extenso(data : date, alinhamento : str='right', fontsize : int = 10)-> str:
-    data_ext = data_por_extenso
+    data_ext = data_por_extenso(data)
     texto = f"""
     <p style="text-align:{alinhamento}; font-size:{fontsize}px; color:#A0A0A0; margin:0;">
         📅{data_ext}

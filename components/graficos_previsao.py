@@ -170,7 +170,7 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
     # Valor dentro da "caixinha -> precipitacao_mm"
     for _, linha in df.iterrows():
         #Desloca para cima a caixima quando o valor probabilidade_chuva < 2 pa não sobrepor o rótulo do eixo X
-        deslocy_caixa = 4
+        deslocy_caixa = 5
       
         fig.add_annotation(x = linha["eixo_x"],
                            y = max(linha["probabilidade_chuva"] + 2, deslocy_caixa),
@@ -197,7 +197,7 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
                       height=450,
                       xaxis=dict(title=None,
                                  showgrid=False,
-                                 tickfont=dict(family="Arial",size=13,color="#000000")
+                                 tickfont=dict(family="Arial", size = 12, color="#000000")
                                 ),
                       yaxis=dict(title = dict(text="Probabilidade de chuva",
                                  font = dict(family="Arial",size=14,color="#000000")),

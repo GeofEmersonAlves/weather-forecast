@@ -116,7 +116,7 @@ def plotly_para_imagem_excel(fig: go.Figure,
                                 )
     fig_exportacao.update_xaxes(tickangle=0,
                                 automargin=True,
-                                tickfont=dict(family = "Arial", size = 13)
+                                tickfont=dict(family = "Arial", size = 12, color="#000000")
                                )
     fig_exportacao.update_yaxes(automargin=True,
                                 tickfont=dict(family = "Arial", size = 12),
@@ -170,12 +170,13 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
                                           info_user_local: dict,
                                           previsoes_dict: dict, 
                                           previsoes: pd.DataFrame,
+                                          fonte_previsao: str, 
                                           mapa_imet1: Image.Image,
                                           mapa_imet2: Image.Image,
                                           graf_temp_maxmin: go.Figure,
                                           graf_umid_maxmim: go.Figure,
                                           graf_chuva: go.Figure) -> BytesIO:
-   
+  
     BASE_DIR = Path(__file__).parent.parent
     caminho_modelo = Path(BASE_DIR / __PATH_MODELS__  / __MODEL_FILE__)
     buffer_file = BytesIO()
@@ -207,13 +208,14 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
             texto_info = f"{info['texto_info']}\n"
             texto_info += f"{info['versao']}"
             
-            planilha["K19"] = texto_info
+           
         
             #Gera a imagem do Quadro do clima e coloca no relatório
             img_quadro_clima = quadro_clima_base64(clima_json)
             imagem_excel = pil_para_imagem_excel(img_quadro_clima, largura = 530, altura = 310)
             planilha.add_image(imagem_excel, "B3")
-        
+            planilha["K19"] = texto_info
+            planilha["C3"] = f"Fonte: {clima_json['fonte_dados']}"
         #Coloca a imagem o mapa do  IMETT de precipitação no relatório
         # Adiciona uma borda preta de 2 pixels
         mapa_imet2 = ImageOps.expand(mapa_imet2,
@@ -238,9 +240,9 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
                                                 exibir_rotulos=True,
                                                 unidade_rotulos="%")
         planilha.add_image(imagem_excel, "K13")
-        
-        
-    
+        planilha["F20"] = f"Fonte: {fonte_previsao}"
+        planilha["S20"] = f"Fonte: {fonte_previsao}"
+       
         #Monta a tabela de previsões
         row_excel = 5
         for indice, registro in previsoes.iterrows():
