@@ -14,13 +14,16 @@ Descrição:
         
 
 Histórico:
-       20/07/2027 - Inicio ......
+       20/07/2027 - Inicio
+       25/07/2026 - Incluido um cache de 30 minutos no info_clima_agora
 ===============================================================================
 """
-
+import streamlit as st
 import services.weather_api as wt_api 
 from services.weatherinfo_scraped import clima_agora as scrap_clima_agora
 
+#Cache de 30 minutos
+@st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
 def info_clima_agora(cidade : dict) -> dict:
     lat = cidade["lat"]
     long = cidade["long"]

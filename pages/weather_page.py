@@ -46,9 +46,13 @@ from utils.datas import hoje, data_por_extenso
 
 
 # =========== FUNCÃO PARA LIMPAR O CACHE ===========
-def limpar_cache():
-    st.cache_data.clear()
+def limpar_cache_previsao():
+    st.pega_previsao_cache.clear()
 
+def limpar_cache_info_clima():
+    st.pega_previsao_cache.clear()
+
+#Cache de 30 minutos
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
 def pega_previsao_cache(local_clima : dict)->dict: 
     previsoes=  previsao_tempo.pega_previsao_tempo(local_clima)
@@ -122,6 +126,9 @@ with col1:  #Quadro com clima atual
         
     else:
         st.error("⚠️ Não foi possível obter os dados do clima. Tente novamente...")
+        st.button("🗑 Limpar Cache",
+           type="tertiary",
+           on_click = limpar_cache_info_clima)
         
 with col2: #Previsão do tempo
    #texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
@@ -184,7 +191,7 @@ with col2: #Previsão do tempo
        st.error("⚠️ Não foi possível obter dados da previsão do tempo. Tente novamente...")
        st.button("🗑 Limpar Cache",
           type="tertiary",
-          on_click = limpar_cache)
+          on_click = limpar_cache_previsao)
        
        
 with col3: #Mapas de precipitacão

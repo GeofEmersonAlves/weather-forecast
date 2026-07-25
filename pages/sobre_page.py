@@ -18,8 +18,8 @@ Histórico:
        25/07/2026 - Edição do código da página para fazer ajustes necessários
 ===============================================================================
 """
-from pathlib import Path
 import streamlit as st
+from components.nota_rodape import nota_de_rodape
 
 st.set_page_config(
     page_title="Sobre | Weather Forecast",
@@ -27,25 +27,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"  # Fecha a sidebar por padrão
 )
-
-
-# =========================================================
-# CAMINHOS
-# =========================================================
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-CAMINHO_FOTO = BASE_DIR / "assets" / "images" / "perfil.jpg"
-CAMINHO_SCREENSHOT = BASE_DIR / "assets" / "images" / "screenshot_app.png"
-
-
-# =========================================================
-# LINKS
-# =========================================================
-
-URL_GITHUB = "https://github.com/SEU-USUARIO"
-URL_REPOSITORIO = "https://github.com/SEU-USUARIO/weather-forecast"
-URL_LINKEDIN = "https://www.linkedin.com/in/SEU-PERFIL/"
 
 
 # =========================================================
@@ -151,8 +132,6 @@ st.markdown(
     """
     <div class="hero">
         <div class="hero-title">🌦️ Weather Forecast</div>
-
-        <div class="hero-subtitle">
             Aplicação desenvolvida em Python e Streamlit para consulta de
             condições meteorológicas atuais, previsão para os próximos
             15 dias, visualização de gráficos, acompanhamento das fases
@@ -162,99 +141,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
-
-# =========================================================
-# DESENVOLVEDOR
-# =========================================================
-
-st.markdown(
-    '<div class="section-title">👨‍💻 Sobre o desenvolvedor</div>',
-    unsafe_allow_html=True,
-)
-
-col_foto, col_biografia = st.columns(
-    [1, 3],
-    gap="large",
-    vertical_alignment="center",
-)
-
-with col_foto:
-
-    if CAMINHO_FOTO.exists():
-        st.image(
-            CAMINHO_FOTO,
-            width=240,
-        )
-    else:
-        st.markdown(
-            """
-            <div class="info-card" style="text-align:center;">
-                <div style="font-size:5rem;">👨‍💻</div>
-                <div>Adicione uma foto em:</div>
-                <code>assets/images/perfil.jpg</code>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-with col_biografia:
-
-    st.markdown(
-        """
-        <div class="profile-name">Emerson Alves da Silva</div>
-
-        <div class="profile-description">
-            <p>
-                Geofísico, Mestre em Geociências e desenvolvedor Python,
-                com experiência em controle de qualidade de aquisição sísmica,
-                processamento e análise de dados, automação de processos e
-                desenvolvimento de aplicações.
-            </p>
-
-            <p>
-                Possuo experiência profissional na aquisição sísmica terrestre
-                2D e 3D, incluindo coordenação de equipes de controle de qualidade,
-                análise de grandes volumes de dados e elaboração de relatórios
-                técnicos.
-            </p>
-
-            <p>
-                Atualmente, aprofundo meus conhecimentos em Ciência de Dados,
-                Machine Learning, visualização de dados e desenvolvimento de
-                dashboards interativos com Python e Streamlit.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    col_linkedin, col_github, col_repo = st.columns(3)
-
-    with col_linkedin:
-        st.link_button(
-            "💼 LinkedIn",
-            URL_LINKEDIN,
-            use_container_width=True,
-        )
-
-    with col_github:
-        st.link_button(
-            "🐙 GitHub",
-            URL_GITHUB,
-            use_container_width=True,
-        )
-
-    with col_repo:
-        st.link_button(
-            "📂 Repositório",
-            URL_REPOSITORIO,
-            use_container_width=True,
-        )
-
-
-st.divider()
-
 
 # =========================================================
 # OBJETIVO DO PROJETO
@@ -284,7 +170,6 @@ st.write(
 # =========================================================
 # PRINCIPAIS FUNCIONALIDADES
 # =========================================================
-
 st.markdown(
     '<div class="section-title">🚀 Principais funcionalidades</div>',
     unsafe_allow_html=True,
@@ -459,26 +344,6 @@ with col_tecnica2:
 
 
 # =========================================================
-# SCREENSHOT
-# =========================================================
-
-if CAMINHO_SCREENSHOT.exists():
-
-    st.divider()
-
-    st.markdown(
-        '<div class="section-title">🖥️ Aplicação</div>',
-        unsafe_allow_html=True,
-    )
-
-    st.image(
-        CAMINHO_SCREENSHOT,
-        caption="Interface principal do Weather Forecast",
-        use_container_width=True,
-    )
-
-
-# =========================================================
 # FONTES DOS DADOS
 # =========================================================
 
@@ -525,19 +390,4 @@ st.write(
     """
 )
 
-
-# =========================================================
-# RODAPÉ
-# =========================================================
-
-st.markdown(
-    """
-    <div class="footer-about">
-        <strong>Weather Forecast</strong><br>
-        Desenvolvido por Emerson Alves da Silva com Python e Streamlit.
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-
+nota_de_rodape()

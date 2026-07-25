@@ -195,9 +195,9 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
             planilha["M1"] = clima_json["local_clima"]
             
             #Insere o logo
-            logo_excel = pil_para_imagem_excel(logo_report, largura = 110, altura = 110)
+            logo_excel = pil_para_imagem_excel(logo_report, largura = 144, altura = 144)
             planilha.add_image(logo_excel, "B1")
-            logo_excel = pil_para_imagem_excel(logo_report, largura = 110, altura = 110)
+            logo_excel = pil_para_imagem_excel(logo_report, largura = 144, altura = 144)
             planilha.add_image(logo_excel, "K1")
             
             planilha["B2"] = clima_json["data_por_extenso"]
