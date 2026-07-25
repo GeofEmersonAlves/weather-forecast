@@ -1,8 +1,8 @@
 streamlit==1.59.2
 streamlit-geolocation
 requests==2.34.2
-streamlit-geolocation
-dotenv
+beautifulsoup4
+python-dotenv
 geopy
 lxml
 pandas

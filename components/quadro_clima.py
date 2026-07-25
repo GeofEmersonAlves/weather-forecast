@@ -81,5 +81,7 @@ def mostrar_quadro_clima(clima_json : dict):
         texto_fase_lua = f"{emoji_lua} {desc_lua}"
         st.write(texto_fase_lua)
         
+        texto_alinhado(f"Fonte: {clima_json['fonte_dados']}", alinhamento = 'right', fontsize = 12)
+        
     else:
         st.error("Sem dados para mostrar")

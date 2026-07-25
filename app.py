@@ -31,10 +31,13 @@ inicializar_estado_app()
 weather_page = st.Page("pages/weather_page.py", 
                        title = "Clima agora!",
                        default=True )
+sobre_page = st.Page(
+            "pages/sobre_page.py",
+            title="Sobre",
+            icon="ℹ️",
+        )
 
-#test_page = st.Page("pages/testes.py")
-
-pg = st.navigation([weather_page], position='top')
+pg = st.navigation([weather_page,sobre_page], position='top')
 
 
 pg.run()

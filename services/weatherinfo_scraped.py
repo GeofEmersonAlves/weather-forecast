@@ -229,7 +229,7 @@ def clima_agora(dados_cidade : dict) -> dict:
         return None
     
     info_clima_vazio['tab_astro'] = info_tab_astro
-    info_clima_vazio["fonte_dados"] = F"{URLS[2]}"
+    info_clima_vazio["fonte_dados"] = URLS[1]
 
     fase_lua = fase_da_lua()
 

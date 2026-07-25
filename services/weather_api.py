@@ -452,7 +452,7 @@ def clima_agora(lat : str, long: str) -> dict:
         ]
         
     dados['tab_astro'] = tab_astro
-    dados['fonte_dados'] = f"Fonte: {fonte_dados()}"
+    dados['fonte_dados'] = fonte_dados()
     
     fase_lua = fase_da_lua(dados.get("current").get("astro").get("moon_phase"))
     dados['fase_lua'] = fase_lua
