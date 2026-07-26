@@ -17,6 +17,7 @@ e a função  resp_erro cria a resposta para os erros possiveis
 Histórico:
        18/07/2026 - Inicio
        19/07/2026 - Arrumando os vários "bug's" do serviço de buscar cidades
+       26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
 ===============================================================================
 """
 import requests
@@ -88,8 +89,6 @@ def traz_cidade_clima(dados_cidade : dict)->str:
                     )
     return cidade_clima
 
-
-
 def buscar_cidades(nome: str) -> list[dict]:
     nome = nome.strip()
 
@@ -102,7 +101,7 @@ def buscar_cidades(nome: str) -> list[dict]:
             URL_BUSCA_CIDADES,
             headers=HEADERS,
             data={"name": nome},
-            timeout=(5, 20),
+            timeout=(10, 20),
         )
 
         resposta.raise_for_status()

@@ -14,6 +14,7 @@ Descrição:
 
 Histórico:
        16/07/2026 - Inicio
+       26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
 ===============================================================================
 """
 import streamlit as st

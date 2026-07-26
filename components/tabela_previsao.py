@@ -29,6 +29,7 @@ def gera_df_previsao(previsoes :list[dict]) -> pd.DataFrame:
      
      for dia in previsoes:
          dia_bola = gerar_img.gerar_dia_base64(dia['dia'], dia['dia_semana'])
+         #dia_bola = gerar_img.base64_para_imagem(dia_bola)
          if dia["temp_min"] == None:
              temp_min = 0
          else:
@@ -92,10 +93,7 @@ def tabela_previsao_tempo(df_previsao: pd.DataFrame):
          height  = 490 ,  
          row_height = 60,
          column_config={
-             "dia_bola": st.column_config.ImageColumn(
-                 "Dia",
-                 width=60
-             ),
+             "dia_bola": st.column_config.ImageColumn("Dia"),
              "icone": st.column_config.ImageColumn(
                  "Clima",
                  width="small"

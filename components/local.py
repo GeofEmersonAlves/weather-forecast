@@ -15,11 +15,14 @@ Descrição:
 Histórico:
        16/07/2026 - Inicio 
        24/07/2026 - Para facilitar o relatório e não repedir codigo foi incluido  user_loc_formatado
+       26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
 ===============================================================================
 """
+#import streamlit as st
 import services.geolocation as geoloc
 import components.stream_geolocation as str_geoloc
 from geopy.geocoders import Nominatim  # OpenStreetMap(GRATUITO)
+from models.local_vazio import local_empty
 
 direcoes = {
     "N": "Norte",
@@ -63,17 +66,19 @@ def pega_local_API(local_api: dict):
     return local
 
 def local_default():
-    return {"lat": "-23.5489",
-           "long": "-46.6388",
-           "pais": "Brasil",
-           "estado": "São Paulo",
-           "uf": "SP",
-           "cidade": "São Paulo",
-           "idcity": 558,
-           "litoral": False,
-           "bairro": "",
-           "regiao": "Região Sudeste",
-           "obs": "Local padrão"}
+    return {
+            "lat": -23.87072186750067,
+            "long": -46.13784252958647,
+            "pais": "Brasil",
+            "estado": "Brasil",
+            "uf": "SP",
+            "cidade": "Guarujá",
+            "idcity": 798,
+            "litoral": True,
+            "bairro": "APA da Serra do Guararu",
+            "regiao": "Reigião sudeste",
+            "obs": "Local padrão - 🏖️🩴 Prainha Branca 🌊🏝️"
+        }
 
 
 def local_formatado(local: dict) -> dict:
@@ -88,13 +93,12 @@ def local_formatado(local: dict) -> dict:
     return local_dict
 
 #Pega a localizacao do usuario pelo gps ou pelo IP, e retorna 
-def retorna_local() -> dict:   
-    #Localizaçãoi padrao inicial
-    local=local_default()
+def retorna_local(local_atual: dict) -> dict:   
+    print("Entrou no retorna_local()--------------", local_atual)
+    local = local_empty()
     
     location = {}
-    
-    #Tenta pega a localizacao pelo streamlit, se nao conseguir pega pelo IP
+     #Tenta pega a localizacao pelo streamlit
     geolocalizacao = str_geoloc.geolocation()
     if geolocalizacao.get('latitude') is not None:
         location = geoloc.geolocation_with_latlon(geolocalizacao.get('latitude'), 
@@ -103,8 +107,12 @@ def retorna_local() -> dict:
         local['lat'] = geolocalizacao.get('latitude')
         local['long'] = geolocalizacao.get('longitude')
         local['obs'] = "Localização atual"
+        print("Entrou no retorna_local() e pegou a localicazao--------------", local)
         
-    else:
+    else: #Se não conseguir pega pelo IP, se o local nao for o default
+        if local_atual == local_default():
+            return  local_default()
+        
         geolocIP = geoloc.geolocation_by_IP()
         location = geoloc.geolocation_with_latlon(geolocIP.get('latitude'), 
                                                    geolocIP.get('longitude'))
@@ -121,5 +129,8 @@ def retorna_local() -> dict:
         neighbour = location.get('address').get('neighbourhood')
         local['bairro'] = f"{bairro} - {neighbour}"
         local['regiao'] = location.get('address').get('region')
+    
+        if local['uf'] == None or local['cidade'] == None:
+            return local_default()
     
     return local

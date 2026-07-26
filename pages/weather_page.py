@@ -20,6 +20,7 @@ Histórico:
        22/07/2026 - Inclusão da funcionalidade de Geração de Relatório em Excel
        23/07/2026 - Alterações para melhorar a performance devido à Geração de Relatório em Excel
        24/04/2026 - Alterações para antender o novo layout do relatório em excel
+       26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
 ===============================================================================
 """
 
@@ -37,13 +38,13 @@ import components.graficos_previsao as graf_prev
 from components.nota_rodape import nota_de_rodape
 from components.quadro_fases_da_lua import quadro_fases_da_lua
 from components.buttonExcelReport import button_ExcelReport
+from models.local_vazio import local_empty
 from services.imet_api import mapa_precipitacao
 from services.pega_infoclima import  info_clima_agora
 import services.previsao_tempo as previsao_tempo
 from services.fase_da_lua import info_fase_da_lua_com_none
 from utils.datas import hoje, data_por_extenso
 #from services.salva_dict import salvar_json
-
 
 # =========== FUNCÃO PARA LIMPAR O CACHE ===========
 def limpar_cache_previsao():
@@ -59,9 +60,6 @@ def pega_previsao_cache(local_clima : dict)->dict:
     
     return previsoes
 
-#if "cont" not in st.session_state:
-#    st.session_state.cont =0
-
 st.set_page_config("Weather Forecast",
                    page_icon = st.session_state._icone_app_,
                    layout="wide",
@@ -73,10 +71,12 @@ st.logo(st.session_state._icone_app_, icon_image = st.session_state._icone_app_)
 data_hoje = hoje()
     
 with st.sidebar: 
-    local = retorna_local()  #Componente mostra um botão para pegar a localização, caso nao pegar busca pelo IP
-    estado.alterar_user_location(local)
-    
     user_local = st.session_state.user_location
+    
+    local = retorna_local(user_local)  #Componente mostra um botão para pegar a localização, caso nao pegar busca pelo IP
+    if local != user_local:
+        estado.alterar_user_location(local)
+        st.rerun()
     
     tem_cidades = find_cities_weather()  #Mostra a opção para buscar cidades
     
@@ -93,9 +93,8 @@ with st.sidebar:
     #   Esse dicionario vai para o info_clima como rodape_info :{...}
     #assim posso pegar esse texto para colocar o relatóro em excel
     texto = "Dados obtidos por APIs públicas, INMET e Web Scraping para fins educacionais e demonstrativos."
-    versao = "Versão 1.0.0 • Julho/2026"
     rodape_info ={"texto_info": texto,
-                  "versao":versao
+                  "versao":st.session_state._app_version
                   }
     #Mostra as informações da localização do usuário
     info = local_formatado(user_local)
@@ -108,10 +107,11 @@ if st.session_state.local_select["obs"] == "Local vazio":
     
 else:
     local_clima = st.session_state.local_select
-    
 
-#Chama o servico que retorna as informações do clima    
-info_clima_json = info_clima_agora(local_clima)
+info_clima_json = None
+#Chama o servico que retorna as informações do clima  
+if local_clima != local_empty():  
+    info_clima_json = info_clima_agora(local_clima)
 
 texto_local = texto_localizacao("Tempo agora em", local_clima, False)
 
@@ -132,9 +132,10 @@ with col1:  #Quadro com clima atual
            on_click = limpar_cache_info_clima)
         
 with col2: #Previsão do tempo
-   #texto_alinhado("🌤️🌦️🌥️ Previsão do tempo 🌥️🌦️🌤️", fontsize = 18, alinhamento='center', color='red')
-   st.write(texto_localizacao("🌤️🌦️🌥️ Previsão para 15 dias em",local_clima))
-   previsoes = pega_previsao_cache(local_clima)
+   previsoes = None
+   if local_clima != local_empty():  
+       st.write(texto_localizacao("🌤️🌦️🌥️ Previsão para 15 dias em",local_clima))
+       previsoes = pega_previsao_cache(local_clima)
   
    if previsoes:
        st.session_state._previsoes_ = previsoes

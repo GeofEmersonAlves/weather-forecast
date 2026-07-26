@@ -19,13 +19,6 @@ Histórico:
 import streamlit as st
 from  services.busca_cidades import buscar_cidades
 
-import json       
-
-#Fiz para ver o resultado e fazer uns testes, vou mantê-la aqui sei lá por que
-def salva_dict(dicionario : dict):
-    with open("dados.json","w", encoding="utf-8") as arquivo:
-        json.dump(dicionario, arquivo, indent=4, ensure_ascii=False)
-
 def find_cities():
     #st.write(f"Digitado:{texto} {len(texto.strip())}")
     letras_cidade = st.session_state.__letras_cidade__

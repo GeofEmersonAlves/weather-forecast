@@ -16,6 +16,7 @@ Descrição:
 Histórico:
        16/07/2026 - Inicio do projeto
        25/07/2026 - Fim da versao 1.0.0
+       26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
 ===============================================================================
 """
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
@@ -26,6 +27,7 @@ from state.estado_app import inicializar_estado_app
 LOGO256_X_256 = "assets/icons/weather_forecast_icon256px_256px.png"
 icone = Image.open(LOGO256_X_256)
 st.session_state._icone_app_ = icone
+st.session_state._app_version = "Versão 1.0.1 • Julho/2026"
 
 #print(st.__version__)  #Para ver a versão do streamlit instalada
 
