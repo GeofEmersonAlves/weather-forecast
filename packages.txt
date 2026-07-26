@@ -1,0 +1,4 @@
+libcairo2
+libcairo2-dev
+libffi-dev
+shared-mime-info
