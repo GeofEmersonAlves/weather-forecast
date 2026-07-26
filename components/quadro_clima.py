@@ -16,6 +16,7 @@ Histórico:
        21/07/2026 - Criação da função texto_localizacao para reutilização do código
        23/07/2026 - Alteracao para salvar o info_clima na session com a intenção de 
                   melhorar a performance do gerador de relatório Excel
+       26/07/2026 - Correção de um bug
 ===============================================================================
 """
 import streamlit as st
@@ -76,9 +77,12 @@ def mostrar_quadro_clima(clima_json : dict):
         st.table(tab_astro, border= 'horizontal' )
         
         fase_lua = clima_json['fase_lua']
-        emoji_lua = fase_lua.get('emoji')
-        desc_lua = fase_lua.get('descricao')
-        texto_fase_lua = f"{emoji_lua} {desc_lua}"
+        texto_fase_lua = fase_lua
+        if fase_lua != "":
+            emoji_lua = fase_lua.get('emoji')
+            desc_lua = fase_lua.get('descricao')
+            texto_fase_lua = f"{emoji_lua} {desc_lua}"
+            
         st.write(texto_fase_lua)
         
         texto_alinhado(f"Fonte: {clima_json['fonte_dados']}", alinhamento = 'right', fontsize = 12)

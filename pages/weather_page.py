@@ -54,7 +54,6 @@ def limpar_cache_info_clima():
     st.cache_data.clear()
     
     
-    
 #Cache de 30 minutos
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
 def pega_previsao_cache(local_clima : dict)->dict: 

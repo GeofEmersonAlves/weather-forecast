@@ -15,6 +15,7 @@ Descrição:
 
 Histórico:
        20/07/2026 - Inicio 
+       26/07/2026 - Correção de um bug
 ===============================================================================
 """
 import services.requisicao as req
@@ -98,6 +99,9 @@ def info_fase_da_lua_com_none(nome: str) -> dict:
 
 def fase_da_lua()->dict:
     resposta = req.faz_requisicao(__URL__ )
+    
+    if not resposta:
+        return ""
     
     soup = BeautifulSoup(resposta.text, "lxml")
     
