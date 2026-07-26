@@ -36,7 +36,7 @@ def texto_localizacao(texto_inicio: str, local: dict, tem_material_icon : bool =
         texto_loc += " :material/location_on:"
 
     return texto_loc
-    
+
 def mostrar_quadro_clima(clima_json : dict):
     #salvar =  clima_json.copy()
     #salvar['img_clima'] = 'imagem'

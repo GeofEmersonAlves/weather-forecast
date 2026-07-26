@@ -94,7 +94,6 @@ def local_formatado(local: dict) -> dict:
 
 #Pega a localizacao do usuario pelo gps ou pelo IP, e retorna 
 def retorna_local(local_atual: dict) -> dict:   
-    print("Entrou no retorna_local()--------------", local_atual)
     local = local_empty()
     
     location = {}
@@ -107,11 +106,13 @@ def retorna_local(local_atual: dict) -> dict:
         local['lat'] = geolocalizacao.get('latitude')
         local['long'] = geolocalizacao.get('longitude')
         local['obs'] = "Localização atual"
-        print("Entrou no retorna_local() e pegou a localicazao--------------", local)
         
     else: #Se não conseguir pega pelo IP, se o local nao for o default
         if local_atual == local_default():
             return  local_default()
+        
+        if local_atual['obs'] =="Localização atual":
+            return local_atual
         
         geolocIP = geoloc.geolocation_by_IP()
         location = geoloc.geolocation_with_latlon(geolocIP.get('latitude'), 

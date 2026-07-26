@@ -101,7 +101,7 @@ def buscar_cidades(nome: str) -> list[dict]:
             URL_BUSCA_CIDADES,
             headers=HEADERS,
             data={"name": nome},
-            timeout=(10, 20),
+            timeout=(20, 40),
         )
 
         resposta.raise_for_status()

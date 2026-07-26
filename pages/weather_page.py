@@ -48,11 +48,13 @@ from utils.datas import hoje, data_por_extenso
 
 # =========== FUNCÃO PARA LIMPAR O CACHE ===========
 def limpar_cache_previsao():
-    pega_previsao_cache.clear()
+    st.cache_data.clear()
 
 def limpar_cache_info_clima():
-    info_clima_agora.clear()
-
+    st.cache_data.clear()
+    
+    
+    
 #Cache de 30 minutos
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
 def pega_previsao_cache(local_clima : dict)->dict: 
@@ -72,7 +74,6 @@ data_hoje = hoje()
     
 with st.sidebar: 
     user_local = st.session_state.user_location
-    
     local = retorna_local(user_local)  #Componente mostra um botão para pegar a localização, caso nao pegar busca pelo IP
     if local != user_local:
         estado.alterar_user_location(local)
