@@ -15,6 +15,7 @@ Descrição:
 
 Histórico:
        16/07/2026 - Inicio do projeto
+       25/07/2026 - Fim da versao 1.0.0
 ===============================================================================
 """
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
