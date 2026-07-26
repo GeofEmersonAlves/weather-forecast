@@ -26,18 +26,25 @@ from components.local import local_formatado
 def button_ExcelReport():
     st.divider()
     if st.button("📊 Gerar relatório em Excel"):
-        if "_df_previsao_" in st.session_state: 
-            df_previsao = st.session_state._df_previsao_ 
-        
-        if "_info_clima_" in st.session_state: 
-            info_clima = st.session_state._info_clima_
+        if "_df_previsao_" not  in st.session_state: 
+            st.error("Sem dados para o relatório") 
+            return
+       
+        df_previsao = st.session_state._df_previsao_ 
         
         if "_previsoes_" in st.session_state:
-            previsoes_dict = st.session_state._previsoes_ 
+                previsoes_dict = st.session_state._previsoes_ 
+                
+        if "_info_clima_" not in st.session_state: 
+            st.error("Sem dados para o relatório") 
+            return
+        
+        info_clima = st.session_state._info_clima_
+        
         
         if "_fonte_previsao_" in st.session_state:
             fonte_previsao = st.session_state._fonte_previsao_
-        
+                    
         user_local = st.session_state.user_location
         info_user_local = local_formatado(user_local)
         
@@ -48,6 +55,7 @@ def button_ExcelReport():
         graf_temp_maxmin = st.session_state._graf_temp_maxmin_
         graf_umid_maxmim = st.session_state._graf_umid_maxmim_ 
         graf_chuva = st.session_state._graf_chuva_
+        
         
         
         st.session_state._excel_report_ = excel_report(info_clima,

@@ -886,7 +886,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
 
         if imagem_clima is not None:
             imagem_clima.thumbnail(
-                (100, 100),
+                (200, 200),
                 Image.Resampling.LANCZOS,
             )
 
