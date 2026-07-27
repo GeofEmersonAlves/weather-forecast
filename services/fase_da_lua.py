@@ -100,7 +100,7 @@ def info_fase_da_lua_com_none(nome: str) -> dict:
 def fase_da_lua()->dict:
     resposta = req.faz_requisicao(__URL__ )
     
-    if not resposta:
+    if  resposta.status_code != 200:
         return ""
     
     soup = BeautifulSoup(resposta.text, "lxml")

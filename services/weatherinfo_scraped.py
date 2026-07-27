@@ -13,7 +13,7 @@ Descrição:
 
 Histórico:
        20/07/2026 - Inicio 
-        27/07/2026 - Correção do problema dos timezone nos horários
+       27/07/2026 - Correção do problema dos timezone nos horários
 ===============================================================================
 """
 import streamlit as st
