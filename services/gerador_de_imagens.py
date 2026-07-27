@@ -20,7 +20,10 @@ Histórico:
        22/06/2026 - Adicionado novos geradores de imagens
        23/07/2026 - Adicionado o gerador da imagem do Quadro do clima
        25/07/2026 - Ajustes na imagem do infoclima para melhorar a visualização e 
-                possicionamento dos elementos na imagem
+                 possicionamento dos elementos na imagem
+       26/07/2026 - Correção do bug da falta de fontes personalizadas na geração da imagem,
+                quando a aplicação subiu para deploy em ambiente Linux, o texto dentro das 
+                imagens ficaram com uma fonte default do Linux, agora o app usa fontes propias
 ===============================================================================
 """
 
@@ -30,7 +33,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, UnidentifiedImageError
 from typing import Any
 import cairosvg
-
+from pilmoji import Pilmoji
+from services.fontes import carregar_fonte, carregar_fonte_emoji, carregar_fonte_simbolo
 
 DIAS_ABREVIADOS = {
     "Segunda": "Seg",
@@ -94,28 +98,6 @@ def Image_para_base64(Image_imagem: Image.Image) -> str:
     imagem_base64 = base64.b64encode(buffer.getvalue()).decode("utf-8")
 
     return f"data:image/png;base64,{imagem_base64}"
-
-
-def carregar_fonte(tamanho: int, negrito: bool = False) -> ImageFont.FreeTypeFont:
-    if negrito:
-        fontes = [
-            Path("C:/Windows/Fonts/arialbd.ttf"),
-            Path("C:/Windows/Fonts/segoeuib.ttf"),
-        ]
-    else:
-        fontes = [
-            Path("C:/Windows/Fonts/arial.ttf"),
-            Path("C:/Windows/Fonts/segoeui.ttf"),
-        ]
-
-    for caminho_fonte in fontes:
-        if caminho_fonte.exists():
-            return ImageFont.truetype(
-                str(caminho_fonte),
-                size=tamanho,
-            )
-
-    return ImageFont.load_default()
 
 
 def gerar_dia_base64(
@@ -247,7 +229,7 @@ def temperaturas_min_max_base64(
     img = Image.new("RGBA", (largura, altura), (255, 255, 255, 0))
     draw = ImageDraw.Draw(img)
 
-    fonte = carregar_fonte(18)
+    fonte = carregar_fonte_simbolo(18)
 
     azul = (33, 150, 243, 255)
     vermelho = (244, 67, 54, 255)
@@ -500,10 +482,8 @@ def clima_chuva_base64(
 
     buffer = BytesIO()
     imagem.save(buffer, format="PNG")
-
-    imagem_base64 = base64.b64encode(
-        buffer.getvalue()
-    ).decode("utf-8")
+  
+    imagem_base64 = base64.b64encode(buffer.getvalue()).decode("utf-8")
 
     return f"data:image/png;base64,{imagem_base64}"
 
@@ -600,39 +580,6 @@ def gerar_imagem_fase_lua(
 
     return imagem_final
 
-def carregar_fonte_emoji(tamanho: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    fontes = [
-        "C:/Windows/Fonts/seguiemj.ttf",
-        "C:/Windows/Fonts/seguisym.ttf",
-        "C:/Windows/Fonts/segoeui.ttf",
-    ]
-
-    for caminho in fontes:
-        if Path(caminho).exists():
-            return ImageFont.truetype(caminho, tamanho)
-
-    return ImageFont.load_default()
-
-def carregar_fonte_simbolo(tamanho: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    """
-    Carrega uma fonte para setas e outros símbolos Unicode.
-
-    Esta fonte costuma renderizar corretamente:
-    ↗ ↖ ↘ ↙ ↑ ↓ ← →
-    ⬆ ⬇ ⬅ ➡
-    """
-
-    fontes = [
-        "C:/Windows/Fonts/seguisym.ttf",
-        "C:/Windows/Fonts/segoeui.ttf",
-        "C:/Windows/Fonts/arial.ttf",
-    ]
-
-    for caminho in fontes:
-        if Path(caminho).exists():
-            return ImageFont.truetype(caminho, tamanho)
-
-    return ImageFont.load_default()
 
 def eh_emoji(caractere: str) -> bool:
     """Verifica se o caractere pertence a faixas comuns de emojis."""
@@ -678,6 +625,7 @@ def limpar_variacoes_unicode(texto: str) -> str:
 
 
 def desenhar_texto_unicode(draw: ImageDraw.ImageDraw,
+                            imagem: Image.Image,
                             posicao: tuple[int, int],
                             texto: str,
                             fonte_texto: ImageFont.FreeTypeFont | ImageFont.ImageFont,
@@ -714,13 +662,24 @@ def desenhar_texto_unicode(draw: ImageDraw.ImageDraw,
             usar_cor_embutida = False
 
         try:
-            draw.text(
-                (x, y),
-                caractere,
-                font=fonte_atual,
-                fill=cor,
-                embedded_color=usar_cor_embutida,
-            )
+            if fonte_atual == fonte_emoji:
+                incr_y = 0
+                if caractere not in "🌡🌧➡":
+                    incr_y = 10
+                    
+                with Pilmoji(imagem) as pilmoji:
+                    pilmoji.text((x, y - incr_y), caractere ,
+                        font = fonte_atual,
+                        fill="black"
+                    )
+                
+            else:
+                draw.text((x , y),
+                            caractere,
+                            font=fonte_simbolo,
+                            fill=cor,
+                            embedded_color=usar_cor_embutida
+                         )
 
         except (ValueError, OSError):
             # Algumas versões do Pillow ou algumas fontes não
@@ -813,8 +772,7 @@ def ajustar_texto(draw: ImageDraw.ImageDraw,
 
 def quadro_clima_base64(dados_clima: dict[str, Any],
                         largura: int = 600,
-                        altura: int = 300,
-                        ) -> Image.Image | None:
+                        altura: int = 300) -> Image.Image | None:
     
     if not isinstance(dados_clima, dict):
         return None
@@ -885,49 +843,33 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
         centro_imagem = largura // 2
 
         if imagem_clima is not None:
-            imagem_clima.thumbnail(
-                (200, 200),
-                Image.Resampling.LANCZOS,
-            )
+            imagem_clima.thumbnail((200, 200),Image.Resampling.LANCZOS)
 
             x_icone = centro_imagem - 50
             y_icone = 10
 
-            imagem.alpha_composite(
-                imagem_clima,
-                dest=(x_icone, y_icone),
-            )
+            imagem.alpha_composite(imagem_clima, dest=(x_icone, y_icone))
 
-        largura_temperatura = draw.textlength(
-            temperatura,
-            font=fonte_temperatura,
-        )
+        largura_temperatura = draw.textlength(temperatura,font=fonte_temperatura)
 
         x_temperatura = centro_imagem + 30
         y_temperatura = 10
 
         # Garante que a temperatura não ultrapasse a imagem.
-        x_temperatura = min(
-            x_temperatura,
-            largura - int(largura_temperatura) - margem,
-        )
+        x_temperatura = min(x_temperatura,largura - int(largura_temperatura) - margem)
 
-        draw.text(
-            (x_temperatura, y_temperatura),
-            temperatura,
-            font=fonte_temperatura,
-            fill=cor_temperatura,
-        )
+        draw.text((x_temperatura, y_temperatura),
+                    temperatura,
+                    font=fonte_temperatura,
+                    fill=cor_temperatura,
+                )
 
         # =========================================================
         # Informações de tab_clima
         # =========================================================
         y_tab_clima = 90
 
-        quantidade_colunas = max(
-            min(len(tab_clima), 4),
-            1,
-        )
+        quantidade_colunas = max(min(len(tab_clima), 4), 1)
 
         largura_disponivel = largura - (margem * 2)
         largura_coluna = largura_disponivel // quantidade_colunas
@@ -942,12 +884,12 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
                 draw=draw,
                 texto=str(item),
                 largura_maxima=largura_texto_maxima,
-                fonte_texto=fonte_clima,
-                fonte_emoji=fonte_emoji_clima,
-                fonte_simbolo=fonte_simbolo_clima,
+                fonte_texto = fonte_clima,
+                fonte_emoji = fonte_emoji_clima,
+                fonte_simbolo = fonte_simbolo_clima,
             )
-
             desenhar_texto_unicode(
+                imagem = imagem,
                 draw=draw,
                 posicao=(x_coluna, y_tab_clima),
                 texto=texto_ajustado,
@@ -956,6 +898,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
                 fonte_simbolo=fonte_simbolo_clima,
                 cor=cor_secundaria,
             )
+
 
         # =========================================================
         # Tabela tab_astro
@@ -982,6 +925,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
             texto_direito = str(linha[1])
 
             desenhar_texto_unicode(
+                imagem = imagem,
                 draw=draw,
                 posicao=(x_texto_esquerdo, y + 5),
                 texto=texto_esquerdo,
@@ -992,6 +936,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
             )
 
             desenhar_texto_unicode(
+                imagem = imagem,
                 draw=draw,
                 posicao=(x_texto_direito, y + 5),
                 texto=texto_direito,
@@ -1026,6 +971,7 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
         texto_lua = f"{emoji_lua} {nome_lua}"
 
         desenhar_texto_unicode(
+            imagem = imagem,
             draw=draw,
             posicao=(margem, altura - 29),
             texto=texto_lua,
@@ -1034,7 +980,8 @@ def quadro_clima_base64(dados_clima: dict[str, Any],
             fonte_simbolo=fonte_simbolo_lua,
             cor=cor_texto,
         )
-
+     
+        
         return imagem.convert("RGB")
     
 

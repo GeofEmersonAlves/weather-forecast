@@ -221,6 +221,7 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
         
             #Gera a imagem do Quadro do clima e coloca no relatório
             img_quadro_clima = quadro_clima_base64(clima_json)
+           
             imagem_excel = pil_para_imagem_excel(img_quadro_clima, largura = 530, altura = 310)
             planilha.add_image(imagem_excel, "B3")
             planilha["K19"] = texto_info

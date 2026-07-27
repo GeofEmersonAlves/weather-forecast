@@ -12,3 +12,4 @@ CairoSVG
 plotly
 openpyxl 
 kaleido
+pilmoji

@@ -27,7 +27,7 @@ from state.estado_app import inicializar_estado_app
 LOGO256_X_256 = "assets/icons/weather_forecast_icon256px_256px.png"
 icone = Image.open(LOGO256_X_256)
 st.session_state._icone_app_ = icone
-st.session_state._app_version = "Versão 1.0.1 • Julho/2026"
+st.session_state._app_version = "Versão 1.0.2 • Julho/2026"
 
 #print(st.__version__)  #Para ver a versão do streamlit instalada
 
