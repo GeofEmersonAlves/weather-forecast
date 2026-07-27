@@ -17,6 +17,7 @@ Histórico:
        16/07/2026 - Inicio do projeto
        25/07/2026 - Fim da versao 1.0.0
        26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
+       26/07/2026 - Oficializando a versão 1.0.2 como a versão mais estavél e online
 ===============================================================================
 """
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
