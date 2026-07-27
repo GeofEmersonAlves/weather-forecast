@@ -9,7 +9,7 @@ pandas
 Babel
 python-slugify
 CairoSVG
-plotly
 openpyxl 
-kaleido
 pilmoji
+plotly>=6.1.1
+kaleido==1.3.0
