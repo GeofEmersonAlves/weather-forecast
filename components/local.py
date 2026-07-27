@@ -15,7 +15,9 @@ Descrição:
 Histórico:
        16/07/2026 - Inicio 
        24/07/2026 - Para facilitar o relatório e não repedir codigo foi incluido  user_loc_formatado
-       26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
+       26/07/2026 - Correção dos bugs que apareceram quando o app ficou online+
+       27/07/2026 - Atualização das coordenadas do local default, 
+                 as corrdenadas  lat, long agora são bem na areia da Prainha Branca 😎 
 ===============================================================================
 """
 #import streamlit as st
@@ -67,8 +69,8 @@ def pega_local_API(local_api: dict):
 
 def local_default():
     return {
-            "lat": -23.87072186750067,
-            "long": -46.13784252958647,
+            "lat": -23.865897,
+            "long": -46.135357,
             "pais": "Brasil",
             "estado": "Brasil",
             "uf": "SP",

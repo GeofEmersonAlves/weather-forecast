@@ -35,7 +35,7 @@
 		<meta name="premiumAds" content="0">
 	
 	<!-- METATAGS TARGETING -->
-		<meta name="ab" content="20">
+		<meta name="ab" content="2">
 		<meta name="robots" content="all">
 		<meta name="regiao" content="se">
 	<meta name="uf" content="sp">
@@ -211,7 +211,7 @@ if (!cookieConsent) {
 
 <input type="checkbox" id="chkHamburguerMenu" class="_none">
 
-<nav class="modal-menu" data-section="modal-menu">
+<nav class="modal-menu modal-menu-teste-banner" data-section="modal-menu">
 	<div class="container _overflow-auto custom-scrollbar">
 		<section class="wrapper-menu">
 			<div id="column-1">
@@ -806,7 +806,7 @@ if (!cookieConsent) {
     </a>
 
     <div class="_flex _flex-column _align-center _margin-r-10" style="width:70px;">
-      <img class="lazyload" data-src="/dist/images/v2/svg/4t.svg" width="40" height="40" alt="Sol com algumas nuvens. Chove rápido durante o dia e à noite." />
+      <img class="lazyload" data-src="/dist/images/v2/svg/2.svg" width="40" height="40" alt="Sol o dia todo sem nuvens no céu, com aumento de nebulosidade à noite. Não chove." />
       <p class="-gray-dark-2 -bold _margin-t-10">Hoje</p>
     </div>
     <div class="_width-100-pct">
@@ -821,7 +821,7 @@ if (!cookieConsent) {
             13&deg;
 
             <img src="/dist/images/v2/svg/ic-arrow-max.svg" height="12" width="12" alt="Temperatura máxima Hoje" class="_margin-l-10 _margin-r-5">
-            17&deg;
+            27&deg;
           </p>
         </li>
         <li class="item">
@@ -830,14 +830,13 @@ if (!cookieConsent) {
             <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Chuva</span>
           </div>
           <div class="_flex _align-center -gray">
-              <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
-
-    <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
-  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
-              <span class="_margin-l-5">
-              30mm
+              <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+            <span class="_margin-l-5">
+              0mm
               -
-              95%
+              0%
             </span>
           </div>
         </li>
@@ -861,7 +860,7 @@ if (!cookieConsent) {
     </a>
 
     <div class="_flex _flex-column _align-center _margin-r-10" style="width:70px;">
-      <img class="lazyload" data-src="/dist/images/v2/svg/3.svg" width="40" height="40" alt="Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens." />
+      <img class="lazyload" data-src="/dist/images/v2/svg/2.svg" width="40" height="40" alt="Dia de sol com névoa fraca ao amanhecer." />
       <p class="-gray-dark-2 -bold _margin-t-10">Amanhã</p>
     </div>
     <div class="_width-100-pct">
@@ -876,7 +875,7 @@ if (!cookieConsent) {
             14&deg;
 
             <img src="/dist/images/v2/svg/ic-arrow-max.svg" height="12" width="12" alt="Temperatura máxima Amanhã" class="_margin-l-10 _margin-r-5">
-            21&deg;
+            29&deg;
           </p>
         </li>
         <li class="item">
@@ -885,14 +884,13 @@ if (!cookieConsent) {
             <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Chuva</span>
           </div>
           <div class="_flex _align-center -gray">
-              <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-azul.png" alt="">
-
-    <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+              <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
   <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
-              <span class="_margin-l-5">
-              1mm
+  <img class="lazyload _flex _width-auto" width="10" height="10" data-src="/dist/images/gota-cinza.png" alt="">
+            <span class="_margin-l-5">
+              0mm
               -
-              74%
+              0%
             </span>
           </div>
         </li>
@@ -907,7 +905,7 @@ if (!cookieConsent) {
     <a
       href="previsao-do-tempo/15-dias/cidade/558/saopaulo-sp"
       class="transparent-link actTriggerGA"
-      title="Ver a previsão completa para Domingo"
+      title="Ver a previsão completa para Quarta"
       id="Botao_card_previsao_3"
       data-category="Pagina_home"
       data-action="Clique_card_previsao_3"
@@ -916,8 +914,8 @@ if (!cookieConsent) {
     </a>
 
     <div class="_flex _flex-column _align-center _margin-r-10" style="width:70px;">
-      <img class="lazyload" data-src="/dist/images/v2/svg/2r.svg" width="40" height="40" alt="Sol com algumas nuvens. Não chove." />
-      <p class="-gray-dark-2 -bold _margin-t-10">Domingo</p>
+      <img class="lazyload" data-src="/dist/images/v2/svg/2r.svg" width="40" height="40" alt="Sol com aumento de nuvens à tarde. Muitas nuvens à noite, mas não chove." />
+      <p class="-gray-dark-2 -bold _margin-t-10">Quarta</p>
     </div>
     <div class="_width-100-pct">
       <ul class="variables-list -small">
@@ -927,11 +925,11 @@ if (!cookieConsent) {
             <span class="-bold -gray-dark-2 -uppercase -font-12 _padding-5">Temperatura</span>
           </div>
           <p class="-gray _flex _align-center">
-            <img src="/dist/images/v2/svg/ic-arrow-min.svg" height="12" width="12" alt="Temperatura mínima Domingo" class="_margin-r-5">
-            13&deg;
+            <img src="/dist/images/v2/svg/ic-arrow-min.svg" height="12" width="12" alt="Temperatura mínima Quarta" class="_margin-r-5">
+            16&deg;
 
-            <img src="/dist/images/v2/svg/ic-arrow-max.svg" height="12" width="12" alt="Temperatura máxima Domingo" class="_margin-l-10 _margin-r-5">
-            24&deg;
+            <img src="/dist/images/v2/svg/ic-arrow-max.svg" height="12" width="12" alt="Temperatura máxima Quarta" class="_margin-l-10 _margin-r-5">
+            30&deg;
           </p>
         </li>
         <li class="item">
@@ -3321,30 +3319,6 @@ if (!cookieConsent) {
 
             <div class="_flex _margin-t-20 _space-between">
                             <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
-                <span>30mm</span>
-                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="30mm">
-                  <span style="height: 30%"></span>
-                </div>
-                <span>Sex</span>
-                <span>24/07</span>
-              </div>
-                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
-                <span>1mm</span>
-                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="1mm">
-                  <span style="height: 1%"></span>
-                </div>
-                <span>Sáb</span>
-                <span>25/07</span>
-              </div>
-                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
-                <span>0mm</span>
-                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
-                  <span style="height: 0%"></span>
-                </div>
-                <span>Dom</span>
-                <span>26/07</span>
-              </div>
-                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
                 <span>0mm</span>
                 <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
                   <span style="height: 0%"></span>
@@ -3375,6 +3349,30 @@ if (!cookieConsent) {
                 </div>
                 <span>Qui</span>
                 <span>30/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Sex</span>
+                <span>31/07</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Sáb</span>
+                <span>01/08</span>
+              </div>
+                            <div class="-gray-dark-2 -font-12 _flex _align-center _flex-column">
+                <span>0mm</span>
+                <div class="volume-bar _margin-b-10 _margin-t-10" data-text="0mm">
+                  <span style="height: 0%"></span>
+                </div>
+                <span>Dom</span>
+                <span>02/08</span>
               </div>
                           </div>
           </div>

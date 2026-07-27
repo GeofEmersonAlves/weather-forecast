@@ -47,10 +47,7 @@ from utils.datas import hoje, data_por_extenso
 #from services.salva_dict import salvar_json
 
 # =========== FUNCÃO PARA LIMPAR O CACHE ===========
-def limpar_cache_previsao():
-    st.cache_data.clear()
-
-def limpar_cache_info_clima():
+def limpar_cache():
     st.cache_data.clear()
     
     
@@ -129,7 +126,7 @@ with col1:  #Quadro com clima atual
         st.button("🗑 Limpar Cache",
            type="tertiary",
            key = "cache_clima",
-           on_click = limpar_cache_info_clima)
+           on_click = limpar_cache)
         
 with col2: #Previsão do tempo
    previsoes = None
@@ -194,7 +191,7 @@ with col2: #Previsão do tempo
        st.button("🗑 Limpar Cache",
           type="tertiary",
           key = "cache_prev",
-          on_click = limpar_cache_previsao)
+          on_click = limpar_cache)
        
        
 with col3: #Mapas de precipitacão

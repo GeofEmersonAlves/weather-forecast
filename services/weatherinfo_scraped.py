@@ -10,10 +10,10 @@ Python     : Python 3.13.14 | packaged by Anaconda, Inc.
 
 Descrição:
         Faz um scrapping de uma pagina de clima para obter as informações climaticas
-      
 
 Histórico:
        20/07/2026 - Inicio 
+        27/07/2026 - Correção do problema dos timezone nos horários
 ===============================================================================
 """
 import streamlit as st
@@ -27,6 +27,7 @@ from services.busca_cidades import traz_cidade_clima
 from services.weather_api import direcao_vento_emoji, astro_evento, weather_icon
 import services.requisicao as req
 from services.fase_da_lua import fase_da_lua
+from services.time_zone import hora_brasilia_to_fuso_local
 from utils.datas import hoje
 
 #pip install python-slugify
@@ -155,13 +156,25 @@ def scrap_page2(dados_cidade : dict) -> list:
     vol_chuva = txt_chuva.split(" ")[1]
     porc_chuva = txt_chuva.split(" ")[2]
     porc_chuva = porc_chuva.replace("\n","").replace("\t","").replace(" ","").replace("-","")
+    
     txt_sol = dados["Sol"]
     sol_nasc = txt_sol.split(" ")[1]
     sol_desc = txt_sol.split(" ")[2]
+ 
+    #Convertendo o horario para o fusohorario local
+    lat = dados_cidade["latitude"]
+    long = dados_cidade["longitude"]
+    hr_sol_up = hora_brasilia_to_fuso_local(sol_nasc, lat, long)
+    hr_sol_down = hora_brasilia_to_fuso_local(sol_desc, lat, long)
     
-    txt_sol_up_h = "🧭 "+sol_nasc
+    txt_sol_up_h = "🧭 "+hr_sol_up
     txt_sol_up = astro_evento('sunrise')
-    txt_sol_down_h = "🧭 "+sol_desc
+    txt_sol_down_h = "🧭 "+hr_sol_down
+    txt_sol_down = astro_evento('sunset')
+
+    txt_sol_up_h = "🧭 "+hr_sol_up
+    txt_sol_up = astro_evento('sunrise')
+    txt_sol_down_h = "🧭 "+hr_sol_down
     txt_sol_down = astro_evento('sunset')
     
     txt_precipita = "🌧️ Precipitação"

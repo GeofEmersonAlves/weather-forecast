@@ -21,6 +21,7 @@ Histórico:
                  Desta forma com o tempo a biblioteca de icones cresce e cada vez menos precisa busca os 
                  icones via requisição.
         23/07/2026 - Inclusão da chamada do serviço get_weatherstack_token
+        27/07/2026 - Correção do problema dos timezone nos horários
 ===============================================================================
 """
 import streamlit as st
@@ -33,6 +34,7 @@ from urllib.parse import urlparse
 from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 from services.requisicao import faz_requisicao
 import services.get_tokens as get_tokens
+from services.time_zone import hora_brasilia_to_fuso_local
 
 
 Base_URL_API = "http://api.weatherstack.com/"
@@ -463,10 +465,15 @@ def clima_agora(lat : str, long: str) -> dict:
     texto_sensacao = f"🌡️ Sensação {sens} ºC"
 
     dados['tab_clima'] = [texto_descricao, texto_vento, texto_umidade, texto_sensacao]
-  
-    txt_sol_up_h = "🧭 "+dados.get('current').get('astro').get('sunrise')
+      
+    hr_sol_up = hora_brasilia_to_fuso_local(dados.get('current').get('astro').get('sunrise'), 
+                                            float(lat), float(long))
+    
+    hr_sol_down = hora_brasilia_to_fuso_local(dados.get('current').get('astro').get('sunset'), 
+                                            float(lat), float(long))
+    txt_sol_up_h = "🧭 "+hr_sol_up
     txt_sol_up = astro_evento('sunrise')
-    txt_sol_down_h = "🧭 "+dados.get('current').get('astro').get('sunset')
+    txt_sol_down_h = "🧭 "+hr_sol_down
     txt_sol_down = astro_evento('sunset')
     txt_moon_up_h = "🧭 "+dados.get('current').get('astro').get('moonrise')
     txt_moon_up = astro_evento('moonrise')
