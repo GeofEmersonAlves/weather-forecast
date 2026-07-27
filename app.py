@@ -22,9 +22,13 @@ Histórico:
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
 import streamlit as st
 from PIL import Image
+from pathlib import Path
 from state.estado_app import inicializar_estado_app
 
-LOGO256_X_256 = "assets/icons/weather_forecast_icon256px_256px.png"
+#ROOT = Path(__file__).resolve().parent.parent   # ajuste conforme sua estrutura
+
+LOGO256_X_256 = Path("assets/icons/weather_forecast_icon256px_256px.png")
+                                             
 icone = Image.open(LOGO256_X_256)
 st.session_state._icone_app_ = icone
 st.session_state._app_version = "Versão 1.0.2 • Julho/2026"
