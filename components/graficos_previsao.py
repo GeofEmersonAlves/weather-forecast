@@ -171,9 +171,12 @@ def grafico_chuva(dados_previsao: dict, title_graf: str) -> go.Figure:
     for _, linha in df.iterrows():
         #Desloca para cima a caixima quando o valor probabilidade_chuva < 2 pa não sobrepor o rótulo do eixo X
         deslocy_caixa = 5
+        deslocy_down = 2
+        if linha["probabilidade_chuva"] >= 98 :
+            deslocy_down = -3
       
         fig.add_annotation(x = linha["eixo_x"],
-                           y = max(linha["probabilidade_chuva"] + 2, deslocy_caixa),
+                           y = max(linha["probabilidade_chuva"] + deslocy_down, deslocy_caixa),
                            text = f"<b>{linha['probabilidade_chuva']}%<br>{linha['precipitacao_mm']}mm</b>",
                            showarrow = False,
                            bgcolor = "rgba(255, 255, 255, 0.4)", #"rgba(255,255,255,0)", #'rgba(0,0,0,0)',  #"white",

@@ -1,0 +1,90 @@
+{
+    "request": {
+        "type": "Scrapping",
+        "query": null,
+        "language": "PT-BR",
+        "unit": "m"
+    },
+    "location": {
+        "name": "São Paulo",
+        "country": "Brasil",
+        "region": "Região Sudeste",
+        "lat": -23.5475,
+        "lon": -46.6361,
+        "timezone_id": null,
+        "localtime": null,
+        "localtime_epoch": null,
+        "utc_offset": null
+    },
+    "current": {
+        "observation_time": null,
+        "temperature": "15",
+        "weather_code": null,
+        "weather_icons": [],
+        "weather_descriptions": [],
+        "astro": {
+            "sunrise": null,
+            "sunset": null,
+            "moonrise": null,
+            "moonset": null,
+            "moon_phase": null,
+            "moon_illumination": null
+        },
+        "air_quality": {
+            "co": null,
+            "no2": null,
+            "o3": null,
+            "so2": null,
+            "pm2_5": null,
+            "pm10": null,
+            "us-epa-index": null,
+            "gb-defra-index": null
+        },
+        "wind_speed": null,
+        "wind_degree": null,
+        "wind_dir": null,
+        "pressure": null,
+        "precip": null,
+        "humidity": null,
+        "cloudcover": null,
+        "feelslike": null,
+        "uv_index": null,
+        "visibility": null,
+        "is_day": null
+    },
+    "img_clima": "imagem",
+    "tab_clima": [
+        "Céu limpo",
+        "💨 Vento 3km/h ↗️NE",
+        "💧 Umidade 47%",
+        "🌡️ Sensação 17 ºC"
+    ],
+    "tab_astro": [
+        [
+            "🌡️⬆️Temp. Máxima:",
+            "🔺26 °C"
+        ],
+        [
+            "🌡️⬇️Temp. Mínima:",
+            "🔻14 °C"
+        ],
+        [
+            "🌅⬆️Nascer do Sol",
+            "🧭 06:46:56h"
+        ],
+        [
+            "🌇⬇️Pôr do Sol",
+            "🧭 17:38:40h"
+        ],
+        [
+            "🌧️ Precipitação",
+            "💧 0mm - 0% "
+        ]
+    ],
+    "fonte_dados": "https://tempoagora.uol.com.br/",
+    "fase_lua": {
+        "emoji": "🌒",
+        "image": "assets/images/lua_crescente.jpg",
+        "descricao": "Lua Crescente"
+    }
+}

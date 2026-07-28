@@ -1,7 +1,12 @@
-![Banner](assets/banner.jpg)
+![Banner](docs/banner.jpg)
 
 # 🌤️ Weather Forecast
   Dashboard meteorológico desenvolvido com Python, Streamlit, Plotly e Web Scraping.
+
+
+<p align="center">
+  <img src="docs/demo.gif" width="900">
+</p>
 
   https://geof-emersonalves-weather-forecast.streamlit.app/
   
@@ -61,6 +66,7 @@
 ✔ Relatórios completos em Excel. ✔Calendário das fases da Lua
 
 🚀 Novidades da versão
+```
 🌙 Calendário das Fases da Lua
 A aplicação exibe um calendário com as fases da Lua,apresentando a fase prevista para cada dia juntamente com umarepresentação gráfica correspondente.
 
@@ -86,6 +92,7 @@ Se ambas estiverem indisponíveis, a aplicação utiliza automaticamenteuma estr
 - Tratamento de timeouts e falhas;
 - Reutilização automática de imagens;
 - Melhor organização da arquitetura da aplicação.
+```
 
 ## 📁 Estrutura do Projeto
 ```
