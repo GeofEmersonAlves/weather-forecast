@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <img src="docs/demo.gif" width="900">
+  <img src="docs/demo.gif" width="450">
 </p>
 
   https://geof-emersonalves-weather-forecast.streamlit.app/
