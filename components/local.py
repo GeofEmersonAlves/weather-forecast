@@ -18,6 +18,7 @@ Histórico:
        26/07/2026 - Correção dos bugs que apareceram quando o app ficou online+
        27/07/2026 - Atualização das coordenadas do local default, 
                  as corrdenadas  lat, long agora são bem na areia da Prainha Branca 😎 
+       29/07/2026 - Correção de um bug quando na funcao pega_local_API(local_api: dict):
 ===============================================================================
 """
 #import streamlit as st
@@ -38,35 +39,6 @@ direcoes = {
     "CO": "Centro-Oeste",
 }
 
-def pega_local_API(local_api: dict):
-    regiao = direcoes.get(local_api['region'], "")
-    if len(regiao) > 0 :
-        regiao = f"Região {regiao}"
-    
-    #Para algumas cidades fora do brasil, as vezes vem sem lat e long, neste caso eu pego pelo OpenStreetMap
-    lat = local_api["latitude"]
-    long = local_api["longitude"]
-    
-    if lat is None or long is None:
-        geolocator = Nominatim(user_agent="meu_app")
-        cidade = f"{local_api['city']}-{local_api['uf'], {local_api['country']}}"
-        resp = geolocator.geocode(cidade)
-        lat = resp.latitude
-        long = resp.longitude
-        
-    local = {"lat": lat,
-           "long": long,
-           "pais": local_api["country"],
-           "estado": local_api["country"],
-           "uf": local_api["uf"],
-           "cidade": local_api["city"],
-           "idcity": local_api["idcity"],
-           "litoral": local_api["seaside"],
-           "bairro": "",
-           "regiao": regiao,
-           "obs": "Local selecionado"}
-    return local
-
 def local_default():
     return {
             "lat": -23.865897,
@@ -81,6 +53,39 @@ def local_default():
             "regiao": "Reigião sudeste",
             "obs": "Local padrão - 🏖️🩴 Prainha Branca 🌊🏝️"
         }
+def pega_local_API(local_api: dict | None)->dict:
+    if local_api:
+        regiao = direcoes.get(local_api['region'], "")
+        if len(regiao) > 0 :
+            regiao = f"Região {regiao}"
+        
+        #Para algumas cidades fora do brasil, as vezes vem sem lat e long, neste caso eu pego pelo OpenStreetMap
+        lat = local_api["latitude"]
+        long = local_api["longitude"]
+        
+        if lat is None or long is None:
+            geolocator = Nominatim(user_agent="meu_app")
+            cidade = f"{local_api['city']}-{local_api['uf'], {local_api['country']}}"
+            resp = geolocator.geocode(cidade)
+            lat = resp.latitude
+            long = resp.longitude
+            
+        local = {"lat": lat,
+               "long": long,
+               "pais": local_api["country"],
+               "estado": local_api["country"],
+               "uf": local_api["uf"],
+               "cidade": local_api["city"],
+               "idcity": local_api["idcity"],
+               "litoral": local_api["seaside"],
+               "bairro": "",
+               "regiao": regiao,
+               "obs": "Local selecionado"}
+        
+    else:
+        local = local_default()
+            
+    return local
 
 
 def local_formatado(local: dict) -> dict:

@@ -36,7 +36,6 @@ from services.requisicao import faz_requisicao
 import services.get_tokens as get_tokens
 from services.time_zone import hora_brasilia_to_fuso_local
 
-
 Base_URL_API = "http://api.weatherstack.com/"
 
 WEATHER_CODES = {

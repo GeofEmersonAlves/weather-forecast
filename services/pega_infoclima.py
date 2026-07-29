@@ -23,7 +23,7 @@ import services.weather_api as wt_api
 from services.weatherinfo_scraped import clima_agora as scrap_clima_agora
 
 #Cache de 30 minutos
-@st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
+@st.cache_data(show_spinner="⏳ Carregando Tempo agora . . .",  ttl = 1800)
 def info_clima_agora(cidade : dict) -> dict:
     lat = cidade["lat"]
     long = cidade["long"]

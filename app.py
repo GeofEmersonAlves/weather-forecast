@@ -20,6 +20,8 @@ Histórico:
        26/07/2026 - Oficializando a versão 1.0.2 como a versão mais estavél e online
        27/07/2026 - Correção do problema dos timezone nos horários
        27/07/2026 - Oficializando a versão 1.0.3
+       29/07/2026 - Correção de um bug no componente local
+       29/07/2026 - Oficializando a versão 1.0.4
 ===============================================================================
 """
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
