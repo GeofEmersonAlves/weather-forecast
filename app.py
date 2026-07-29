@@ -36,7 +36,7 @@ LOGO256_X_256 = Path("assets/icons/weather_forecast_icon256px_256px.png")
                                              
 icone = Image.open(LOGO256_X_256)
 st.session_state._icone_app_ = icone
-st.session_state._app_version = "Versão 1.0.3 • Julho/2026"
+st.session_state._app_version = "Versão 1.0.4 • Julho/2026"
 
 #print(st.__version__)  #Para ver a versão do streamlit instalada
 
