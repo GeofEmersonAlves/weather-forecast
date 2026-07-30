@@ -22,6 +22,9 @@ Histórico:
        27/07/2026 - Oficializando a versão 1.0.3
        29/07/2026 - Correção de um bug no componente local
        29/07/2026 - Oficializando a versão 1.0.4
+       30/07/2026 - Correção de bug, tratamento do timeout do geo.reverse() no serviço geolocation.py
+                  e aleração do codigo do componente local.py para.
+       29/07/2026 - Oficializando a versão 1.0.5           
 ===============================================================================
 """
 #IMPORTAÇÃO DAS BIBLIOTECAS E FRAMEWORKS
@@ -36,7 +39,7 @@ LOGO256_X_256 = Path("assets/icons/weather_forecast_icon256px_256px.png")
                                              
 icone = Image.open(LOGO256_X_256)
 st.session_state._icone_app_ = icone
-st.session_state._app_version = "Versão 1.0.4 • Julho/2026"
+st.session_state._app_version = "Versão 1.0.5 • Julho/2026"
 
 #print(st.__version__)  #Para ver a versão do streamlit instalada
 

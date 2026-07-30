@@ -14,12 +14,18 @@ Descrição:
 
 Histórico:
        16/07/2026 - Inicio do cogigo
+       30/07/2026 - Correção de bug, tratamento do timeout do geo.reverse() 
 ===============================================================================
 """
 import services.requisicao as req
 from geopy.geocoders import Nominatim  # OpenStreetMap(GRATUITO)
+from geopy.exc import (GeocoderTimedOut,
+                       GeocoderUnavailable,
+                       GeocoderServiceError)
+
 from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 
+__TEMPO_TIMEOUT__ = 15
 __ESTADO_UF__ = {
     "acre": "AC", "alagoas": "AL", "amapá": "AP", "amazonas": "AM",
     "bahia": "BA", "ceará": "CE", "distrito federal": "DF", "espírito santo": "ES",
@@ -34,13 +40,45 @@ def sigla_estado(nome_estado : str) -> str:
     nome_limpo = nome_estado.strip().lower()
     return __ESTADO_UF__.get(nome_limpo, "Estado não encontrado")
 
+def geolocation_with_city(cidade: str, uf: str | None = None, pais: str | None = None) -> tuple[float | None, float | None]:
+    
+    geo = Nominatim(user_agent="WeatherForecast/1.0", timeout = __TEMPO_TIMEOUT__)
+    endereco = ", ".join(filtro for filtro in (cidade, uf, pais) if filtro)
+    
+    try:
+        local = geo.geocode(endereco)
 
+        if local is None:
+            return None, None
+
+        return local.latitude, local.longitude
+
+    except (GeocoderTimedOut, GeocoderUnavailable, GeocoderServiceError) as erro:
+        print(f"Erro ao localizar '{endereco}': {erro}")
+        return None, None    
+    
+    
+    
 def geolocation_with_latlon(lat : str, lon : str)-> dict | None:
-    geo = Nominatim(user_agent="meu_app")
+    if lat is None or lon is None:
+        return None
+
+    geo = Nominatim(user_agent="WeatherForecast/1.0", timeout = __TEMPO_TIMEOUT__)
     
-    local = geo.reverse(f"{lat},{lon}")
+    try:
+        local = geo.reverse((float(lat), float(lon)),
+                            language="pt-BR",
+                            addressdetails=True,
+                            exactly_one=True,
+                            timeout = __TEMPO_TIMEOUT__)
+        if not local:
+            return None
+        
+        return local.raw
     
-    return local.raw
+    except (GeocoderTimedOut, GeocoderUnavailable, GeocoderServiceError, ValueError, TypeError) as erro:
+        print(f"Não foi possível consultar o Nominatim: {erro}")
+        return None  
 
 @lru_cache(maxsize=5)
 def geolocation_by_IP() -> dict | None:

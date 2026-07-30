@@ -19,13 +19,12 @@ Histórico:
        27/07/2026 - Atualização das coordenadas do local default, 
                  as corrdenadas  lat, long agora são bem na areia da Prainha Branca 😎 
        29/07/2026 - Correção de um bug quando na funcao pega_local_API(local_api: dict):
+       30/07/2026 - Correção de bug, no servico geolocation
 ===============================================================================
 """
 #import streamlit as st
 import services.geolocation as geoloc
 import components.stream_geolocation as str_geoloc
-from geopy.geocoders import Nominatim  # OpenStreetMap(GRATUITO)
-from models.local_vazio import local_empty
 
 direcoes = {
     "N": "Norte",
@@ -53,6 +52,7 @@ def local_default():
             "regiao": "Reigião sudeste",
             "obs": "Local padrão - 🏖️🩴 Prainha Branca 🌊🏝️"
         }
+
 def pega_local_API(local_api: dict | None)->dict:
     if local_api:
         regiao = direcoes.get(local_api['region'], "")
@@ -63,12 +63,10 @@ def pega_local_API(local_api: dict | None)->dict:
         lat = local_api["latitude"]
         long = local_api["longitude"]
         
-        if lat is None or long is None:
-            geolocator = Nominatim(user_agent="meu_app")
-            cidade = f"{local_api['city']}-{local_api['uf'], {local_api['country']}}"
-            resp = geolocator.geocode(cidade)
-            lat = resp.latitude
-            long = resp.longitude
+        if not (lat and long):
+            lat, long = geoloc.geolocation_with_city(local_api["city"], 
+                                                     local_api["uf"], 
+                                                     local_api["country"])
             
         local = {"lat": lat,
                "long": long,
@@ -100,45 +98,77 @@ def local_formatado(local: dict) -> dict:
     return local_dict
 
 #Pega a localizacao do usuario pelo gps ou pelo IP, e retorna 
-def retorna_local(local_atual: dict) -> dict:   
-    local = local_empty()
-    
-    location = {}
-     #Tenta pega a localizacao pelo streamlit
+def retorna_local(local_atual: dict) -> dict:
+    local = local_atual.copy()
+
     geolocalizacao = str_geoloc.geolocation()
-    if geolocalizacao.get('latitude') is not None:
-        location = geoloc.geolocation_with_latlon(geolocalizacao.get('latitude'), 
-                                                 geolocalizacao.get('longitude'))
-        #print(location)
-        local['lat'] = geolocalizacao.get('latitude')
-        local['long'] = geolocalizacao.get('longitude')
-        local['obs'] = "Localização atual"
-        
-    else: #Se não conseguir pega pelo IP, se o local nao for o default
+
+    latitude = geolocalizacao.get("latitude")
+    longitude = geolocalizacao.get("longitude")
+
+    if latitude is not None and longitude is not None:
+        local["lat"] = latitude
+        local["long"] = longitude
+        local["obs"] = "Localização atual"
+
+        location = geoloc.geolocation_with_latlon(latitude,longitude)
+
+        if location is None:
+            return local
+
+    else:
         if local_atual == local_default():
-            return  local_default()
-        
-        if local_atual['obs'] =="Localização atual":
-            return local_atual
-        
-        geolocIP = geoloc.geolocation_by_IP()
-        location = geoloc.geolocation_with_latlon(geolocIP.get('latitude'), 
-                                                   geolocIP.get('longitude'))
-        local['lat'] = geolocIP.get('latitude')
-        local['long'] = geolocIP.get('longitude')
-        local['obs'] = "Localização aproximada pelo IP"
-    
-    if location is not None:
-        local['pais']  = location.get('address').get('country')
-        local['estado'] = location.get('address').get('state')
-        local['uf'] = geoloc.sigla_estado(location.get('address').get('state'))
-        local['cidade'] = location.get('address').get('city')
-        bairro = location.get('address').get('city_district')
-        neighbour = location.get('address').get('neighbourhood')
-        local['bairro'] = f"{bairro} - {neighbour}"
-        local['regiao'] = location.get('address').get('region')
-    
-        if local['uf'] == None or local['cidade'] == None:
             return local_default()
-    
+
+        if local_atual.get("obs") == "Localização atual":
+            return local_atual
+
+        geoloc_ip = geoloc.geolocation_by_IP()
+
+        if not geoloc_ip:
+            return local_atual
+
+        latitude = geoloc_ip.get("latitude")
+        longitude = geoloc_ip.get("longitude")
+
+        if not (latitude and longitude):
+            return local_atual
+
+        local["lat"] = latitude
+        local["long"] = longitude
+        local["obs"] = "Localização aproximada pelo IP"
+
+        location = geoloc.geolocation_with_latlon(latitude, longitude)
+
+        if location is None:
+            return local
+
+    address = location.get("address", {})
+
+    estado = address.get("state")
+    cidade = (address.get("city")
+                or address.get("town")
+                or address.get("village")
+                or address.get("municipality")
+              )
+
+    local["pais"] = address.get("country", local.get("pais"))
+    local["estado"] = estado or local.get("estado")
+    local["uf"] = geoloc.sigla_estado(estado) if estado else local.get("uf")
+    local["cidade"] = cidade or local.get("cidade")
+
+    bairro = (address.get("city_district")
+              or address.get("suburb")
+              or ""
+             )
+
+    neighbourhood = address.get("neighbourhood") or ""
+
+    if bairro and neighbourhood and bairro != neighbourhood:
+        local["bairro"] = f"{bairro} - {neighbourhood}"
+    else:
+        local["bairro"] = bairro or neighbourhood
+
+    local["regiao"] = address.get("region",local.get("regiao", ""))
+
     return local
