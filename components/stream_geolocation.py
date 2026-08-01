@@ -11,6 +11,7 @@ Python     : Python 3.13.14 | packaged by Anaconda, Inc.
 Descrição:
     Componente que retorna a geolocalização pelo streamlit se o usuario autorizar no navegador
       
+    !pip install streamlit-geolocation
 
 Histórico:
        16/07/2026 - Inicio
@@ -27,7 +28,7 @@ def geolocation() -> dict :
     with geocol2:
         if localizacao.get("latitude") is  None:
             st.warning("Pressione o botão para acessar sua localização.")
-        
+            
         else:
             st.success("Localização obtida com Sucesso!")
     

@@ -30,6 +30,7 @@ Histórico:
                     Insersão dos gráficos apresentados na tela no relatório
        24/07/2026 - Alterações no layout do relatório para melhorar a visualização dos gráficos
        24/07/2026 - Ajustes para que os gráficos que vão para o excel fiquem iguais aos apresentados na tela
+       01/08/2026 - Alteração do tratamento dos mapas da INMET API
 ===============================================================================
 """
 from copy import deepcopy
@@ -170,8 +171,9 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
                                           previsoes_dict: dict, 
                                           previsoes: pd.DataFrame,
                                           fonte_previsao: str, 
-                                          mapa_imet1: Image.Image,
-                                          mapa_imet2: Image.Image,
+                                          mapa_inmet1: Image.Image | None,
+                                          mapa_inmet2: Image.Image | None,
+                                          fonte_inmet: str,
                                           graf_temp_maxmin: go.Figure,
                                           graf_umid_maxmim: go.Figure,
                                           graf_chuva: go.Figure) -> BytesIO:
@@ -216,8 +218,6 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
             info = clima_json['rodape_info']
             texto_info = f"{info['texto_info']}\n"
             texto_info += f"{info['versao']}"
-            
-           
         
             #Gera a imagem do Quadro do clima e coloca no relatório
             img_quadro_clima = quadro_clima_base64(clima_json)
@@ -226,16 +226,26 @@ def preencher_relatorio_clima_Tempo_Agora(clima_json: dict,
             planilha.add_image(imagem_excel, "B3")
             planilha["K19"] = texto_info
             planilha["C3"] = f"Fonte: {clima_json['fonte_dados']}"
+            
+            
         #Coloca a imagem o mapa do  IMETT de precipitação no relatório
         # Adiciona uma borda preta de 2 pixels
-        mapa_imet2 = ImageOps.expand(mapa_imet2,
-                                     border=1,
-                                     fill="#000000"   # cor da borda
-                                    )
-        imagem_excel = pil_para_imagem_excel(mapa_imet2, largura=310, altura = 310)
-        planilha.add_image(imagem_excel, "H3")
+        mapa_inmet = None
+        if mapa_inmet2:
+            mapa_inmet = mapa_inmet2
+               
+        elif mapa_inmet1:
+            mapa_inmet = mapa_inmet1
         
-      
+        if mapa_inmet:
+            img_inmet = base64_para_imagem(mapa_inmet)
+
+            img_inmet = ImageOps.expand(img_inmet,border=1,fill="#000000")   # cor da borda
+
+            imagem_excel = pil_para_imagem_excel(img_inmet, largura=310, altura = 310)
+            planilha.add_image(imagem_excel, "H3")
+            planilha["H3"] = fonte_inmet
+        
         #Coloca os gráficos no relatório   
         #Acima explico como chegar nos valores de largura e altura 
         imagem_excel = plotly_para_imagem_excel(graf_chuva, largura_excel=760, altura_excel = 400)  #755

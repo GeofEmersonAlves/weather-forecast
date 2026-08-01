@@ -9,21 +9,24 @@ Versão     : 1.0
 Python     : Python 3.13.14 | packaged by Anaconda, Inc. 
 
 Descrição:
-        Faz uma requisicao na API do IMET para pegar a imagem de precipitacao 
-      
+        Faz uma requisicao na API do IMET para pegar os mapas de precipitacao 
+    
 
 Histórico:
        17/07/2026 - Inicio 
+       01/08/2026 - Melhora no tratamento da resosta do INMET, mudança do cache
 ===============================================================================
 """
+from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 from services.requisicao import faz_requisicao
-import base64
-from io import BytesIO
-from PIL import Image
-import streamlit as st
 
-@st.cache_data(show_spinner="⏳ Carregando mapa de precipitação . . .",  ttl = 43200) #Cache de 12 hora para o mapa de precipitacao
-def mapa_precipitacao(ANO : int, PERIODO : str, MES : int) -> Image.Image | None:
+__URL__ = "https://apiclima.inmet.gov.br/"
+
+def url_inmet()->str:
+    return __URL__
+
+@lru_cache(maxsize = 5)
+def mapas_precipitacao(ANO : int, PERIODO : str, MES : int) -> list[dict]:
     HEAD = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -32,16 +35,13 @@ def mapa_precipitacao(ANO : int, PERIODO : str, MES : int) -> Image.Image | None
         )
     }
     
-    url = f"https://apiclima.inmet.gov.br/progp/{ANO}/{PERIODO}/{MES}"
+    url = f"{__URL__}progp/{ANO}/{PERIODO}/{MES}"
    
     resposta = faz_requisicao(url, HEAD = HEAD, use_raise = True)
-    
+
+    dados = []    
     if resposta:
-        dados = resposta.json()
-        base64_img = dados[0]["base64"]    
-        imagem = Image.open(BytesIO(base64.b64decode(base64_img.split(",", 1)[1])))
-          
-    else:
-        imagem = None
-    
-    return imagem
+        if resposta.status_code == 200:
+            dados = resposta.json()
+
+    return dados

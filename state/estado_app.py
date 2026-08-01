@@ -15,6 +15,7 @@ Descrição:
 Histórico:
        16/07/2026 - Inicio
        26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
+       01/08/2026 - Inclusão no estado das variáveis para a lista de mapas do INMET
 ===============================================================================
 """
 import streamlit as st
@@ -31,6 +32,13 @@ def inicializar_estado_app():
     
     if "resp_busca_cidades" not in st.session_state:
         st.session_state.resp_busca_cidades = lst_empty_resp()
+        
+    if "_mapas_inmet_mensal_" not in st.session_state:
+        st.session_state._mapas_inmet_mensal_ = []
+    
+    if "_mapas_inmet_semestral_" not in st.session_state:    
+        st.session_state._mapas_inmet_semestral_ = []
+        
     
 def alterar_resp_busca_cidades(resp_busca_cidades : list[dict[str, object]]):
     st.session_state.resp_busca_cidades = resp_busca_cidades.copy()

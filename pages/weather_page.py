@@ -21,6 +21,7 @@ Histórico:
        23/07/2026 - Alterações para melhorar a performance devido à Geração de Relatório em Excel
        24/04/2026 - Alterações para antender o novo layout do relatório em excel
        26/07/2026 - Correção dos bugs que apareceram quando o app ficou online
+       01/08/2026 - Alteração do tratamento dos mapas da INMET API
 ===============================================================================
 """
 
@@ -38,18 +39,29 @@ import components.graficos_previsao as graf_prev
 from components.nota_rodape import nota_de_rodape
 from components.quadro_fases_da_lua import quadro_fases_da_lua
 from components.buttonExcelReport import button_ExcelReport
+from components.mapas_inmet import mostra_mapas_immet
+
 from models.local_vazio import local_empty
-from services.imet_api import mapa_precipitacao
+from services.imet_api import mapas_precipitacao, url_inmet
 from services.pega_infoclima import  info_clima_agora
 import services.previsao_tempo as previsao_tempo
 from services.fase_da_lua import info_fase_da_lua_com_none
 from utils.datas import hoje, data_por_extenso
 #from services.salva_dict import salvar_json
 
-# =========== FUNCÃO PARA LIMPAR O CACHE ===========
+data_hoje = hoje()
+
 def limpar_cache():
     st.cache_data.clear()
-    
+
+
+@st.cache_data(show_spinner="⏳ Carregando informações do INMET . . .",  ttl = 3600)        
+def solicita_mapas_inmet():
+    mapas_inmet_mensal = mapas_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
+    mapas_inmet_semestral = mapas_precipitacao(data_hoje.year, "Trimestral", data_hoje.month)
+    st.session_state._mapas_inmet_mensal_ = mapas_inmet_mensal
+    st.session_state._mapas_inmet_semestral_ = mapas_inmet_semestral
+
     
 #Cache de 30 minutos
 @st.cache_data(show_spinner="⏳ Carregando previsão do tempo . . .",  ttl = 1800)
@@ -57,6 +69,7 @@ def pega_previsao_cache(local_clima : dict)->dict:
     previsoes=  previsao_tempo.pega_previsao_tempo(local_clima)
     
     return previsoes
+
 
 st.set_page_config("Weather Forecast",
                    page_icon = st.session_state._icone_app_,
@@ -66,8 +79,7 @@ st.set_page_config("Weather Forecast",
 
 st.logo(st.session_state._icone_app_, icon_image = st.session_state._icone_app_)
 
-data_hoje = hoje()
-    
+
 with st.sidebar: 
     user_local = st.session_state.user_location
     local = retorna_local(user_local)  #Componente mostra um botão para pegar a localização, caso nao pegar busca pelo IP
@@ -192,23 +204,19 @@ with col2: #Previsão do tempo
           type="tertiary",
           key = "cache_prev",
           on_click = limpar_cache)
-       
-       
+
+
 with col3: #Mapas de precipitacão
     tab_mensal, tab_semestral = st.tabs(["Precipitação Mensal", "Precipitação Trimestral"], on_change = "ignore")
-    mapa_imet_mensal = mapa_precipitacao(data_hoje.year, "Mensal", data_hoje.month)
-    mapa_imet_semestral = mapa_precipitacao(data_hoje.year, "Trimestral", data_hoje.month)
-    
-    st.session_state._mapa_imet_mensal_ = mapa_imet_mensal
-    st.session_state._mapa_imet_semestral_ = mapa_imet_semestral
+    solicita_mapas_inmet()    
 
     with tab_mensal:    
-        st.image(mapa_imet_mensal, width = "stretch")
-        texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
+       mostra_mapas_immet(st.session_state._mapas_inmet_mensal_)
+        
     with tab_semestral:    
-        st.image(mapa_imet_semestral, width = "stretch")
-        texto_alinhado("Fonte: https://apiclima.inmet.gov.br/", alinhamento = 'right', fontsize = 12)
-   
+       mostra_mapas_immet(st.session_state._mapas_inmet_semestral_)
+       
+    texto_alinhado(f"Fonte:{url_inmet()}", alinhamento = 'right', fontsize = 12)
     
     mostra_data_por_extenso(data_hoje, fontsize = 18)
     
