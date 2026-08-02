@@ -16,7 +16,6 @@ Histórico:
        27/07/2026 - Correção do problema dos timezone nos horários
 ===============================================================================
 """
-import streamlit as st
 from bs4 import BeautifulSoup
 from copy import deepcopy
 from urllib.parse import urljoin
@@ -191,7 +190,6 @@ def scrap_page2(dados_cidade : dict) -> list:
     return tab_astro
 
 
-@st.cache_data(show_spinner="⏳ Carregando condições climáticas . . .",  ttl = 1800)
 def clima_agora(dados_cidade : dict) -> dict:
     info_clima_vazio = novo_info_clima()
     
@@ -249,8 +247,3 @@ def clima_agora(dados_cidade : dict) -> dict:
     info_clima_vazio["fase_lua"] = fase_lua
 
     return deepcopy(info_clima_vazio) 
-
-
-
-#scrap_page({"idcity":271, 'cidade':"Curitiba", "uf":"PR"})
-

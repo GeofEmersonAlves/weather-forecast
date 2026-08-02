@@ -24,7 +24,7 @@ Histórico:
         27/07/2026 - Correção do problema dos timezone nos horários
 ===============================================================================
 """
-import streamlit as st
+from datetime import datetime
 import base64
 from io import BytesIO
 from PIL import Image
@@ -34,7 +34,7 @@ from urllib.parse import urlparse
 from functools import lru_cache  #Para fazer um cache da imagem, não precisa instalar, ja vem com o Python
 from services.requisicao import faz_requisicao
 import services.get_tokens as get_tokens
-from services.time_zone import hora_brasilia_to_fuso_local
+#from services.time_zone import hora_brasilia_to_fuso_local
 
 Base_URL_API = "http://api.weatherstack.com/"
 
@@ -362,8 +362,6 @@ def weather_icon(url_icon: str) -> str | None:
         else:
             return f"data:image/png;base64,{imagem_base64}"
    
-    #print("-------------- Fez a requisição do ícone ------")
-    #print(url_icon)
 
     resp = faz_requisicao(url_icon, use_raise=True)
 
@@ -424,7 +422,7 @@ def testa_tokens(lat : str, long: str) -> dict | None:
 
     return dados
 
-@st.cache_data(show_spinner="⏳ Carregando condicções climaticas . . .",  ttl = 1800)
+@lru_cache(maxsize=15)
 def clima_agora(lat : str, long: str) -> dict:
     ws_token = get_tokens.get_weatherstack_token_usar()
     
@@ -465,19 +463,29 @@ def clima_agora(lat : str, long: str) -> dict:
 
     dados['tab_clima'] = [texto_descricao, texto_vento, texto_umidade, texto_sensacao]
       
-    hr_sol_up = hora_brasilia_to_fuso_local(dados.get('current').get('astro').get('sunrise'), 
-                                            float(lat), float(long))
+    hr_sol_up = dados.get('current').get('astro').get('sunrise') 
+    hr_sol_down = dados.get('current').get('astro').get('sunset')
     
-    hr_sol_down = hora_brasilia_to_fuso_local(dados.get('current').get('astro').get('sunset'), 
-                                            float(lat), float(long))
+    hr_sol_up = datetime.strptime(hr_sol_up, "%I:%M %p").strftime("%H:%M")
+    hr_sol_down = datetime.strptime(hr_sol_down, "%I:%M %p").strftime("%H:%M")
+    
     txt_sol_up_h = "🧭 "+hr_sol_up
     txt_sol_up = astro_evento('sunrise')
     txt_sol_down_h = "🧭 "+hr_sol_down
     txt_sol_down = astro_evento('sunset')
-    txt_moon_up_h = "🧭 "+dados.get('current').get('astro').get('moonrise')
+    
+
+    hr_moon_up = dados.get('current').get('astro').get('moonrise') 
+    hr_moon_down = dados.get('current').get('astro').get('moonset')
+    
+    hr_moon_up = datetime.strptime(hr_moon_up, "%I:%M %p").strftime("%H:%M")
+    hr_moon_down = datetime.strptime(hr_moon_down, "%I:%M %p").strftime("%H:%M")
+    
+    txt_moon_up_h = "🧭 " + hr_moon_up
     txt_moon_up = astro_evento('moonrise')
-    txt_moon_down_h = "🧭 "+dados.get('current').get('astro').get('moonset')
+    txt_moon_down_h = "🧭 " + hr_moon_down
     txt_moon_down = astro_evento('moonset')
+    
     txt_precipita = "🌧️ Precipitação"
     txt_preci_valor = f"💧 {dados.get('current').get('precip')} mm"
     txt_uv = "☀️ Índice UV"

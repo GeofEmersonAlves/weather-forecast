@@ -224,6 +224,3 @@ nota_de_rodape()
 
 texto_alinhado(rodape_info["texto_info"], alinhamento = "right", fontsize = 12, color = "blue")
 texto_alinhado(rodape_info["versao"], alinhamento = "right", fontsize = 10, color = "gray")
-
-
-

@@ -664,7 +664,7 @@ def desenhar_texto_unicode(draw: ImageDraw.ImageDraw,
         try:
             if fonte_atual == fonte_emoji:
                 incr_y = 0
-                if caractere not in "🌡🌧➡":
+                if caractere not in "🌡🌧➡☀️":
                     incr_y = 10
                     
                 with Pilmoji(imagem) as pilmoji:
